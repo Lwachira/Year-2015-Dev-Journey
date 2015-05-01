@@ -1,0 +1,15 @@
+h3{
+  text-align:center;
+  text-decoration:underline;
+}
+
+canvas{
+  width:100px;
+  height:100px;
+  border:2px solid black;
+
+}
+
+.container{
+ text-align:center;
+}
