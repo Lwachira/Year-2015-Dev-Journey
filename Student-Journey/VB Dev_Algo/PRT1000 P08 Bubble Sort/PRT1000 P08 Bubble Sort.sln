@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PRT1000 P08 Bubble Sort", "PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort.vbproj", "{89742D5C-A253-4709-AC68-2C62E85D9B96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F50F0AFB-CA90-411D-BA22-8CD15EDC5455}"
+	ProjectSection(SolutionItems) = preProject
+		Performance1.psess = Performance1.psess
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89742D5C-A253-4709-AC68-2C62E85D9B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89742D5C-A253-4709-AC68-2C62E85D9B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89742D5C-A253-4709-AC68-2C62E85D9B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89742D5C-A253-4709-AC68-2C62E85D9B96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal
