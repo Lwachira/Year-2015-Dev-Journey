@@ -7,3 +7,7 @@ C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P0
 C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Release\PRT1000 P08 Bubble Sort.exe
 C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Release\PRT1000 P08 Bubble Sort.xml
 C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Release\PRT1000 P08 Bubble Sort.pdb
+C:\Users\Lincoln\Documents\GitHub\Year-2015-Dev-Journey\Student-Journey\VB Dev_Algo\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\bin\Release\PRT1000 P08 Bubble Sort.exe.config
+C:\Users\Lincoln\Documents\GitHub\Year-2015-Dev-Journey\Student-Journey\VB Dev_Algo\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Release\PRT1000 P08 Bubble Sort.exe
+C:\Users\Lincoln\Documents\GitHub\Year-2015-Dev-Journey\Student-Journey\VB Dev_Algo\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Release\PRT1000 P08 Bubble Sort.xml
+C:\Users\Lincoln\Documents\GitHub\Year-2015-Dev-Journey\Student-Journey\VB Dev_Algo\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Release\PRT1000 P08 Bubble Sort.pdb
