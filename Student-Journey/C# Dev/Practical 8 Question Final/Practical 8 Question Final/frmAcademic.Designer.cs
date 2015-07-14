@@ -1,6 +1,6 @@
 ﻿namespace Practical_8_Question_Final
 {
-    partial class Form1
+    partial class frmAcademic
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmAcademic
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(376, 415);
+            this.Name = "frmAcademic";
+            this.Text = "Academic";
+            this.Load += new System.EventHandler(this.frmAcademic_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
