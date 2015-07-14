@@ -9,3 +9,6 @@ C:\Users\Lincoln\Documents\Visual Studio 2015\Projects\C#\Practical 8\Practical 
 C:\Users\Lincoln\Documents\Visual Studio 2015\Projects\C#\Practical 8\Practical 8\obj\Debug\Practical 8.pdb
 C:\Users\Lincoln\Documents\Visual Studio 2015\Projects\C#\Practical 8\Practical 8\bin\Debug\Societies.dll
 C:\Users\Lincoln\Documents\Visual Studio 2015\Projects\C#\Practical 8\Practical 8\bin\Debug\Societies.pdb
+C:\Users\Lincoln\Documents\GitHub\Year-2015-Dev-Journey\Student-Journey\C# Dev\Practical 8\Practical 8 Question 1\Practical 8\bin\Debug\Practical 8.exe.config
+C:\Users\Lincoln\Documents\GitHub\Year-2015-Dev-Journey\Student-Journey\C# Dev\Practical 8\Practical 8 Question 1\Practical 8\obj\Debug\Practical 8.exe
+C:\Users\Lincoln\Documents\GitHub\Year-2015-Dev-Journey\Student-Journey\C# Dev\Practical 8\Practical 8 Question 1\Practical 8\obj\Debug\Practical 8.pdb
