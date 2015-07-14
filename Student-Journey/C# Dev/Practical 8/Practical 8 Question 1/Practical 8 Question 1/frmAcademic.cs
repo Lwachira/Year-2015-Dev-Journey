@@ -29,7 +29,8 @@ namespace Practical_8_Question_1
         }
 
         private void btnWrite_Click(object sender, EventArgs e)
-        {
+        {           
+            //Academic File
             StreamWriter myAcademic = new StreamWriter("academic.txt", true);
             string message = "";
 
@@ -43,9 +44,6 @@ namespace Practical_8_Question_1
                 message = rdLaw.Text;
 
             }
-
-
-
             myAcademic.Write(studName + "," + message + "," + txtCourse.Text);
             myAcademic.WriteLine();
             myAcademic.Close();

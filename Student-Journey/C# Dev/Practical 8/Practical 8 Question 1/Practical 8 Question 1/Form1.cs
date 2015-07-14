@@ -22,22 +22,35 @@ namespace Practical_8_Question_1
 
         private void btnAcademic_Click(object sender, EventArgs e)
         {
-            StreamWriter myStudents = new StreamWriter("student.txt", true);
-            myStudents.Write(txtStudNumber.Text + "," + txtStudName.Text + "," + txtStudentDegree.Text);
+            FileWriter();
             myAcademicForm = new frmAcademic(txtStudNumber.Text, txtStudName.Text, txtStudentDegree.Text);
             this.Visible = false;
             myAcademicForm.ShowDialog();
             this.Visible = true;
+            txtStudentDegree.Clear();
+            txtStudName.Clear();
+            txtStudNumber.Clear();
+        }
+
+        private void FileWriter()
+        {
+            StreamWriter myStudents = new StreamWriter("student.txt", true);
+            myStudents.Write(txtStudName.Text + "," + txtStudNumber.Text + "," + txtStudentDegree.Text);
+            myStudents.WriteLine();
+            myStudents.Close();
         }
 
         private void btnArts_Click(object sender, EventArgs e)
         {
-            StreamWriter myStudents = new StreamWriter("student.txt", true);
-            myStudents.Write(txtStudNumber.Text + "," + txtStudName.Text + "," + txtStudentDegree.Text);
+            FileWriter();
             myArtsForm = new frmArts(txtStudNumber.Text, txtStudName.Text, txtStudentDegree.Text);
             this.Visible = false;
             myArtsForm.ShowDialog();
             this.Visible = true;
+
+            txtStudentDegree.Clear();
+            txtStudName.Clear();
+            txtStudNumber.Clear();
 
         }
     }
