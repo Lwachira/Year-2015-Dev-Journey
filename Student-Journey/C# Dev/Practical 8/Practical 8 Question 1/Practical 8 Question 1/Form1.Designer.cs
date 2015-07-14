@@ -95,6 +95,7 @@
             this.btnAcademic.TabIndex = 6;
             this.btnAcademic.Text = "Academic";
             this.btnAcademic.UseVisualStyleBackColor = true;
+            this.btnAcademic.Click += new System.EventHandler(this.btnAcademic_Click);
             // 
             // btnArts
             // 
@@ -104,15 +105,16 @@
             this.btnArts.TabIndex = 7;
             this.btnArts.Text = "Arts";
             this.btnArts.UseVisualStyleBackColor = true;
+            this.btnArts.Click += new System.EventHandler(this.btnArts_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(74, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 13);
+            this.label4.Size = new System.Drawing.Size(101, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Chose the society your in.";
+            this.label4.Text = "Chose your Society:";
             // 
             // Form1
             // 
