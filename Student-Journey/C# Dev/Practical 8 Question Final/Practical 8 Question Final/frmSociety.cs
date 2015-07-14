@@ -12,6 +12,8 @@ namespace Practical_8_Question_Final
 {
     public partial class Form1 : Form
     {
+        frmArts myArtsForm;
+        frmAcademic myAcademicForm;
 
         public Form1()
         {
@@ -20,7 +22,7 @@ namespace Practical_8_Question_Final
 
         private void btnAcc_Click(object sender, EventArgs e)
         {
-            frmAcademic myAcademicForm = new frmAcademic(txtStudentNo.Text, txtName.Text, txtDegree.Text);
+            myAcademicForm = new frmAcademic();
             this.Visible = false;
             myAcademicForm.ShowDialog();
             this.Visible = true;
@@ -29,10 +31,15 @@ namespace Practical_8_Question_Final
         private void btnArts_Click(object sender, EventArgs e)
         {
 
-            frmArts myArtsForm = new frmArts(txtStudentNo.Text, txtName.Text, txtDegree.Text);
+            myArtsForm = new frmArts();
             this.Visible = false;
             myArtsForm.ShowDialog();
             this.Visible = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

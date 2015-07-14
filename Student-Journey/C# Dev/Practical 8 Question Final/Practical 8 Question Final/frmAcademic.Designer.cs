@@ -112,5 +112,9 @@
         private System.Windows.Forms.RadioButton rdoAccounting;
         private System.Windows.Forms.TextBox txtCourseCode;
         private System.Windows.Forms.Label label6;
+
+        public frmAcademic()
+        {
+        }
     }
 }
