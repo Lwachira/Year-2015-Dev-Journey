@@ -21,16 +21,18 @@ namespace Practical_8_Question_Final
         private void btnAcc_Click(object sender, EventArgs e)
         {
             frmAcademic myAcademicForm = new frmAcademic(txtStudentNo.Text, txtName.Text, txtDegree.Text);
-            this.Hide();
-            myAcademicForm.Show();
+            this.Visible = false;
+            myAcademicForm.ShowDialog();
+            this.Visible = true;
         }
 
         private void btnArts_Click(object sender, EventArgs e)
         {
 
             frmArts myArtsForm = new frmArts(txtStudentNo.Text, txtName.Text, txtDegree.Text);
-            this.Hide();
-            myArtsForm.Show();
+            this.Visible = false;
+            myArtsForm.ShowDialog();
+            this.Visible = true;
         }
     }
 }
