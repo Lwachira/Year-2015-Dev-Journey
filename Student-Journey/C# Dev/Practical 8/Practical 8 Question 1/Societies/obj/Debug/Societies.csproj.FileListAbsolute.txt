@@ -1,5 +1,0 @@
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 7\Societies\bin\Debug\Societies.dll
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 7\Societies\bin\Debug\Societies.pdb
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 7\Societies\obj\Debug\Societies.dll
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 7\Societies\obj\Debug\Societies.pdb
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 7\Societies\obj\Debug\Societies.csprojResolveAssemblyReference.cache
