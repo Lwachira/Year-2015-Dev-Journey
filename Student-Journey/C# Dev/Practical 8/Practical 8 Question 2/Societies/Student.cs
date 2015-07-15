@@ -44,6 +44,13 @@ namespace Societies
             this.degreeCode = degreeCode;
         }
 
+        public Student(string studName)
+        {
+
+            this.studName = studName;
+
+        }
+
         public override string ToString()
         {
             return "Student Number: " + studNum + "\t" + "Student Name: " + studName + "\t";
@@ -57,7 +64,7 @@ namespace Societies
         private string societyName;
         private string experienceLevel;
         private int wins;
-
+        private string colors;
 
         public string SocietyName
         {
@@ -71,16 +78,26 @@ namespace Societies
             set { experienceLevel = value; }
         }
 
-        public Arts(string studNum, string studName, string degreeCode, string societyName, string experienceLevel, int wins) : base(studNum, studName, degreeCode)
+
+        public string Colors
+        {
+            get { return colors; }
+            set { colors = value; }
+        }
+
+
+        public Arts(string studNum, string studName, string degreeCode, string societyName, string experienceLevel, int wins, string colors) : base(studNum, studName, degreeCode)
         {
             this.societyName = societyName;
             this.experienceLevel = experienceLevel;
             this.wins = wins;
+            this.colors = colors;
+
         }
 
         public override string ToString()
         {
-            return base.ToString() + "  Arts and Culture Society: " + societyName + "\t" + "Experience Level: " + experienceLevel + "\t" + "No of wins: " + wins + "\t";
+            return base.ToString() + "  Arts and Culture Society: " + societyName + "\t" + "Experience Level: " + experienceLevel + "\t" + "No of wins: " + wins + "\t" + "Colors: " + colors;
         }
     }
 
@@ -103,7 +120,7 @@ namespace Societies
             set { courseCode = value; }
         }
 
-        public Academic(string studNum, string studName, string degreeCode, string societyName, string courseCode) : base(studNum, studName, degreeCode)
+        public Academic(string studName, string societyName, string courseCode) : base(studName)
 
         {
             this.courseCode = courseCode;
@@ -112,7 +129,7 @@ namespace Societies
 
         public override string ToString()
         {
-            return base.ToString() + "Academic Society: " + societyName + "\t" + "Course Code: " + courseCode + "\t";
+            return "Student Name: " + base.StudentName + "\t\t" + "Academic Society: " + societyName + "\t\t" + "Course Code: " + courseCode + "\t";
         }
     }
 

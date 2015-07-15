@@ -71,7 +71,7 @@ namespace Societies
             set { experienceLevel = value; }
         }
 
-        public Arts(string studNum, string studName, string degreeCode, string societyName, string experienceLevel, int wins) : base(studNum, studName, degreeCode)
+        public Arts(string studNum, string studName, string societyName, string experienceLevel, int wins) : base(studNum, studName, degreeCode)
         {
             this.societyName = societyName;
             this.experienceLevel = experienceLevel;
