@@ -49,9 +49,10 @@ namespace Practical_8_Question_1
             {
                 colour = "Yes";
             }
-            StreamWriter myArts = new StreamWriter("arts.txt", true);
-            myArts.Write(studName + "," + message + "," + cmbLevel.SelectedItem + "," + txtWins.Text + "," + colour);
-            myArts.WriteLine();
+
+            StreamWriter myArts = new StreamWriter("arts.txt");
+            myArts.WriteLine(studName + "," + message + "," + cmbLevel.SelectedItem + "," + txtWins.Text + "," + colour + "\n");
+           
             myArts.Close();
         }
     }

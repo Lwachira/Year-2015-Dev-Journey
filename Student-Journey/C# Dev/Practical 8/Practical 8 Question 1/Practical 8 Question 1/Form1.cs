@@ -53,5 +53,10 @@ namespace Practical_8_Question_1
             txtStudNumber.Clear();
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
