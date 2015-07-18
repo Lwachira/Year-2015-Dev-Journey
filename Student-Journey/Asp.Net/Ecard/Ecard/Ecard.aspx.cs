@@ -26,6 +26,23 @@ namespace Ecard
 
                 ListItem item = new ListItem();
                 item.Text = BorderStyle.None.ToString();
+                item.Value = ((int)BorderStyle.None).ToString();
+
+                lstBorder.Items.Add(item);
+                item = new ListItem();
+                item.Text = BorderStyle.Solid.ToString();
+                item.Value = ((int)BorderStyle.Solid).ToString();
+                lstBorder.Items.Add(item);
+                item = new ListItem();
+
+                item.Text = BorderStyle.Double.ToString();
+                item.Value = ((int)BorderStyle.Double).ToString();
+                lstBorder.Items.Add(item);
+
+                lstBorder.SelectedIndex = 0;
+                    
+                //imgDefault.ImageUrl =
+
 
             }
         }

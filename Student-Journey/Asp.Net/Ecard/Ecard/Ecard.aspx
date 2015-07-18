@@ -44,7 +44,7 @@
             <br />
             <br />
             <br />
-
+            <asp:Image ID="imgDefault" runat="server" Width="212px" Height="160px" />
 
         </asp:Panel>
     </form>
