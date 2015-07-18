@@ -28,7 +28,7 @@
             <asp:CheckBox ID="chkPicture" runat="server" Text="Add the default picture" />
             <br />
             Enter the greeting text below:<br />
-            <asp:TextBox ID="txtGreeting" runat="server" Width="240px" Height="85px" TextMode="MultiLine">
+            <asp:TextBox ID="txtGreeting" runat="server" Width="240px" Height="85px" TextMode="MultiLine" OnTextChanged="txtGreeting_TextChanged">
             </asp:TextBox>
             <br />
             <br />

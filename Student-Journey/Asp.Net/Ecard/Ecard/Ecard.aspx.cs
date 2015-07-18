@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Drawing;
 namespace Ecard
 {
     public partial class Ecard : System.Web.UI.Page
@@ -29,10 +29,12 @@ namespace Ecard
                 item.Value = ((int)BorderStyle.None).ToString();
 
                 lstBorder.Items.Add(item);
+
                 item = new ListItem();
                 item.Text = BorderStyle.Solid.ToString();
                 item.Value = ((int)BorderStyle.Solid).ToString();
                 lstBorder.Items.Add(item);
+
                 item = new ListItem();
 
                 item.Text = BorderStyle.Double.ToString();
@@ -40,14 +42,50 @@ namespace Ecard
                 lstBorder.Items.Add(item);
 
                 lstBorder.SelectedIndex = 0;
-                    
-                //imgDefault.ImageUrl =
+
+                imgDefault.ImageUrl = "defaultpic.png";
 
 
             }
         }
 
         protected void cmdUpdate_Click(object sender, EventArgs e)
+        {
+            pnlCard.BackColor = Color.FromName(lstBackColor.SelectedItem.Text);
+
+            lblGreeting.Font.Name = lstFontName.SelectedItem.Text;
+
+
+            try
+            {
+                if (int.Parse(txtFontSize.Text) > 0)
+                {
+                    lblGreeting.Font.Size = FontUnit.Point(int.Parse(txtFontSize.Text));
+                }
+            }
+            catch (Exception f)
+            {
+
+                
+            }
+           
+
+            int borderValue = int.Parse(lstBorder.SelectedItem.Value);
+            pnlCard.BorderStyle = (BorderStyle)borderValue;
+
+            if (chkPicture.Checked)
+            {
+                imgDefault.Visible = true;
+            }
+            else
+            {
+                imgDefault.Visible = false;
+            }
+
+            lblGreeting.Text = txtGreeting.Text;
+        }
+
+        protected void txtGreeting_TextChanged(object sender, EventArgs e)
         {
 
         }
