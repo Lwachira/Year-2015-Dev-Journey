@@ -1,7 +1,0 @@
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\TriangleLibrary\bin\Debug\TriangleLibrary.dll
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\TriangleLibrary\bin\Debug\TriangleLibrary.pdb
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\TriangleLibrary\bin\Debug\ShapesLibrary.dll
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\TriangleLibrary\bin\Debug\ShapesLibrary.pdb
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\TriangleLibrary\obj\Debug\TriangleLibrary.csprojResolveAssemblyReference.cache
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\TriangleLibrary\obj\Debug\TriangleLibrary.dll
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\TriangleLibrary\obj\Debug\TriangleLibrary.pdb

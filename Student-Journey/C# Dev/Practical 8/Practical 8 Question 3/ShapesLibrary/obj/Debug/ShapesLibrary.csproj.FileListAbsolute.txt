@@ -1,4 +1,0 @@
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\ShapesLibrary\bin\Debug\ShapesLibrary.dll
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\ShapesLibrary\bin\Debug\ShapesLibrary.pdb
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\ShapesLibrary\obj\Debug\ShapesLibrary.dll
-c:\users\lincoln\documents\visual studio 2015\Projects\C#\Practical 8 Question 3\ShapesLibrary\obj\Debug\ShapesLibrary.pdb
