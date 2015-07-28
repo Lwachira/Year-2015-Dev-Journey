@@ -1,9 +1,0 @@
-C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\bin\Debug\PRT1000 P08 Bubble Sort.exe.config
-C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Debug\PRT1000_P08_Bubble_Sort.Resources.resources
-C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Debug\PRT1000 P08 Bubble Sort.vbproj.GenerateResource.Cache
-C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\bin\Debug\PRT1000 P08 Bubble Sort.exe
-C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\bin\Debug\PRT1000 P08 Bubble Sort.pdb
-C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\bin\Debug\PRT1000 P08 Bubble Sort.xml
-C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Debug\PRT1000 P08 Bubble Sort.exe
-C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Debug\PRT1000 P08 Bubble Sort.xml
-C:\Users\Lincoln Wachira\Desktop\Nmmu\PRT1000\PRT1000 P08 Bubble Sort\PRT1000 P08 Bubble Sort\obj\Debug\PRT1000 P08 Bubble Sort.pdb

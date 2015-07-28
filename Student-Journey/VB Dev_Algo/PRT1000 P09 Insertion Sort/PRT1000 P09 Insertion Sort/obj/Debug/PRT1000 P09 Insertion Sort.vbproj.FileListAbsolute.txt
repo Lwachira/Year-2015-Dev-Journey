@@ -1,9 +1,0 @@
-H:\2015\PRT1000\PRT1000 P09 Insertion Sort\PRT1000 P09 Insertion Sort\bin\Debug\PRT1000 P09 Insertion Sort.exe.config
-H:\2015\PRT1000\PRT1000 P09 Insertion Sort\PRT1000 P09 Insertion Sort\obj\Debug\PRT1000_P09_Insertion_Sort.Resources.resources
-H:\2015\PRT1000\PRT1000 P09 Insertion Sort\PRT1000 P09 Insertion Sort\obj\Debug\PRT1000 P09 Insertion Sort.vbproj.GenerateResource.Cache
-H:\2015\PRT1000\PRT1000 P09 Insertion Sort\PRT1000 P09 Insertion Sort\bin\Debug\PRT1000 P09 Insertion Sort.exe
-H:\2015\PRT1000\PRT1000 P09 Insertion Sort\PRT1000 P09 Insertion Sort\bin\Debug\PRT1000 P09 Insertion Sort.pdb
-H:\2015\PRT1000\PRT1000 P09 Insertion Sort\PRT1000 P09 Insertion Sort\bin\Debug\PRT1000 P09 Insertion Sort.xml
-H:\2015\PRT1000\PRT1000 P09 Insertion Sort\PRT1000 P09 Insertion Sort\obj\Debug\PRT1000 P09 Insertion Sort.exe
-H:\2015\PRT1000\PRT1000 P09 Insertion Sort\PRT1000 P09 Insertion Sort\obj\Debug\PRT1000 P09 Insertion Sort.xml
-H:\2015\PRT1000\PRT1000 P09 Insertion Sort\PRT1000 P09 Insertion Sort\obj\Debug\PRT1000 P09 Insertion Sort.pdb
