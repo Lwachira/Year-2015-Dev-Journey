@@ -10,44 +10,53 @@
     <form id="form1" runat="server">
         <div>
             <h2>Build your own message</h2>
-            <asp:Table ID="tblColor" runat="server">
+            <asp:Table ID="Table1" runat="server">
+
                 <asp:TableRow>
-                    <asp:TableCell ID="cellColor">
-                        Background-color :
-                <asp:DropDownList TextMode="MultiLine" ID="txtBckColor" runat="server">
-                    <asp:ListItem Text="Red" />
-                    <asp:ListItem Text="Blue" />
-                    <asp:ListItem Text="Green" />
-                    <asp:ListItem Text="Yellow" />
-                    <asp:ListItem Text="Orange" />
+                    <asp:TableCell>Background Color:</asp:TableCell>
+                    <asp:TableCell>
+                        <asp:DropDownList ID="lstColor" runat="server" OnSelectedIndexChanged="lstColor_SelectedIndexChanged" AutoPostBack="true">
+                            <asp:ListItem Text="Red" Value="Red" />
+                            <asp:ListItem Text="Blue" Value="Blue" />
+                            <asp:ListItem Text="Yellow" Value="Yellow" />
+                            <asp:ListItem Text="Green" Value="Green" />
+                            <asp:ListItem Text="Orange" Value="Orange" />
 
-                </asp:DropDownList>
+                        </asp:DropDownList>
+                    </asp:TableCell>
+                    <asp:TableCell RowSpan="3" ID="myCell" BackColor="Tomato" Width="330px">
+                        <asp:Label ID="lblMessage" runat="server" Text="Default Message" Font-Size="20px"></asp:Label>
+                    </asp:TableCell>
 
+                </asp:TableRow>
+                <asp:TableRow>
+                    <asp:TableCell>Border Type:</asp:TableCell>
+                    <asp:TableCell>
+                        <asp:RadioButton ID="rdoOne" GroupName="myRdo" Text="None" runat="server" />
+                        <br />
+                        <asp:RadioButton ID="rdoTwo" GroupName="myRdo" Text="Solid" runat="server" />
+                        <br />
+
+                        <asp:RadioButton ID="rdoThree" GroupName="myRdo" Text="Ridge" runat="server" />
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow>
+                    <asp:TableCell>Message:</asp:TableCell>
+                    <asp:TableCell>
+                        <asp:TextBox ID="txtText" runat="server" Height="100px" Width="150px" TextMode="MultiLine"></asp:TextBox>
+                        <br />
+                        <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow>
+                    <asp:TableCell>Font size:</asp:TableCell>
+                    <asp:TableCell>
+                        <asp:Button ID="btnIncrease" runat="server" Text="Increase" OnClick="btnIncrease_Click" />&nbsp;<asp:Button ID="btnDecrease" runat="server" Text="Decrease" OnClick="btnDecrease_Click" />
                     </asp:TableCell>
 
                 </asp:TableRow>
 
-                <asp:TableRow>
-
-                    <asp:TableCell ID="cellBorder">
-                        <br />
-                        Border Type:                       
-                        <br />
-
-                        <asp:RadioButton ID="RadioButton1" runat="server" GroupName="rdoOne" ViewStateMode="Inherit" />
-                        <br />
-                        <asp:RadioButton ID="RadioButton2" runat="server" GroupName="rdoOne" />
-                        <br />
-
-                        <asp:RadioButton ID="RadioButton3" runat="server" GroupName="rdoOne" />
-                        <br />
-
-
-
-                    </asp:TableCell>
-                </asp:TableRow>
             </asp:Table>
-
         </div>
     </form>
 </body>
