@@ -33,7 +33,7 @@ namespace Sem2Prac1
                 dbAdapter = new OleDbDataAdapter(dbCom);
                 ds = new DataSet();
                 dbAdapter.Fill(ds, "myDoctors");
-                lstDoctor.DataSource = ds.Tables["myDoctors"];
+                dgvDoctorView.DataSource = ds.Tables["myDoctors"];
             }
             catch (Exception f)
             {

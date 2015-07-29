@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer.cs" />
+    <Compile Include="classDoctor.cs" />
+    <Compile Include="frmAddDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddDoctors.Designer.cs">
+      <DependentUpon>frmAddDoctors.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAppMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +68,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddDoctors.resx">
+      <DependentUpon>frmAddDoctors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAppMenu.resx">
       <DependentUpon>frmAppMenu.cs</DependentUpon>
     </EmbeddedResource>

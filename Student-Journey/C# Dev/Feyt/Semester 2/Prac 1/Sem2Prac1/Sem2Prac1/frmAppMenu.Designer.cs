@@ -31,13 +31,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.appointmentsByDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.appoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvAppoint = new System.Windows.Forms.DataGridView();
-            this.appointmentsByDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.appoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.doctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppoint)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +69,14 @@
             this.updatesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.updatesToolStripMenuItem.Text = "Updates";
             // 
+            // doctorToolStripMenuItem
+            // 
+            this.doctorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.insertToolStripMenuItem});
+            this.doctorToolStripMenuItem.Name = "doctorToolStripMenuItem";
+            this.doctorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.doctorToolStripMenuItem.Text = "Doctor";
+            // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -76,6 +85,19 @@
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
+            // 
+            // appointmentsByDoctorToolStripMenuItem
+            // 
+            this.appointmentsByDoctorToolStripMenuItem.Name = "appointmentsByDoctorToolStripMenuItem";
+            this.appointmentsByDoctorToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.appointmentsByDoctorToolStripMenuItem.Text = "Doctor";
+            this.appointmentsByDoctorToolStripMenuItem.Click += new System.EventHandler(this.appointmentsByDoctorToolStripMenuItem_Click);
+            // 
+            // appoToolStripMenuItem
+            // 
+            this.appoToolStripMenuItem.Name = "appoToolStripMenuItem";
+            this.appoToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.appoToolStripMenuItem.Text = "Patient";
             // 
             // label1
             // 
@@ -104,24 +126,12 @@
             this.dgvAppoint.Size = new System.Drawing.Size(697, 224);
             this.dgvAppoint.TabIndex = 3;
             // 
-            // appointmentsByDoctorToolStripMenuItem
+            // insertToolStripMenuItem
             // 
-            this.appointmentsByDoctorToolStripMenuItem.Name = "appointmentsByDoctorToolStripMenuItem";
-            this.appointmentsByDoctorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.appointmentsByDoctorToolStripMenuItem.Text = "Doctor";
-            this.appointmentsByDoctorToolStripMenuItem.Click += new System.EventHandler(this.appointmentsByDoctorToolStripMenuItem_Click);
-            // 
-            // appoToolStripMenuItem
-            // 
-            this.appoToolStripMenuItem.Name = "appoToolStripMenuItem";
-            this.appoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.appoToolStripMenuItem.Text = "Patient";
-            // 
-            // doctorToolStripMenuItem
-            // 
-            this.doctorToolStripMenuItem.Name = "doctorToolStripMenuItem";
-            this.doctorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.doctorToolStripMenuItem.Text = "Doctor";
+            this.insertToolStripMenuItem.Name = "insertToolStripMenuItem";
+            this.insertToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.insertToolStripMenuItem.Text = "Insert";
+            this.insertToolStripMenuItem.Click += new System.EventHandler(this.insertToolStripMenuItem_Click);
             // 
             // frmAppMenu
             // 
@@ -156,6 +166,7 @@
         private System.Windows.Forms.ToolStripMenuItem doctorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem appointmentsByDoctorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem appoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertToolStripMenuItem;
     }
 }
 

@@ -53,5 +53,13 @@ namespace Sem2Prac1
             formDoc.ShowDialog();
             this.Visible = true;
         }
+
+        private void insertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddDoctors formAddDoctor = new frmAddDoctors();
+            this.Visible = false;
+            formAddDoctor.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

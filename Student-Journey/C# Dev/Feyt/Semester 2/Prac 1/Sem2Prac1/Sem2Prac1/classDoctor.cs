@@ -10,10 +10,56 @@ namespace Sem2Prac1
     {
 
         private string doctorID;
-        private string doctorSurnam;
+        private string doctorSurname;
         private string doctorFirstName;
         private string doctorCellNo;
 
 
+        public string DoctorID
+        {
+            get { return doctorID; }
+            set { doctorID = value; }
+        }
+
+        public string DoctorSurname
+        {
+            get
+            {
+                return doctorSurname;
+            }
+            set
+            {
+                doctorSurname = value;
+
+
+            }
+
+
+        }
+
+        public string DoctorFirstName
+        {
+            get
+            {
+                return doctorFirstName;
+            }
+            set
+            {
+                doctorFirstName = value;
+            }
+        }
+
+        public string DoctorCellNo
+        {
+            get
+            {
+                return doctorCellNo;
+            }
+
+            set
+            {
+                doctorCellNo = value;
+            }
+        }
     }
 }
