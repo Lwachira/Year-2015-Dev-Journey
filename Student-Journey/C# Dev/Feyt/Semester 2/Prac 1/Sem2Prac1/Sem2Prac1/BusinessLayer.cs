@@ -35,7 +35,7 @@ namespace Sem2Prac1
                     dbCon.Open();
                 }
 
-                string OleInsert = "Insert NTO Doctor(Doctor ID,Doctor Surname,Doctor First Name,Doctor Cell No) VALUES( '" + doctorID + "','" + doctorSurname + "','" + doctorFirstname + "','" + doctorCellNo + "')";
+                string OleInsert = "Insert INTO Doctor VALUES( '" + doctorID + "','" + doctorSurname + "','" + doctorFirstname + "','" + doctorCellNo + "')";
 
                 dbCom = new OleDbCommand(OleInsert, dbCon);
                 x = dbCom.ExecuteNonQuery();

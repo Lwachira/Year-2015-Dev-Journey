@@ -30,5 +30,10 @@ namespace Sem2Prac1
             BusinessLayer b = new BusinessLayer();
             int x = b.insertDoctors(txtDocID.Text,txtDocSurname.Text,txtDocFirstName.Text,txtDocCellNum.Text);
         }
+
+        private void frmAddDoctors_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

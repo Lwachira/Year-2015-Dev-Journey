@@ -22,7 +22,6 @@ namespace Sem2Prac1
         private string conString;
         private OleDbDataAdapter dbAdapter;
         private DataSet ds;
-
         private void frmDoctor_Load(object sender, EventArgs e)
         {
             try
@@ -45,6 +44,14 @@ namespace Sem2Prac1
             {
                 dbConn.Close();
             }
+        }
+
+        private void dgvDoctorView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+
+
         }
     }
 }

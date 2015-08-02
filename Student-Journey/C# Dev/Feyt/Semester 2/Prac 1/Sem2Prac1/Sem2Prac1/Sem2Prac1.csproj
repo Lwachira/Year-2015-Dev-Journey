@@ -66,6 +66,12 @@
     <Compile Include="frmDoctor.Designer.cs">
       <DependentUpon>frmDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateDoc.Designer.cs">
+      <DependentUpon>frmUpdateDoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddDoctors.resx">
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoctor.resx">
       <DependentUpon>frmDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateDoc.resx">
+      <DependentUpon>frmUpdateDoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

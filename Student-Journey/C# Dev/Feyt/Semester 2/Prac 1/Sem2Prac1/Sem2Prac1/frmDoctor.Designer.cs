@@ -50,6 +50,7 @@
             this.dgvDoctorView.Name = "dgvDoctorView";
             this.dgvDoctorView.Size = new System.Drawing.Size(415, 207);
             this.dgvDoctorView.TabIndex = 1;
+            this.dgvDoctorView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoctorView_CellClick);
             // 
             // frmDoctor
             // 
