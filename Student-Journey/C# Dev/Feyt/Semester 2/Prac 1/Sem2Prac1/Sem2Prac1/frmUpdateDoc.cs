@@ -89,15 +89,15 @@ namespace Sem2Prac1
             try
             {
 
-                sql = "Update Doctor Set Doctor Doctor Surname = @sName,Doctor First Name = @fName,Doctor Cell No = @docCellNum Where Doctor ID = @ID";
+                sql = "Update Doctor Set  Doctor Surname = @sName,Doctor First Name = @fName,Doctor Cell No = @docCellNum Where Doctor ID = @ID";
                 conString = "Provider = Microsoft.Ace.OLEDB.12.0; Data Source = PracticeXYZ.accdb";
                 dbConn = new OleDbConnection(conString);
                 dbConn.Open();
                 dbCom = new OleDbCommand(sql, dbConn);
-                dbCom.Parameters.AddWithValue("@ID", txtDocID.Text);
-                dbCom.Parameters.AddWithValue("@sName", txtDocSurname.Text);
-                dbCom.Parameters.AddWithValue("@fName", txtDocFirstName.Text);
-                dbCom.Parameters.AddWithValue("@docCellNum", txtDocCellNum.Text);
+                dbCom.Parameters.AddWithValue("@ID", txtDocID.Text.ToString());
+                dbCom.Parameters.AddWithValue("@sName", txtDocSurname.Text).ToString();
+                dbCom.Parameters.AddWithValue("@fName", txtDocFirstName.Text.ToString());
+                dbCom.Parameters.AddWithValue("@docCellNum", txtDocCellNum.Text.ToString());
 
                 int x = dbCom.ExecuteNonQuery();
             }
