@@ -11,7 +11,7 @@
         <div>
             <h2>Calculator</h2>
             <asp:Label ID="lblMessage" runat="server" Text=" " BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Height="35px" Width="254px"></asp:Label>
-            <asp:Table ID="Table1" runat="server">
+            <asp:Table ID="Table1" runat="server" Width="444px">
 
                 <asp:TableRow>
                     <asp:TableCell>Action:</asp:TableCell>
