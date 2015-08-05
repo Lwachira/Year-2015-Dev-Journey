@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="AvoidCommonErrors.WebForm1" %>
+﻿<%@ Page Trace="true" Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="AvoidCommonErrors.WebForm1" %>
 
 <!DOCTYPE html>
 
