@@ -175,6 +175,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_Insert_Doctor";
             this.Text = "Form_Insert_Doctor";
+            this.Load += new System.EventHandler(this.Form_Insert_Doctor_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctor)).EndInit();

@@ -37,7 +37,7 @@ namespace Prac_2_Stored_Procedure
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           // MessageBox.Show("I built my app from the ground up since the last");
+            MessageBox.Show("I built my app from the ground up since the last");
 
             try
             {

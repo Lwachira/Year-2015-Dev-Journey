@@ -63,5 +63,10 @@ namespace Prac_2_Stored_Procedure
 
 
         }
+
+        private void Form_Insert_Doctor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
