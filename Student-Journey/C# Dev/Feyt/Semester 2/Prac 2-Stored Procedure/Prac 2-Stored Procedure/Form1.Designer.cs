@@ -31,11 +31,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgvAppointments = new System.Windows.Forms.DataGridView();
             this.formsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.appointmentsByDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvAppointments = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.delteUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.SuspendLayout();
@@ -63,37 +64,19 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // dgvAppointments
-            // 
-            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAppointments.Location = new System.Drawing.Point(12, 88);
-            this.dgvAppointments.Name = "dgvAppointments";
-            this.dgvAppointments.Size = new System.Drawing.Size(638, 207);
-            this.dgvAppointments.TabIndex = 2;
-            this.dgvAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointments_CellContentClick);
             // 
             // formsToolStripMenuItem
             // 
             this.formsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.appointmentsByDoctorToolStripMenuItem,
-            this.insertDoctorToolStripMenuItem});
+            this.insertDoctorToolStripMenuItem,
+            this.delteUpdateToolStripMenuItem});
             this.formsToolStripMenuItem.Name = "formsToolStripMenuItem";
             this.formsToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.formsToolStripMenuItem.Text = "Forms";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(225, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 22);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Doctor Practice";
             // 
             // appointmentsByDoctorToolStripMenuItem
             // 
@@ -108,6 +91,32 @@
             this.insertDoctorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.insertDoctorToolStripMenuItem.Text = "Insert_Doctor";
             this.insertDoctorToolStripMenuItem.Click += new System.EventHandler(this.insertDoctorToolStripMenuItem_Click);
+            // 
+            // dgvAppointments
+            // 
+            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointments.Location = new System.Drawing.Point(12, 88);
+            this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.Size = new System.Drawing.Size(638, 207);
+            this.dgvAppointments.TabIndex = 2;
+            this.dgvAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointments_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(225, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 22);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Doctor Practice";
+            // 
+            // delteUpdateToolStripMenuItem
+            // 
+            this.delteUpdateToolStripMenuItem.Name = "delteUpdateToolStripMenuItem";
+            this.delteUpdateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.delteUpdateToolStripMenuItem.Text = "Delete/Update";
+            this.delteUpdateToolStripMenuItem.Click += new System.EventHandler(this.delteUpdateToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -139,6 +148,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem appointmentsByDoctorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem insertDoctorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem delteUpdateToolStripMenuItem;
     }
 }
 

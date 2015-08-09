@@ -14,7 +14,7 @@ namespace Prac_2_Stored_Procedure
     public partial class Form1 : Form
     {
 
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace Prac_2_Stored_Procedure
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("I built my app from the ground up since the last");
+           // MessageBox.Show("I built my app from the ground up since the last");
 
             try
             {
@@ -49,7 +49,7 @@ namespace Prac_2_Stored_Procedure
                 dbAdapter.Fill(dtAppointments);
 
                 dgvAppointments.DataSource = dtAppointments;
-                
+
 
             }
             catch (Exception ex)
@@ -57,7 +57,7 @@ namespace Prac_2_Stored_Procedure
 
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void appointmentsByDoctorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,6 +73,14 @@ namespace Prac_2_Stored_Procedure
             Form_Insert_Doctor frmInsertDoc = new Form_Insert_Doctor();
             this.Visible = false;
             frmInsertDoc.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void delteUpdateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Update_Delete_Doctor frmUpdate = new Form_Update_Delete_Doctor();
+            this.Visible = false;
+            frmUpdate.ShowDialog();
             this.Visible = true;
         }
     }
