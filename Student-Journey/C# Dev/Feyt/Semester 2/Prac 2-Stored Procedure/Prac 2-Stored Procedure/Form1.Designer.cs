@@ -34,9 +34,9 @@
             this.formsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appointmentsByDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.delteUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.delteUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +92,13 @@
             this.insertDoctorToolStripMenuItem.Text = "Insert_Doctor";
             this.insertDoctorToolStripMenuItem.Click += new System.EventHandler(this.insertDoctorToolStripMenuItem_Click);
             // 
+            // delteUpdateToolStripMenuItem
+            // 
+            this.delteUpdateToolStripMenuItem.Name = "delteUpdateToolStripMenuItem";
+            this.delteUpdateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.delteUpdateToolStripMenuItem.Text = "Delete/Update";
+            this.delteUpdateToolStripMenuItem.Click += new System.EventHandler(this.delteUpdateToolStripMenuItem_Click);
+            // 
             // dgvAppointments
             // 
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -110,13 +117,6 @@
             this.label1.Size = new System.Drawing.Size(133, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Doctor Practice";
-            // 
-            // delteUpdateToolStripMenuItem
-            // 
-            this.delteUpdateToolStripMenuItem.Name = "delteUpdateToolStripMenuItem";
-            this.delteUpdateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.delteUpdateToolStripMenuItem.Text = "Delete/Update";
-            this.delteUpdateToolStripMenuItem.Click += new System.EventHandler(this.delteUpdateToolStripMenuItem_Click);
             // 
             // Form1
             // 

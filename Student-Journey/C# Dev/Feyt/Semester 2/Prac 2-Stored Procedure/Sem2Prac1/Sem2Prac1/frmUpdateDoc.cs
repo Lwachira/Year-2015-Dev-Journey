@@ -98,7 +98,6 @@ namespace Sem2Prac1
                 dbCom.Parameters.AddWithValue("@sName", txtDocSurname.Text).ToString();
                 dbCom.Parameters.AddWithValue("@fName", txtDocFirstName.Text.ToString());
                 dbCom.Parameters.AddWithValue("@docCellNum", txtDocCellNum.Text.ToString());
-
                 int x = dbCom.ExecuteNonQuery();
             }
             catch (Exception ex)
