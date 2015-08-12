@@ -30,6 +30,7 @@
         {
             this.dgvDoctor = new System.Windows.Forms.DataGridView();
             this.label = new System.Windows.Forms.Label();
+            this.cmbDoctorName = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +52,20 @@
             this.label.TabIndex = 1;
             this.label.Text = "Doctor";
             // 
+            // cmbDoctorName
+            // 
+            this.cmbDoctorName.FormattingEnabled = true;
+            this.cmbDoctorName.Location = new System.Drawing.Point(194, 342);
+            this.cmbDoctorName.Name = "cmbDoctorName";
+            this.cmbDoctorName.Size = new System.Drawing.Size(121, 21);
+            this.cmbDoctorName.TabIndex = 2;
+            // 
             // formDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 395);
+            this.Controls.Add(this.cmbDoctorName);
             this.Controls.Add(this.label);
             this.Controls.Add(this.dgvDoctor);
             this.Name = "formDoctor";
@@ -71,5 +81,6 @@
 
         private System.Windows.Forms.DataGridView dgvDoctor;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.ComboBox cmbDoctorName;
     }
 }
