@@ -43,7 +43,20 @@
                 End If
 
             End While
-            sum += (Double.Parse(mark1) + Double.Parse(mark2) + Double.Parse(mark3) + Double.Parse(mark4)) / 4
+
+            If currentRow(3).ToString().Contains("1") Then
+                mark1 = currentRow(4).ToString()
+            ElseIf currentRow(3).ToString().Contains("2") Then
+                mark2 = currentRow(4).ToString()
+            ElseIf currentRow(3).ToString().Contains("3") Then
+                mark3 = currentRow(4).ToString()
+            ElseIf currentRow(3).ToString().Contains("4") Then
+                mark4 = currentRow(4).ToString()
+
+                sum += (Double.Parse(mark1) + Double.Parse(mark2) + Double.Parse(mark3) + Double.Parse(mark4)) / 4
+
+            End If
+
             PrintLine(holdStudentNumber, studentName, mark1, mark2, mark3, mark4, sum)
 
         End Using
