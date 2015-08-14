@@ -20,7 +20,6 @@
             PrintReportHeadline()
             While Not myReader.EndOfData
 
-
                 If currentRow(3).ToString().Contains("1") Then
                     mark1 = currentRow(4).ToString()
                 ElseIf currentRow(3).ToString().Contains("2") Then
@@ -43,19 +42,13 @@
                     sum = 0
                 End If
 
-
-
             End While
-            sum = (Double.Parse(mark1) + Double.Parse(mark2) + Double.Parse(mark3) + Double.Parse(mark4)) / 4
+            sum += (Double.Parse(mark1) + Double.Parse(mark2) + Double.Parse(mark3) + Double.Parse(mark4)) / 4
             PrintLine(holdStudentNumber, studentName, mark1, mark2, mark3, mark4, sum)
 
         End Using
         Console.ReadLine()
     End Sub
-
-
-
-
 
     Private Sub PrintReportHeadline()
         Console.WriteLine("Final Marks Report")
