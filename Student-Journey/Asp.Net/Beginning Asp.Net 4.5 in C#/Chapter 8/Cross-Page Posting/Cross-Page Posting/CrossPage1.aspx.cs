@@ -7,7 +7,7 @@ namespace Cross_Page_Posting
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+        }
 
         public string FullName
         {
