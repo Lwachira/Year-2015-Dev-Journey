@@ -14,7 +14,18 @@
                 PrintHead()
                 subTotal += Integer.Parse(currentRow(3)) + Integer.Parse(currentRow(4)) + Integer.Parse(currentRow(5)) + Integer.Parse(currentRow(6))
 
-                average = subTotal / studentCount
+                average = subTotal / 4
+                PrintEachLine(currentRow, average)
+                subTotal = 0
+                While Not myReader.EndOfData
+                    currentRow = myReader.ReadFields()
+                    subTotal += Integer.Parse(currentRow(3)) + Integer.Parse(currentRow(4)) + Integer.Parse(currentRow(5)) + Integer.Parse(currentRow(6))
+
+                    average = subTotal / 4
+                    PrintEachLine(currentRow, average)
+                    subTotal = 0
+                End While
+
             End Using
         Catch ex As ArgumentException
 
@@ -23,7 +34,11 @@
         End Try
     End Sub
 
+    Private Sub PrintEachLine(currentRow() As String, average As Double)
+        Console.WriteLine(currentRow(0) + "  " + currentRow(1) + " " + currentRow(2).PadRight(10) + vbTab + currentRow(3) + "{0}" + currentRow(4) + "{0}" + currentRow(5) + "{0}" + currentRow(6) + "{0}" + average.ToString(), vbTab)
+    End Sub
+
     Private Sub PrintHead()
-        Console.WriteLine("Student# " + vbTab + "Student Name".PadRight(20) + "Mark 1 " + vbTab + " Mark 2 " + vbTab + " Mark 3 " + vbTab + " Mark 4 ")
+        Console.WriteLine("Student# " + " Student Name ".PadRight(15) + vbTab + "Mark 1 " + " Mark 2 " + " Mark 3 " + " Mark 4 " + "Average")
     End Sub
 End Module
