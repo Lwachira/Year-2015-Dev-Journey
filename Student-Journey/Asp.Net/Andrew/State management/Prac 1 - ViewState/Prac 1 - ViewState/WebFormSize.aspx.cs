@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Prac_1___ViewState
 {
@@ -11,7 +6,52 @@ namespace Prac_1___ViewState
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void btnIncrease_Click(object sender, EventArgs e)
+        {
+            int counter;
+            if (ViewState["Size"] == null)
+            {
+                counter = 1;
+            }
+            else
+            {
+                counter = (int)ViewState["Size"] + 1;
+            }
+            ViewState["Size"] = counter;
+            lblMessage.Text = "Size: " + counter.ToString();
+            if (counter >= 20)
+            {
+                btnIncrease.Enabled = false;
+            }
+            else
+            {
+                btnDecrease.Enabled = true;
+            }
+        }
+
+        protected void btnDecrease_Click(object sender, EventArgs e)
+        {
+            int counter;
+            if (ViewState["Size"] == null)
+            {
+                counter = 1;
+            }
+            else
+            {
+                counter = (int)ViewState["Size"] - 1;
+            }
+            ViewState["Size"] = counter;
+            lblMessage.Text = "Size: " + counter.ToString();
+            if (counter <= 0)
+            {
+                btnDecrease.Enabled = false;
+            }
+            else
+            {
+                btnIncrease.Enabled = true;
+            }
         }
     }
 }
