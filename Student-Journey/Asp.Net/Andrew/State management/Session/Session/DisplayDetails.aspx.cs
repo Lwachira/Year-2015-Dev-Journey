@@ -11,7 +11,10 @@ namespace Session
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Person"] != null)
+            {
+                lblMessage.Text = Session["Person"].ToString();
+            }
         }
     }
 }

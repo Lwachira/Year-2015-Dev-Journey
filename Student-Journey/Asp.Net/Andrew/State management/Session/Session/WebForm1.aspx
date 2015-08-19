@@ -18,7 +18,7 @@
 
             <br />
             <br />
-            <asp:Button ID="btnPage" runat="server" Text="Next Page" />
+            <asp:Button ID="btnPage" runat="server" Text="Next Page" OnClick="btnPage_Click" />
         </div>
     </form>
 </body>

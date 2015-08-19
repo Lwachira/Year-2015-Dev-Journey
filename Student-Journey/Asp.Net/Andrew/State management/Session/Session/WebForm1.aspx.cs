@@ -11,7 +11,15 @@ namespace Session
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void btnPage_Click(object sender, EventArgs e)
+        {
+            Person perosonOne = new Person(txtFName.Text, txtSName.Text);
+
+            Session["Person"] = perosonOne;
+
+            Response.Redirect("DisplayDetails.aspx");
         }
     }
 }
