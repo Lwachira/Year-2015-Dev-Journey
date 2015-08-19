@@ -11,7 +11,14 @@ namespace Prac_2_Query_String
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void btnPage_Click(object sender, EventArgs e)
+        {
+            string url = "DisplayDetails.aspx?";
+            url += "Item=" + txtFirstName.Text + " " + txtLastName.Text;
+
+            Response.Redirect(url);
         }
     }
 }
