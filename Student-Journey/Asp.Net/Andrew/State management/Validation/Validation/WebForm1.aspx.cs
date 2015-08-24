@@ -11,7 +11,13 @@ namespace Validation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void cmdOk_Click(object sender, EventArgs e)
+        {
+            if (!Page.IsValid) return;
+
+            lblMessage.Text = "cmd event handler executed";
         }
     }
 }
