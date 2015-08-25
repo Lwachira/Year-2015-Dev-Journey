@@ -11,12 +11,13 @@
         <div>
             A number (1 to 10):
             <asp:TextBox ID="txtValidated" runat="server" />
-            <%-- <asp:RangeValidator ID="RangeValidator" runat="server"
+
+            <asp:RangeValidator ID="RangeValidator" runat="server"
                 ErrorMessage="This Number Is Not In The Range"
                 ControlToValidate="txtValidated"
                 MaximumValue="10" MinimumValue="1"
                 ForeColor="Red" Font-Bold="true"
-                Type="Integer" />--%>
+                Type="Integer" />
 
             <asp:ValidationSummary ID="Errors" ForeColor="Red" runat="server" />
             <br />
