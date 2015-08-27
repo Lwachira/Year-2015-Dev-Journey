@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.grpTxtBox = new System.Windows.Forms.GroupBox();
+            this.txtRenalStatus = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEndDate = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtStartDate = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtShopID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,12 +46,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvRental = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtStartDate = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtEndDate = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtRenalStatus = new System.Windows.Forms.TextBox();
             this.grpTxtBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRental)).BeginInit();
@@ -72,6 +72,54 @@
             this.grpTxtBox.TabIndex = 8;
             this.grpTxtBox.TabStop = false;
             this.grpTxtBox.Text = "TextBox";
+            // 
+            // txtRenalStatus
+            // 
+            this.txtRenalStatus.Location = new System.Drawing.Point(87, 178);
+            this.txtRenalStatus.Name = "txtRenalStatus";
+            this.txtRenalStatus.Size = new System.Drawing.Size(100, 20);
+            this.txtRenalStatus.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 178);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "RenalStatus";
+            // 
+            // txtEndDate
+            // 
+            this.txtEndDate.Location = new System.Drawing.Point(84, 147);
+            this.txtEndDate.Name = "txtEndDate";
+            this.txtEndDate.Size = new System.Drawing.Size(100, 20);
+            this.txtEndDate.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "End Date";
+            // 
+            // txtStartDate
+            // 
+            this.txtStartDate.Location = new System.Drawing.Point(84, 115);
+            this.txtStartDate.Name = "txtStartDate";
+            this.txtStartDate.Size = new System.Drawing.Size(100, 20);
+            this.txtStartDate.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "StartDate";
             // 
             // txtShopID
             // 
@@ -143,6 +191,7 @@
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -164,63 +213,19 @@
             // 
             // dgvRental
             // 
-            this.dgvRental.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvRental.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvRental.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvRental.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRental.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRental.Location = new System.Drawing.Point(287, 12);
+            this.dgvRental.Location = new System.Drawing.Point(267, 12);
             this.dgvRental.Name = "dgvRental";
-            this.dgvRental.Size = new System.Drawing.Size(240, 429);
+            this.dgvRental.Size = new System.Drawing.Size(260, 429);
             this.dgvRental.TabIndex = 9;
+            this.dgvRental.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRental_CellClick);
             this.dgvRental.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRental_CellContentClick);
             this.dgvRental.SelectionChanged += new System.EventHandler(this.dgvRental_SelectionChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "StartDate";
-            // 
-            // txtStartDate
-            // 
-            this.txtStartDate.Location = new System.Drawing.Point(84, 115);
-            this.txtStartDate.Name = "txtStartDate";
-            this.txtStartDate.Size = new System.Drawing.Size(100, 20);
-            this.txtStartDate.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "End Date";
-            // 
-            // txtEndDate
-            // 
-            this.txtEndDate.Location = new System.Drawing.Point(84, 147);
-            this.txtEndDate.Name = "txtEndDate";
-            this.txtEndDate.Size = new System.Drawing.Size(100, 20);
-            this.txtEndDate.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 178);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "RenalStatus";
-            // 
-            // txtRenalStatus
-            // 
-            this.txtRenalStatus.Location = new System.Drawing.Point(87, 178);
-            this.txtRenalStatus.Name = "txtRenalStatus";
-            this.txtRenalStatus.Size = new System.Drawing.Size(100, 20);
-            this.txtRenalStatus.TabIndex = 11;
             // 
             // frmRental
             // 
@@ -234,6 +239,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmRental";
             this.Text = "frmRental";
+            this.Load += new System.EventHandler(this.frmRental_Load);
             this.grpTxtBox.ResumeLayout(false);
             this.grpTxtBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
