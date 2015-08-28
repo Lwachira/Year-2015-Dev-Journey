@@ -170,6 +170,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmClient";
             this.Text = "frmClient";
+            this.Load += new System.EventHandler(this.frmClient_Load);
             this.grpTxtBox.ResumeLayout(false);
             this.grpTxtBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);

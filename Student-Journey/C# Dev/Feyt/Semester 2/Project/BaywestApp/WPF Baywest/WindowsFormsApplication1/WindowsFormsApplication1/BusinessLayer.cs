@@ -74,5 +74,44 @@ namespace WindowsFormsApplication1
 
             return x;
         }
+
+        public int InsertRental(classRental r)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+
+                sqlCon.Open();
+            int x = 1;
+            try
+            {
+                string sql = "spInsertRental '" + r.RentalID + "','" + r.ClientID + "','" + r.ShopID + "','" + r.StartDate + "','" + r.EndDate + "','" + r.RentalStatus + "'";
+                sqlCom = new SqlCommand(sql, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
+
+        public int DeleteRental(classRental r)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+
+                sqlCon.Open();
+            int x = 1;
+            try
+            {
+                string sql = "spDeleteRental '" + r.RentalID + "'";
+                sqlCom = new SqlCommand(sql, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
     }
 }

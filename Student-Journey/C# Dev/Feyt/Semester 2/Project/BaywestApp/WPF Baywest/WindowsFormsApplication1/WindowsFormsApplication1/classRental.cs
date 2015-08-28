@@ -27,6 +27,21 @@ namespace WindowsFormsApplication1
             this.rentalID = rentalID;
         }
 
+        public classRental(int rentalID, int clientID, int shopID, string startDate, string endDate, string rentalStatus)
+        {
+            this.clientID = clientID;
+            this.shopID = shopID;
+            this.startDate = startDate;
+            this.endDate = endDate;
+            this.rentalStatus = rentalStatus;
+            this.rentalID = rentalID;
+        }
+
+        public classRental(int rentalID)
+        {
+            this.rentalID = rentalID;
+        }
+
         public classRental()
         {
         }
@@ -75,6 +90,16 @@ namespace WindowsFormsApplication1
         public int UpdateCall()
         {
             return bl.UpdateRental(this);
+        }
+
+        public int InsertCall()
+        {
+            return bl.InsertRental(this);
+        }
+
+        public int DeleteCall()
+        {
+            return bl.DeleteRental(this);
         }
     }
 }

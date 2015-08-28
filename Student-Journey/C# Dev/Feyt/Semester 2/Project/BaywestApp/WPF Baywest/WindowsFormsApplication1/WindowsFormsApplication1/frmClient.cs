@@ -16,5 +16,9 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void frmClient_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

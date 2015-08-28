@@ -55,6 +55,7 @@ namespace WindowsFormsApplication1
             {
                 cl = new classRental(int.Parse(txtClientID.Text), int.Parse(txtShopID.Text), txtStartDate.Text, txtEndDate.Text, txtRenalStatus.Text, int.Parse(txtRentalID.Text));
                 dgvRental.DataSource = cl.UpdateCall();
+                dgvRental.DataSource = cl.GetAllCalls();
             }
             catch (Exception ex)
             {
@@ -62,7 +63,34 @@ namespace WindowsFormsApplication1
             }
 
             //Immediate refreshing
-            dgvRental.DataSource = cl.GetAllCalls();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cl = new classRental(int.Parse(txtRentalID.Text), int.Parse(txtClientID.Text), int.Parse(txtShopID.Text), txtStartDate.Text, txtEndDate.Text, txtRenalStatus.Text);
+                dgvRental.DataSource = cl.InsertCall();
+                dgvRental.DataSource = cl.GetAllCalls();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cl = new classRental(int.Parse(txtRentalID.Text));
+                dgvRental.DataSource = cl.DeleteCall();
+                dgvRental.DataSource = cl.GetAllCalls();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
