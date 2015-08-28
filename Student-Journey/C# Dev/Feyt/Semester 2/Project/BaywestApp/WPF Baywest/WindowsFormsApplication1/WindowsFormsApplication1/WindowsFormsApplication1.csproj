@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\BusinessLayer.cs" />
+    <Compile Include="Class\classClient.cs" />
     <Compile Include="Class\classRental.cs" />
     <Compile Include="Class\classShop.cs" />
     <Compile Include="Form1.cs">

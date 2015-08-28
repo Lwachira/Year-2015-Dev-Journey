@@ -40,7 +40,23 @@ namespace WindowsFormsApplication1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            cs = new classShop(int.Parse(txtShopID.Text), txtShopName.Text, txtShopSize.Text);
+            dgvShop.DataSource = cs.InsertShop();
+            dgvShop.DataSource = cs.GetAllShop();
+        }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            cs = new classShop(int.Parse(txtShopID.Text));
+            dgvShop.DataSource = cs.DeleteShop();
+            dgvShop.DataSource = cs.GetAllShop();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            cs = new classShop(int.Parse(txtShopID.Text), txtShopName.Text, txtShopSize.Text);
+            dgvShop.DataSource = cs.UpdateShop();
+            dgvShop.DataSource = cs.GetAllShop();
         }
     }
 }

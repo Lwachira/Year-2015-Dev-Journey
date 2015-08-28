@@ -25,6 +25,11 @@ namespace WindowsFormsApplication1
             this.shopSize = shopSize;
         }
 
+        public classShop(int shopID)
+        {
+            this.shopID = shopID;
+        }
+
         public int ShopID
         {
             get { return shopID; }
@@ -46,6 +51,21 @@ namespace WindowsFormsApplication1
         public DataTable GetAllShop()
         {
             return bl.GetShop();
+        }
+
+        public int InsertShop()
+        {
+            return bl.InsertShop(this);
+        }
+
+        public int DeleteShop()
+        {
+            return bl.DeleteShop(this);
+        }
+
+        public int UpdateShop()
+        {
+            return bl.updateShop(this);
         }
     }
 }

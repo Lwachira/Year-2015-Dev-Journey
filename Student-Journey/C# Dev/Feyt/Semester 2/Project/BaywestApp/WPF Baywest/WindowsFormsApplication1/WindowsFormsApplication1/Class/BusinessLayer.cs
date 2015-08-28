@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "hi");
+                MessageBox.Show(ex.Message);
             }
 
             return x;
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication1
             return dbShop;
         }
 
-        public int InsertShop(classRental cr)
+        public int InsertShop(classShop cr)
         {
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1
 
             try
             {
-                string sqlInsert = "spInsert ' ";
+                string sqlInsert = "spInsertShop ' " + cr.ShopID + "','" + cr.ShopName + "','" + cr.ShopSize + "'";
                 sqlCom = new SqlCommand(sqlInsert, sqlCon);
                 x = sqlCom.ExecuteNonQuery();
             }
@@ -153,6 +153,68 @@ namespace WindowsFormsApplication1
             }
 
             return x;
+        }
+
+        public int DeleteShop(classShop cr)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+
+                sqlCon.Open();
+            int x = 1;
+            try
+            {
+                string sql = "spDeleteShop '" + cr.ShopID + "'";
+                sqlCom = new SqlCommand(sql, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int updateShop(classShop cr)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+
+                sqlCon.Open();
+
+            int x = 1;
+
+            DataTable dbUpRental = new DataTable();
+            try
+            {
+                string sql = "spUpdateShop '" + cr.ShopID + "','" + cr.ShopName + "','" + cr.ShopSize + "'";
+                sqlCom = new SqlCommand(sql, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
+
+        public DataTable GetAllClient()
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+
+                sqlCon.Open();
+            DataTable dbShop = new DataTable();
+            try
+            {
+                sqlCom = new SqlCommand("spGetAllClient", sqlCon);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(dbShop);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dbShop;
         }
     }
 }
