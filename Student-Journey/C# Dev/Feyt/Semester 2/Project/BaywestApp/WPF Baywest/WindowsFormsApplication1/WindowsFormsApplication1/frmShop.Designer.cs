@@ -85,6 +85,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // grpTxtBox
             // 
@@ -152,13 +153,15 @@
             // 
             // dgvShop
             // 
-            this.dgvShop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvShop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvShop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvShop.Location = new System.Drawing.Point(287, 12);
             this.dgvShop.Name = "dgvShop";
             this.dgvShop.Size = new System.Drawing.Size(240, 436);
             this.dgvShop.TabIndex = 6;
+            this.dgvShop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvShop_CellClick);
             // 
             // frmShop
             // 
@@ -172,6 +175,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmShop";
             this.Text = "frmShop";
+            this.Load += new System.EventHandler(this.frmShop_Load);
             this.groupBox1.ResumeLayout(false);
             this.grpTxtBox.ResumeLayout(false);
             this.grpTxtBox.PerformLayout();
