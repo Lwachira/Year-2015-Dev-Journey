@@ -64,7 +64,7 @@ namespace WindowsFormsApplication1.Class
 
         public int ShopID
         {
-            get { return shopID }
+            get { return shopID; }
             set { shopID = value; }
         }
 
@@ -80,24 +80,24 @@ namespace WindowsFormsApplication1.Class
             set { serviceID = value; }
         }
 
-        public DataTable GetAllLogin()
+        public DataTable GetAllAsignedCall()
         {
-            return bl.GetAllLogin();
+            return bl.GetAllAssignedCall();
         }
 
-        public int InsertLogin()
-        {
-            return bl.InsertLogin(this);
-        }
+        //public int InsertAllAssignedCall()
+        //{
+        //    return bl.InsertAllAssignedCall(this);
+        //}
 
-        public int DeleteLogin()
-        {
-            return bl.DeleteLogin(this);
-        }
+        //public int DeleteAllAssignedCall()
+        //{
+        //    return bl.DeleteAllAssignedCall(this);
+        //}
 
-        public int UpdateLogin()
-        {
-            return bl.UpdateLogin(this);
-        }
+        //public int UpdateAllAssignedCall()
+        //{
+        //    return bl.UpdateAllAssignedCall(this);
+        //}
     }
 }

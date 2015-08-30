@@ -631,5 +631,93 @@ namespace WindowsFormsApplication1
 
             return x;
         }
+
+        public DataTable GetAllAssignedCall()
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+
+                sqlCon.Open();
+            DataTable db = new DataTable();
+            try
+            {
+                sqlCom = new SqlCommand("spGetAllAssignedCall", sqlCon);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(db);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return db;
+        }
+
+        //public int InsertAllAssignedCall(classLogin cc)
+        //{
+        //    if (sqlCon.State == ConnectionState.Closed)
+        //        sqlCon.Open();
+
+        //    int x = 1;
+
+        //    try
+        //    {
+        //        string sqlInsert = "spInsertLogin ' " + cc.UserName + "','" + cc.UserRank + "','" + cc.UserID + "','" + cc.ClientID + "'";
+        //        sqlCom = new SqlCommand(sqlInsert, sqlCon);
+        //        x = sqlCom.ExecuteNonQuery();
+        //    }
+        //    catch (SqlException sx)
+        //    {
+        //        MessageBox.Show(sx.Message);
+        //        MessageBox.Show("Make sure that your using data that exist's ");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+
+        //    return x;
+        //}
+
+        //public int DeleteAllAssignedCall(classLogin cc)
+        //{
+        //    if (sqlCon.State == ConnectionState.Closed)
+
+        //        sqlCon.Open();
+        //    int x = 1;
+        //    try
+        //    {
+        //        string sql = "spDeleteLogin '" + cc.UserID + "'";
+        //        sqlCom = new SqlCommand(sql, sqlCon);
+        //        x = sqlCom.ExecuteNonQuery();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    return x;
+        //}
+
+        //public int UpdateAllAssignedCAll(classLogin cc)
+        //{
+        //    if (sqlCon.State == ConnectionState.Closed)
+
+        //        sqlCon.Open();
+
+        //    int x = 1;
+
+        //    DataTable dbUpRental = new DataTable();
+        //    try
+        //    {
+        //        string sql = "spUpdateLogin '" + cc.UserName + "','" + cc.UserRank + "','" + cc.UserID + "','" + cc.ClientID + "'";
+        //        sqlCom = new SqlCommand(sql, sqlCon);
+        //        x = sqlCom.ExecuteNonQuery();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+
+        //    return x;
+        //}
     }
 }
