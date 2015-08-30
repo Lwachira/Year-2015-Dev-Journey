@@ -56,14 +56,23 @@ namespace WindowsFormsApplication1.AdminForms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            cl = new classLogin(txtUserName.Text, txtUserRank.Text, int.Parse(txtUserID.Text), int.Parse(txtClientID.Text));
+            dgvUser.DataSource = cl.InsertLogin();
+            dgvUser.DataSource = cl.GetAllLogin();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            cl = new classLogin(int.Parse(txtUserID.Text));
+            dgvUser.DataSource = cl.DeleteLogin();
+            dgvUser.DataSource = cl.GetAllLogin();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            cl = new classLogin(txtUserName.Text, txtUserRank.Text, int.Parse(txtUserID.Text), int.Parse(txtClientID.Text));
+            dgvUser.DataSource = cl.UpdateLogin();
+            dgvUser.DataSource = cl.GetAllLogin();
         }
     }
 }

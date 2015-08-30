@@ -564,72 +564,72 @@ namespace WindowsFormsApplication1
             return db;
         }
 
-        //public int InsertLoign(classCalls cc)
-        //{
-        //    if (sqlCon.State == ConnectionState.Closed)
-        //        sqlCon.Open();
+        public int InsertLogin(classLogin cc)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
 
-        //    int x = 1;
+            int x = 1;
 
-        //    try
-        //    {
-        //        string sqlInsert = "spInsertLogin ' " + cc.CallID + "','" + cc.CallType + "','" + cc.ProblemDescription + "'";
-        //        sqlCom = new SqlCommand(sqlInsert, sqlCon);
-        //        x = sqlCom.ExecuteNonQuery();
-        //    }
-        //    catch (SqlException sx)
-        //    {
-        //        MessageBox.Show(sx.Message);
-        //        MessageBox.Show("Make sure that your using data that exist's ");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
+            try
+            {
+                string sqlInsert = "spInsertLogin ' " + cc.UserName + "','" + cc.UserRank + "','" + cc.UserID + "','" + cc.ClientID + "'";
+                sqlCom = new SqlCommand(sqlInsert, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (SqlException sx)
+            {
+                MessageBox.Show(sx.Message);
+                MessageBox.Show("Make sure that your using data that exist's ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-        //    return x;
-        //}
+            return x;
+        }
 
-        //public int DeleteLogin(classLogin cc)
-        //{
-        //    if (sqlCon.State == ConnectionState.Closed)
+        public int DeleteLogin(classLogin cc)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
 
-        //        sqlCon.Open();
-        //    int x = 1;
-        //    try
-        //    {
-        //        string sql = "spDeleteLogin '" + cc.CallID + "'";
-        //        sqlCom = new SqlCommand(sql, sqlCon);
-        //        x = sqlCom.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //    return x;
-        //}
+                sqlCon.Open();
+            int x = 1;
+            try
+            {
+                string sql = "spDeleteLogin '" + cc.UserID + "'";
+                sqlCom = new SqlCommand(sql, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
 
-        //public int UpdateLogin(classLogin cc)
-        //{
-        //    if (sqlCon.State == ConnectionState.Closed)
+        public int UpdateLogin(classLogin cc)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
 
-        //        sqlCon.Open();
+                sqlCon.Open();
 
-        //    int x = 1;
+            int x = 1;
 
-        //    DataTable dbUpRental = new DataTable();
-        //    try
-        //    {
-        //        string sql = "spUpdateLogin '" + cc.CallID + "','" + cc.CallType + "','" + cc.ProblemDescription + "'";
-        //        sqlCom = new SqlCommand(sql, sqlCon);
-        //        x = sqlCom.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
+            DataTable dbUpRental = new DataTable();
+            try
+            {
+                string sql = "spUpdateLogin '" + cc.UserName + "','" + cc.UserRank + "','" + cc.UserID + "','" + cc.ClientID + "'";
+                sqlCom = new SqlCommand(sql, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-        //    return x;
-        //}
+            return x;
+        }
     }
 }

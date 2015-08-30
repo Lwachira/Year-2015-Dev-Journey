@@ -62,19 +62,19 @@ namespace WindowsFormsApplication1.Class
             return bl.GetAllLogin();
         }
 
-        //public int InsertLogin()
-        //{
-        //    return bl.InsertLogin(this);
-        //}
+        public int InsertLogin()
+        {
+            return bl.InsertLogin(this);
+        }
 
-        //public int DeleteLogin()
-        //{
-        //    return bl.DeleteLogin(this);
-        //}
+        public int DeleteLogin()
+        {
+            return bl.DeleteLogin(this);
+        }
 
-        //public int UpdateLogin()
-        //{
-        //    return bl.UpdateLogin(this);
-        //}
+        public int UpdateLogin()
+        {
+            return bl.UpdateLogin(this);
+        }
     }
 }

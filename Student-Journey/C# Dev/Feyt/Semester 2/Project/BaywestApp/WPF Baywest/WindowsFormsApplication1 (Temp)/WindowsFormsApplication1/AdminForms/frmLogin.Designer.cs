@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpTxtBox = new System.Windows.Forms.GroupBox();
+            this.txtClientID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtUserRank = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtClientID = new System.Windows.Forms.TextBox();
             this.grpTxtBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
@@ -65,11 +65,26 @@
             this.grpTxtBox.TabStop = false;
             this.grpTxtBox.Text = "TextBox";
             // 
+            // txtClientID
+            // 
+            this.txtClientID.Location = new System.Drawing.Point(87, 121);
+            this.txtClientID.Name = "txtClientID";
+            this.txtClientID.Size = new System.Drawing.Size(100, 20);
+            this.txtClientID.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Client ID";
+            // 
             // txtUserRank
             // 
             this.txtUserRank.Location = new System.Drawing.Point(85, 54);
             this.txtUserRank.Name = "txtUserRank";
-            this.txtUserRank.ReadOnly = true;
             this.txtUserRank.Size = new System.Drawing.Size(100, 20);
             this.txtUserRank.TabIndex = 5;
             // 
@@ -104,7 +119,6 @@
             // 
             this.txtUserName.Location = new System.Drawing.Point(86, 90);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.ReadOnly = true;
             this.txtUserName.Size = new System.Drawing.Size(100, 20);
             this.txtUserName.TabIndex = 1;
             // 
@@ -112,7 +126,6 @@
             // 
             this.txtUserID.Location = new System.Drawing.Point(84, 19);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.ReadOnly = true;
             this.txtUserID.Size = new System.Drawing.Size(100, 20);
             this.txtUserID.TabIndex = 0;
             // 
@@ -173,23 +186,6 @@
             this.dgvUser.TabIndex = 10;
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             this.dgvUser.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_RowEnter);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Client ID";
-            // 
-            // txtClientID
-            // 
-            this.txtClientID.Location = new System.Drawing.Point(87, 121);
-            this.txtClientID.Name = "txtClientID";
-            this.txtClientID.ReadOnly = true;
-            this.txtClientID.Size = new System.Drawing.Size(100, 20);
-            this.txtClientID.TabIndex = 12;
             // 
             // frmLogin
             // 
