@@ -196,7 +196,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvUser);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.Text = "Login Details";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.grpTxtBox.ResumeLayout(false);
             this.grpTxtBox.PerformLayout();

@@ -51,5 +51,11 @@ namespace WindowsFormsApplication1
             dgvShop.DataSource = cs.UpdateShop();
             dgvShop.DataSource = cs.GetAllShop();
         }
+
+        private void rentalAgreementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRental rental = new frmRental();
+            rental.ShowDialog();
+        }
     }
 }

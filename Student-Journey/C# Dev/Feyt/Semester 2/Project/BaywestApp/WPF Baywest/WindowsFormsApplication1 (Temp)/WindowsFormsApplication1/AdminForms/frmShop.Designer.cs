@@ -41,9 +41,15 @@
             this.txtShopName = new System.Windows.Forms.TextBox();
             this.txtShopID = new System.Windows.Forms.TextBox();
             this.dgvShop = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rentalAgreementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shopCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shopServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.grpTxtBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -99,7 +105,7 @@
             this.grpTxtBox.Controls.Add(this.label1);
             this.grpTxtBox.Controls.Add(this.txtShopName);
             this.grpTxtBox.Controls.Add(this.txtShopID);
-            this.grpTxtBox.Location = new System.Drawing.Point(12, 12);
+            this.grpTxtBox.Location = new System.Drawing.Point(12, 35);
             this.grpTxtBox.Name = "grpTxtBox";
             this.grpTxtBox.Size = new System.Drawing.Size(228, 239);
             this.grpTxtBox.TabIndex = 4;
@@ -159,11 +165,54 @@
             this.dgvShop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvShop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShop.Location = new System.Drawing.Point(383, 12);
+            this.dgvShop.Location = new System.Drawing.Point(395, 28);
             this.dgvShop.Name = "dgvShop";
             this.dgvShop.Size = new System.Drawing.Size(462, 440);
             this.dgvShop.TabIndex = 6;
             this.dgvShop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvShop_CellClick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.DarkCyan;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(857, 24);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.BackColor = System.Drawing.Color.DarkCyan;
+            this.viewToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rentalAgreementToolStripMenuItem,
+            this.shopCallToolStripMenuItem,
+            this.shopServiceToolStripMenuItem});
+            this.viewToolStripMenuItem.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.viewToolStripMenuItem.Text = "Quick Access";
+            // 
+            // rentalAgreementToolStripMenuItem
+            // 
+            this.rentalAgreementToolStripMenuItem.Name = "rentalAgreementToolStripMenuItem";
+            this.rentalAgreementToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.rentalAgreementToolStripMenuItem.Text = "RentalAgreement";
+            this.rentalAgreementToolStripMenuItem.Click += new System.EventHandler(this.rentalAgreementToolStripMenuItem_Click);
+            // 
+            // shopCallToolStripMenuItem
+            // 
+            this.shopCallToolStripMenuItem.Name = "shopCallToolStripMenuItem";
+            this.shopCallToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.shopCallToolStripMenuItem.Text = "ShopCall";
+            // 
+            // shopServiceToolStripMenuItem
+            // 
+            this.shopServiceToolStripMenuItem.Name = "shopServiceToolStripMenuItem";
+            this.shopServiceToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.shopServiceToolStripMenuItem.Text = "ShopService";
             // 
             // frmShop
             // 
@@ -173,6 +222,7 @@
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Baywest;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(857, 464);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvShop);
             this.Controls.Add(this.grpTxtBox);
             this.Controls.Add(this.groupBox1);
@@ -184,7 +234,10 @@
             this.grpTxtBox.ResumeLayout(false);
             this.grpTxtBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -202,5 +255,10 @@
         private System.Windows.Forms.TextBox txtShopName;
         private System.Windows.Forms.TextBox txtShopID;
         private System.Windows.Forms.DataGridView dgvShop;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rentalAgreementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shopCallToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shopServiceToolStripMenuItem;
     }
 }

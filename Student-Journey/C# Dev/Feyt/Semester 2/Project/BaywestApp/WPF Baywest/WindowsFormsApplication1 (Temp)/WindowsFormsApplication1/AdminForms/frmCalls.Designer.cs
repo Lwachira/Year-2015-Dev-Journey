@@ -41,9 +41,16 @@
             this.txtCallType = new System.Windows.Forms.TextBox();
             this.txtCallID = new System.Windows.Forms.TextBox();
             this.dgvCalls = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.assignedCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.externalCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.internalCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shopCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.grpTxtBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalls)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -99,7 +106,7 @@
             this.grpTxtBox.Controls.Add(this.label1);
             this.grpTxtBox.Controls.Add(this.txtCallType);
             this.grpTxtBox.Controls.Add(this.txtCallID);
-            this.grpTxtBox.Location = new System.Drawing.Point(12, 12);
+            this.grpTxtBox.Location = new System.Drawing.Point(10, 31);
             this.grpTxtBox.Name = "grpTxtBox";
             this.grpTxtBox.Size = new System.Drawing.Size(228, 239);
             this.grpTxtBox.TabIndex = 11;
@@ -159,11 +166,60 @@
             this.dgvCalls.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCalls.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCalls.Location = new System.Drawing.Point(383, 12);
+            this.dgvCalls.Location = new System.Drawing.Point(389, 29);
             this.dgvCalls.Name = "dgvCalls";
             this.dgvCalls.Size = new System.Drawing.Size(462, 440);
             this.dgvCalls.TabIndex = 12;
             this.dgvCalls.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCalls_CellClick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.DarkCyan;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(857, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.BackColor = System.Drawing.Color.DarkCyan;
+            this.viewToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.assignedCallToolStripMenuItem,
+            this.externalCallToolStripMenuItem,
+            this.internalCallToolStripMenuItem,
+            this.shopCallToolStripMenuItem});
+            this.viewToolStripMenuItem.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.viewToolStripMenuItem.Text = "Quick Access";
+            // 
+            // assignedCallToolStripMenuItem
+            // 
+            this.assignedCallToolStripMenuItem.Name = "assignedCallToolStripMenuItem";
+            this.assignedCallToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.assignedCallToolStripMenuItem.Text = "AssignedCall";
+            // 
+            // externalCallToolStripMenuItem
+            // 
+            this.externalCallToolStripMenuItem.Name = "externalCallToolStripMenuItem";
+            this.externalCallToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.externalCallToolStripMenuItem.Text = "ExternalCall";
+            // 
+            // internalCallToolStripMenuItem
+            // 
+            this.internalCallToolStripMenuItem.Name = "internalCallToolStripMenuItem";
+            this.internalCallToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.internalCallToolStripMenuItem.Text = "InternalCall";
+            // 
+            // shopCallToolStripMenuItem
+            // 
+            this.shopCallToolStripMenuItem.Name = "shopCallToolStripMenuItem";
+            this.shopCallToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.shopCallToolStripMenuItem.Text = "ShopCall";
             // 
             // frmCalls
             // 
@@ -173,6 +229,7 @@
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Baywest;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(857, 464);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpTxtBox);
             this.Controls.Add(this.dgvCalls);
@@ -184,7 +241,10 @@
             this.grpTxtBox.ResumeLayout(false);
             this.grpTxtBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalls)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -202,5 +262,11 @@
         private System.Windows.Forms.TextBox txtCallType;
         private System.Windows.Forms.TextBox txtCallID;
         private System.Windows.Forms.DataGridView dgvCalls;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem assignedCallToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem externalCallToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem internalCallToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shopCallToolStripMenuItem;
     }
 }

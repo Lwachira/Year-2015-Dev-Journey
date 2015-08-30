@@ -84,8 +84,14 @@ namespace WindowsFormsApplication1
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+        }
 
+        private void assignedCallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAssignedCall assignedCall = new frmAssignedCall();
+            this.Visible = false;
+            assignedCall.ShowDialog();
+            this.Visible = true;
         }
     }
 }

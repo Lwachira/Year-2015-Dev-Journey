@@ -36,6 +36,7 @@
             this.serviceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.staffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.callsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.assignedCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -71,49 +72,58 @@
             // rentalToolStripMenuItem
             // 
             this.rentalToolStripMenuItem.Name = "rentalToolStripMenuItem";
-            this.rentalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rentalToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.rentalToolStripMenuItem.Text = "Rental";
             this.rentalToolStripMenuItem.Click += new System.EventHandler(this.rentalToolStripMenuItem_Click);
             // 
             // shopToolStripMenuItem
             // 
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.shopToolStripMenuItem.Text = "Shop";
             this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
             // 
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.clientToolStripMenuItem.Text = "Client";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
             // serviceToolStripMenuItem
             // 
             this.serviceToolStripMenuItem.Name = "serviceToolStripMenuItem";
-            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.serviceToolStripMenuItem.Text = "Service";
             this.serviceToolStripMenuItem.Click += new System.EventHandler(this.serviceToolStripMenuItem_Click);
             // 
             // staffToolStripMenuItem
             // 
             this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            this.staffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.staffToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.staffToolStripMenuItem.Text = "Staff";
             this.staffToolStripMenuItem.Click += new System.EventHandler(this.staffToolStripMenuItem_Click_1);
             // 
             // callsToolStripMenuItem
             // 
+            this.callsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.assignedCallToolStripMenuItem});
             this.callsToolStripMenuItem.Name = "callsToolStripMenuItem";
-            this.callsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.callsToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.callsToolStripMenuItem.Text = "Calls";
             this.callsToolStripMenuItem.Click += new System.EventHandler(this.callsToolStripMenuItem_Click);
+            // 
+            // assignedCallToolStripMenuItem
+            // 
+            this.assignedCallToolStripMenuItem.Name = "assignedCallToolStripMenuItem";
+            this.assignedCallToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.assignedCallToolStripMenuItem.Text = "AssignedCall";
+            this.assignedCallToolStripMenuItem.Click += new System.EventHandler(this.assignedCallToolStripMenuItem_Click);
             // 
             // loginDetailsToolStripMenuItem
             // 
             this.loginDetailsToolStripMenuItem.Name = "loginDetailsToolStripMenuItem";
-            this.loginDetailsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loginDetailsToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.loginDetailsToolStripMenuItem.Text = "LoginDetails";
             this.loginDetailsToolStripMenuItem.Click += new System.EventHandler(this.loginDetailsToolStripMenuItem_Click);
             // 
@@ -126,7 +136,7 @@
             this.ClientSize = new System.Drawing.Size(586, 434);
             this.Controls.Add(this.menuStrip1);
             this.Name = "AdminHome";
-            this.Text = "AdminHome";
+            this.Text = "Admin Home";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -145,5 +155,6 @@
         private System.Windows.Forms.ToolStripMenuItem staffToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem callsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem assignedCallToolStripMenuItem;
     }
 }

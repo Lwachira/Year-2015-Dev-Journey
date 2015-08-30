@@ -148,6 +148,9 @@
     <EmbeddedResource Include="AdminForms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\frmAssignedCall.resx">
+      <DependentUpon>frmAssignedCall.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\frmCalls.resx">
       <DependentUpon>frmCalls.cs</DependentUpon>
     </EmbeddedResource>
