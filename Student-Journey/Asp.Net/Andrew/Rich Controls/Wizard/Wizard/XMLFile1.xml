@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Advertisements>
+  <Advertisements>
 
-  <Ad>
-    <ImageUrl>~\Images\reddit.png</ImageUrl>
-    <NavigateUrl>https://www.reddit.com/r/learnprogramming/</NavigateUrl>
-    <AlternateText>Redd it Learn programming</AlternateText>
-    <Impressions>1</Impressions>
-    <Keyword>Learn</Keyword>
-    <Height>300px</Height>
-  </Ad>
+    <Ad>
+      <ImageUrl>~\Images\reddit.png</ImageUrl>
+      <NavigateUrl>https://www.reddit.com/r/learnprogramming/</NavigateUrl>
+      <AlternateText>Redd it Learn programming</AlternateText>
+      <Impressions>1</Impressions>
+      <Keyword>Learn</Keyword>
+      <Height>300px</Height>
+    </Ad>
 
-  <Ad>
-    <ImageUrl>~\Images\Quora.png</ImageUrl>
+    <Ad>
+      <ImageUrl>~\Images\Quora.png</ImageUrl>
 
-    <NavigateUrl>http://www.quora.com/</NavigateUrl>
-    <AlternateText>Quora</AlternateText>
-    <Impressions>1</Impressions>
-    <Keyword>News</Keyword>
-    <Height>300px</Height>
-  </Ad>
+      <NavigateUrl>http://www.quora.com/</NavigateUrl>
+      <AlternateText>Quora</AlternateText>
+      <Impressions>1</Impressions>
+      <Keyword>News</Keyword>
+      <Height>300px</Height>
+    </Ad>
 
-  <Ad>
-    <ImageUrl>~\Images\myBroadband.PNG</ImageUrl>
+    <Ad>
+      <ImageUrl>~\Images\myBroadband.PNG</ImageUrl>
 
-    <NavigateUrl>http://mybroadband.co.za/news/</NavigateUrl>
-    <AlternateText>My Broadband</AlternateText>
-    <Impressions>1</Impressions>
-    <Keyword>News</Keyword>
-    <Height>300px</Height>
-  </Ad>
-</Advertisements>
+      <NavigateUrl>http://mybroadband.co.za/news/</NavigateUrl>
+      <AlternateText>My Broadband</AlternateText>
+      <Impressions>1</Impressions>
+      <Keyword>News</Keyword>
+      <Height>300px</Height>
+    </Ad>
+  </Advertisements>
