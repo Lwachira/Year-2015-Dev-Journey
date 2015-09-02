@@ -11,15 +11,39 @@ using System.Windows.Forms;
 
 namespace BayWest_213200619.UserForms
 {
-    public partial class frmUserHome : MetroFramework.Forms.MetroForm
+    public partial class btnImage : MetroFramework.Forms.MetroForm
     {
-        public frmUserHome()
+        private string userName;
+        private string userRank;
+
+        public btnImage(string userName, string userRank)
         {
             InitializeComponent();
+            this.userName = userName;
+            this.userRank = userRank;
         }
 
         private void frmUserHome_Load(object sender, EventArgs e)
         {
+        }
+
+        private void metroTrackBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+        }
+
+        private void metroContextMenu1_Opening(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files( *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                picAvatar.Image = new Bitmap(open.FileName);
+                
+            }
         }
     }
 }

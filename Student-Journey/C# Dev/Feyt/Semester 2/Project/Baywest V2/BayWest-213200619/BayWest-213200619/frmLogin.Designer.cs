@@ -66,7 +66,6 @@
             this.Name = "frmLogin";
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.Crimson;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

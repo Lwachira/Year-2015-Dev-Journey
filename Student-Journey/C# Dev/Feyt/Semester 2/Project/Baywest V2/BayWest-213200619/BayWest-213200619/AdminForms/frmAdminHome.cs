@@ -26,5 +26,9 @@ namespace BayWest_213200619.AdminForms
         private void frmAdminHome_Load(object sender, EventArgs e)
         {
         }
+
+        private void btnPermisson_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -45,7 +45,7 @@ namespace BayWest_213200619
             }
             else if (mCmbUsername.SelectedValue.ToString().Contains("user"))
             {
-                frmUserHome home = new frmUserHome();
+                btnImage home = new btnImage(userName, userRank);
                 this.Visible = false;
                 home.ShowDialog();
                 this.Visible = true;
