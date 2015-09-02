@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace BayWest_213200619.AdminForms
 {
-    public partial class frmAdminHome : MetroForm
+    public partial class txtAbout : MetroForm
     {
         private string userName;
         private string userRank;
 
-        public frmAdminHome(string userName, string userRank)
+        public txtAbout(string userName, string userRank)
         {
             InitializeComponent();
             this.userName = userName;

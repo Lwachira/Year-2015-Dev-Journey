@@ -38,7 +38,7 @@ namespace BayWest_213200619
             userRank = mCmbUsername.SelectedValue.ToString();
             if (mCmbUsername.SelectedValue.ToString().Contains("admin"))
             {
-                frmAdminHome home = new frmAdminHome(userName, userRank);
+                txtAbout home = new txtAbout(userName, userRank);
                 this.Visible = false;
                 home.ShowDialog();
                 this.Visible = true;
