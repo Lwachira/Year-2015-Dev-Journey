@@ -74,5 +74,47 @@ namespace WindowsFormsApplication1.AdminForms
         private void callProgressToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ca = new classAssignedCall(int.Parse(txtAssignedID.Text));
+                dgvAssignedCall.DataSource = ca.DeleteAllAssignedCall();
+                dgvAssignedCall.DataSource = ca.GetAllAsignedCall();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ca = new classAssignedCall(int.Parse(txtAssignedID.Text), int.Parse(txtCallID.Text), int.Parse(txtStaffID.Text), txtStartDate.Text, int.Parse(txtShopID.Text), txtCallStatus.Text, int.Parse(txtServiceID.Text));
+                dgvAssignedCall.DataSource = ca.InsertAllAssignedCall();
+                dgvAssignedCall.DataSource = ca.GetAllAsignedCall();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ca = new classAssignedCall(int.Parse(txtAssignedID.Text), int.Parse(txtCallID.Text), int.Parse(txtStaffID.Text), txtStartDate.Text, int.Parse(txtShopID.Text), txtCallStatus.Text, int.Parse(txtServiceID.Text));
+                dgvAssignedCall.DataSource = ca.UpdateAllAssignedCall();
+                dgvAssignedCall.DataSource = ca.GetAllAsignedCall();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

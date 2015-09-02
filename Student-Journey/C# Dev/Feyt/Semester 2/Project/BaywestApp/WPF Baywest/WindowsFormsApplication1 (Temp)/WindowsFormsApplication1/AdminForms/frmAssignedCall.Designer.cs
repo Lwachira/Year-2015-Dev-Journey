@@ -220,6 +220,7 @@
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -229,6 +230,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -238,6 +240,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvAssignedCall
             // 
@@ -280,28 +283,28 @@
             // callToolStripMenuItem
             // 
             this.callToolStripMenuItem.Name = "callToolStripMenuItem";
-            this.callToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.callToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.callToolStripMenuItem.Text = "Call";
             this.callToolStripMenuItem.Click += new System.EventHandler(this.callToolStripMenuItem_Click);
             // 
             // staffToolStripMenuItem
             // 
             this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            this.staffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.staffToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.staffToolStripMenuItem.Text = "Staff";
             this.staffToolStripMenuItem.Click += new System.EventHandler(this.staffToolStripMenuItem_Click);
             // 
             // serviceToolStripMenuItem
             // 
             this.serviceToolStripMenuItem.Name = "serviceToolStripMenuItem";
-            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.serviceToolStripMenuItem.Text = "Service";
             this.serviceToolStripMenuItem.Click += new System.EventHandler(this.serviceToolStripMenuItem_Click);
             // 
             // callProgressToolStripMenuItem
             // 
             this.callProgressToolStripMenuItem.Name = "callProgressToolStripMenuItem";
-            this.callProgressToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.callProgressToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.callProgressToolStripMenuItem.Text = "CallProgress";
             this.callProgressToolStripMenuItem.Click += new System.EventHandler(this.callProgressToolStripMenuItem_Click);
             // 

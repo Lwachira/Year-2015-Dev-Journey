@@ -93,7 +93,7 @@
             this.Controls.Add(this.cmbUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmLogon";
-            this.Text = "frmLogon";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

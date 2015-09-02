@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using WindowsFormsApplication1.AdminForms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class AdminHome : Form
+    public partial class AdminHome : MetroFramework.Forms.MetroForm
     {
         public AdminHome()
         {
@@ -92,6 +93,10 @@ namespace WindowsFormsApplication1
             this.Visible = false;
             assignedCall.ShowDialog();
             this.Visible = true;
+        }
+
+        private void AdminHome_Load(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -85,19 +85,19 @@ namespace WindowsFormsApplication1.Class
             return bl.GetAllAssignedCall();
         }
 
-        //public int InsertAllAssignedCall()
-        //{
-        //    return bl.InsertAllAssignedCall(this);
-        //}
+        public int InsertAllAssignedCall()
+        {
+            return bl.InsertAllAssignedCall(this);
+        }
 
-        //public int DeleteAllAssignedCall()
-        //{
-        //    return bl.DeleteAllAssignedCall(this);
-        //}
+        public int DeleteAllAssignedCall()
+        {
+            return bl.DeleteAllAssignedCall(this);
+        }
 
-        //public int UpdateAllAssignedCall()
-        //{
-        //    return bl.UpdateAllAssignedCall(this);
-        //}
+        public int UpdateAllAssignedCall()
+        {
+            return bl.UpdateAllAssignedCall(this);
+        }
     }
 }
