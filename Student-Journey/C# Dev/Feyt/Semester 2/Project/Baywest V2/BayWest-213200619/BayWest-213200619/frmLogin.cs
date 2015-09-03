@@ -19,6 +19,7 @@ namespace BayWest_213200619
         private classLogin cl = new classLogin();
         private string userName;
         private string userRank;
+        private int clientID;
 
         public frmLogin()
         {
@@ -33,22 +34,25 @@ namespace BayWest_213200619
         }
 
         private void mCmbUsername_SelectedIndexChanged(object sender, EventArgs e)
+
         {
             userName = mCmbUsername.Text;
             userRank = mCmbUsername.SelectedValue.ToString();
+
             if (mCmbUsername.SelectedValue.ToString().Contains("admin"))
             {
                 txtAbout home = new txtAbout(userName, userRank);
-                this.Visible = false;
+
                 home.ShowDialog();
-                this.Visible = true;
             }
             else if (mCmbUsername.SelectedValue.ToString().Contains("user"))
             {
-                btnImage home = new btnImage(userName, userRank);
-                this.Visible = false;
+                mCmbUsername.ValueMember = "ClientID";
+                clientID = int.Parse(mCmbUsername.SelectedValue.ToString());
+
+                frmUserHome home = new frmUserHome(userName, userRank, clientID);
+
                 home.ShowDialog();
-                this.Visible = true;
             }
         }
     }

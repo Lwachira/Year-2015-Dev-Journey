@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Classess\BusinessLayer.cs" />
     <Compile Include="Classess\classLogin.cs" />
+    <Compile Include="Classess\userClassClient.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +74,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserForms\frmUserShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmUserShop.Designer.cs">
+      <DependentUpon>frmUserShop.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserForms\frmUserShop.resx">
+      <DependentUpon>frmUserShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\classLogin.cs" />
+    <None Include="Resources\BusinessLayer.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserForms\frmUserHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +105,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\frmUserHome.resx">
       <DependentUpon>frmUserHome.cs</DependentUpon>

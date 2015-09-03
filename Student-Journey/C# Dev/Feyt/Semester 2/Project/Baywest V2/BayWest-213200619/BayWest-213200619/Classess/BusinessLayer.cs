@@ -119,5 +119,27 @@ namespace BayWest_213200619.Classess
 
             return x;
         }
+
+        public DataTable GetClient(userClassClient cc)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+
+                sqlCon.Open();
+            DataTable db = new DataTable();
+            try
+            {
+                string sql = "spGetClient '" + cc.ClientID + "'";
+
+                sqlCom = new SqlCommand(sql, sqlCon);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(db);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return db;
+        }
     }
 }

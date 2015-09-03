@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BayWest_213200619.Classess
+namespace WindowsFormsApplication1.Class
 {
     internal class classLogin
     {
@@ -61,11 +61,6 @@ namespace BayWest_213200619.Classess
         {
             return bl.GetAllLogin();
         }
-
-        //public DataTable GetClient()
-        //{
-        //    return bl.GetClient(this);
-        //}
 
         public int InsertLogin()
         {

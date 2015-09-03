@@ -123,10 +123,12 @@
             // 
             this.btnPermisson.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPermisson.BackgroundImage")));
             this.btnPermisson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPermisson.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnPermisson.Location = new System.Drawing.Point(3, 15);
             this.btnPermisson.Name = "btnPermisson";
             this.btnPermisson.Size = new System.Drawing.Size(118, 64);
             this.btnPermisson.TabIndex = 2;
+            this.btnPermisson.Text = "Permissions";
             this.btnPermisson.UseSelectable = true;
             this.btnPermisson.Click += new System.EventHandler(this.btnPermisson_Click);
             // 
