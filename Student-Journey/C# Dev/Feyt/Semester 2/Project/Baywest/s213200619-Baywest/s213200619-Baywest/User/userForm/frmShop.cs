@@ -16,6 +16,9 @@ namespace s213200619_Baywest.User.userForm
     {
         public userRental ur = new userRental();
         public userShop us = new userShop();
+        int shopID;
+        string shopName;
+        string shopSize;
         public frmShop(userRental ur)
         {
             InitializeComponent();
@@ -24,7 +27,7 @@ namespace s213200619_Baywest.User.userForm
 
         private void frmShop_Load(object sender, EventArgs e)
         {
-            metrodgvUser.DataSource = us.GetShop(int.Parse(ur.ShopID.ToString()));
+            metrodgvShop.DataSource = us.GetShop(int.Parse(ur.ShopID.ToString()));
         }
 
         private void metrodgvUser_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -32,9 +35,9 @@ namespace s213200619_Baywest.User.userForm
 
             try
             {
-                txtShopID.Text = metrodgvUser[0, e.RowIndex].Value.ToString();
-                txtShopName.Text = metrodgvUser[1, e.RowIndex].Value.ToString();
-                txtShopSize.Text = metrodgvUser[2, e.RowIndex].Value.ToString();
+                shopID = int.Parse(metrodgvShop[0, e.RowIndex].Value.ToString());
+                shopName = metrodgvShop[1, e.RowIndex].Value.ToString();
+                shopSize = metrodgvShop[2, e.RowIndex].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -46,6 +49,9 @@ namespace s213200619_Baywest.User.userForm
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            us = new userShop(shopID, shopName, shopSize);
+            frmShop_Service shopService = new frmShop_Service(us);
+            shopService.ShowDialog();
 
         }
     }

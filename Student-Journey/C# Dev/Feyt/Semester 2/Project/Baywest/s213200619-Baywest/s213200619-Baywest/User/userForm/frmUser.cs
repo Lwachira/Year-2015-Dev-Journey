@@ -17,6 +17,11 @@ namespace s213200619_Baywest.User.userForm
     {
         private userCustomer uc = new userCustomer();
         private classLoginDetails cl = new classLoginDetails();
+
+        int customerID;
+        string customerName;
+        string customerCellNumber;
+        int loginID;
         public frmUser(classLoginDetails cl)
         {
             InitializeComponent();
@@ -41,24 +46,11 @@ namespace s213200619_Baywest.User.userForm
             Application.Exit();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
-        }
-
-        private void metroProgressSpinner1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metrodgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            uc = new userCustomer(int.Parse(txtID.Text), txtName.Text, txtCell.Text, int.Parse(txtID.Text));
+            uc = new userCustomer(customerID, customerName, customerCellNumber, loginID);
             frmRental rental = new frmRental(uc);
             rental.ShowDialog();
         }
@@ -67,10 +59,10 @@ namespace s213200619_Baywest.User.userForm
         {
             try
             {
-                txtID.Text = metrodgvUser[0, e.RowIndex].Value.ToString();
-                txtName.Text = metrodgvUser[1, e.RowIndex].Value.ToString();
-                txtCell.Text = metrodgvUser[2, e.RowIndex].Value.ToString();
-                txtLogin.Text = metrodgvUser[3, e.RowIndex].Value.ToString();
+                customerID = int.Parse(metrodgvUser[0, e.RowIndex].Value.ToString());
+                customerName = metrodgvUser[1, e.RowIndex].Value.ToString();
+                customerCellNumber = metrodgvUser[2, e.RowIndex].Value.ToString();
+                loginID = int.Parse(metrodgvUser[3, e.RowIndex].Value.ToString());
             }
             catch (Exception ex)
             {
@@ -79,9 +71,5 @@ namespace s213200619_Baywest.User.userForm
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

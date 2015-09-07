@@ -28,26 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.metrodgvRental = new MetroFramework.Controls.MetroGrid();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRentalID = new System.Windows.Forms.Label();
-            this.txtShopID = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCustomerID = new System.Windows.Forms.Label();
-            this.metroRentalEndDate = new MetroFramework.Controls.MetroDateTime();
             this.metroRentalStartDate = new MetroFramework.Controls.MetroDateTime();
+            this.metroRentalEndDate = new MetroFramework.Controls.MetroDateTime();
+            this.label5 = new System.Windows.Forms.Label();
+            this.metrodgvRental = new MetroFramework.Controls.MetroGrid();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metrodgvRental)).BeginInit();
@@ -101,36 +95,43 @@
             this.panel1.Controls.Add(this.metroRentalStartDate);
             this.panel1.Controls.Add(this.metroRentalEndDate);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.metrodgvRental);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtRentalID);
-            this.panel1.Controls.Add(this.txtShopID);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtCustomerID);
             this.panel1.Location = new System.Drawing.Point(119, 107);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(619, 297);
+            this.panel1.Size = new System.Drawing.Size(619, 348);
             this.panel1.TabIndex = 17;
+            // 
+            // metroRentalStartDate
+            // 
+            this.metroRentalStartDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroRentalStartDate.CalendarTrailingForeColor = System.Drawing.Color.DarkRed;
+            this.metroRentalStartDate.Enabled = false;
+            this.metroRentalStartDate.Location = new System.Drawing.Point(213, 269);
+            this.metroRentalStartDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroRentalStartDate.Name = "metroRentalStartDate";
+            this.metroRentalStartDate.Size = new System.Drawing.Size(200, 29);
+            this.metroRentalStartDate.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroRentalStartDate.TabIndex = 20;
+            // 
+            // metroRentalEndDate
+            // 
+            this.metroRentalEndDate.Enabled = false;
+            this.metroRentalEndDate.Location = new System.Drawing.Point(213, 304);
+            this.metroRentalEndDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroRentalEndDate.Name = "metroRentalEndDate";
+            this.metroRentalEndDate.Size = new System.Drawing.Size(200, 29);
+            this.metroRentalEndDate.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroRentalEndDate.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(104, 243);
+            this.label5.Location = new System.Drawing.Point(124, 310);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 16;
-            this.label5.Text = "RentalEndDate";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "RentalID";
+            this.label5.Text = "RentalEndDate:";
             // 
             // metrodgvRental
             // 
@@ -141,23 +142,23 @@
             this.metrodgvRental.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metrodgvRental.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metrodgvRental.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metrodgvRental.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metrodgvRental.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metrodgvRental.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metrodgvRental.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metrodgvRental.DefaultCellStyle = dataGridViewCellStyle2;
             this.metrodgvRental.EnableHeadersVisualStyles = false;
             this.metrodgvRental.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metrodgvRental.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -165,99 +166,29 @@
             this.metrodgvRental.Name = "metrodgvRental";
             this.metrodgvRental.ReadOnly = true;
             this.metrodgvRental.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metrodgvRental.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metrodgvRental.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metrodgvRental.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metrodgvRental.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metrodgvRental.Size = new System.Drawing.Size(542, 49);
+            this.metrodgvRental.Size = new System.Drawing.Size(542, 121);
             this.metrodgvRental.Style = MetroFramework.MetroColorStyle.Lime;
             this.metrodgvRental.TabIndex = 2;
             this.metrodgvRental.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.metrodgvRental_RowEnter);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(104, 181);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "ShopID";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(104, 212);
+            this.label4.Location = new System.Drawing.Point(124, 279);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "RentalStartDate";
-            // 
-            // txtRentalID
-            // 
-            this.txtRentalID.AutoSize = true;
-            this.txtRentalID.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRentalID.Location = new System.Drawing.Point(199, 98);
-            this.txtRentalID.Name = "txtRentalID";
-            this.txtRentalID.Size = new System.Drawing.Size(78, 31);
-            this.txtRentalID.TabIndex = 12;
-            this.txtRentalID.Text = "myID";
-            // 
-            // txtShopID
-            // 
-            this.txtShopID.AutoSize = true;
-            this.txtShopID.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShopID.Location = new System.Drawing.Point(199, 166);
-            this.txtShopID.Name = "txtShopID";
-            this.txtShopID.Size = new System.Drawing.Size(97, 31);
-            this.txtShopID.TabIndex = 14;
-            this.txtShopID.Text = "myCell";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(104, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CustomerID";
-            // 
-            // txtCustomerID
-            // 
-            this.txtCustomerID.AutoSize = true;
-            this.txtCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerID.Location = new System.Drawing.Point(199, 130);
-            this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(122, 31);
-            this.txtCustomerID.TabIndex = 13;
-            this.txtCustomerID.Text = "myName";
-            // 
-            // metroRentalEndDate
-            // 
-            this.metroRentalEndDate.Enabled = false;
-            this.metroRentalEndDate.Location = new System.Drawing.Point(193, 237);
-            this.metroRentalEndDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroRentalEndDate.Name = "metroRentalEndDate";
-            this.metroRentalEndDate.Size = new System.Drawing.Size(200, 29);
-            this.metroRentalEndDate.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroRentalEndDate.TabIndex = 19;
-            // 
-            // metroRentalStartDate
-            // 
-            this.metroRentalStartDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroRentalStartDate.CalendarTrailingForeColor = System.Drawing.Color.DarkRed;
-            this.metroRentalStartDate.Enabled = false;
-            this.metroRentalStartDate.Location = new System.Drawing.Point(193, 202);
-            this.metroRentalStartDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroRentalStartDate.Name = "metroRentalStartDate";
-            this.metroRentalStartDate.Size = new System.Drawing.Size(200, 29);
-            this.metroRentalStartDate.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroRentalStartDate.TabIndex = 20;
+            this.label4.Text = "RentalStartDate:";
             // 
             // frmRental
             // 
@@ -289,14 +220,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroGrid metrodgvRental;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label txtRentalID;
-        private System.Windows.Forms.Label txtShopID;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label txtCustomerID;
         private MetroFramework.Controls.MetroDateTime metroRentalEndDate;
         private MetroFramework.Controls.MetroDateTime metroRentalStartDate;
     }

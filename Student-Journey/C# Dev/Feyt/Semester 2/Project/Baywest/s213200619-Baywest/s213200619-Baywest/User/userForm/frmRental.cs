@@ -16,6 +16,11 @@ namespace s213200619_Baywest.User.userForm
     {
         private userCustomer uc = new userCustomer();
         private userRental ur = new userRental();
+        int rentalID;
+        int customerID;
+        int shopID;
+        string rentalStartDate;
+        string rentalEndDate;
         public frmRental(userCustomer uc)
         {
             InitializeComponent();
@@ -31,18 +36,20 @@ namespace s213200619_Baywest.User.userForm
         {
             try
             {
-                txtRentalID.Text = metrodgvRental[0, e.RowIndex].Value.ToString();
-                txtCustomerID.Text = metrodgvRental[1, e.RowIndex].Value.ToString();
-                txtShopID.Text = metrodgvRental[2, e.RowIndex].Value.ToString();
+                rentalID = int.Parse(metrodgvRental[0, e.RowIndex].Value.ToString());
+                customerID = int.Parse(metrodgvRental[1, e.RowIndex].Value.ToString());
+                shopID = int.Parse(metrodgvRental[2, e.RowIndex].Value.ToString());
 
 
 
 
                 DateTime result = DateTime.Parse(metrodgvRental[3, e.RowIndex].Value.ToString());
                 metroRentalStartDate.Value = result;
+                rentalStartDate = result.ToString();
 
                 result = DateTime.Parse(metrodgvRental[4, e.RowIndex].Value.ToString());
                 metroRentalEndDate.Value = result;
+                rentalEndDate = result.ToString();
             }
             catch (Exception ex)
             {
@@ -53,9 +60,18 @@ namespace s213200619_Baywest.User.userForm
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ur = new userRental(int.Parse(txtRentalID.Text), int.Parse(txtCustomerID.Text), int.Parse(txtShopID.Text), metroRentalStartDate.Text, metroRentalEndDate.Text);
-            frmShop shop = new frmShop(ur);
-            shop.ShowDialog();
+            try
+            {
+                ur = new userRental(rentalID, customerID, shopID, rentalStartDate, rentalEndDate);
+                frmShop shop = new frmShop(ur);
+                shop.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

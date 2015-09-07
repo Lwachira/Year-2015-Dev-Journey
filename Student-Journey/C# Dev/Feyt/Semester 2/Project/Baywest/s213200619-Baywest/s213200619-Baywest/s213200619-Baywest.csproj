@@ -78,6 +78,7 @@
     <Compile Include="User\userClass\userCustomer.cs" />
     <Compile Include="User\userClass\userRental.cs" />
     <Compile Include="User\userClass\userShop.cs" />
+    <Compile Include="User\userClass\userShopService.cs" />
     <Compile Include="User\userForm\frmRental.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +90,12 @@
     </Compile>
     <Compile Include="User\userForm\frmShop.Designer.cs">
       <DependentUpon>frmShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmShop_Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmShop_Service.Designer.cs">
+      <DependentUpon>frmShop_Service.cs</DependentUpon>
     </Compile>
     <Compile Include="User\userForm\frmUser.cs">
       <SubType>Form</SubType>
@@ -116,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\userForm\frmShop.resx">
       <DependentUpon>frmShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmShop_Service.resx">
+      <DependentUpon>frmShop_Service.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\userForm\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>

@@ -125,5 +125,30 @@ namespace s213200619_Baywest.User.userClass
             return dbShop;
         }
 
+        public DataTable getShop_Service(int shopID)
+        {
+            DataTable dbShop_Service = new DataTable();
+            try
+            {
+                if (sqlConn.State == ConnectionState.Closed)
+                {
+                    sqlConn.Open();
+
+                }
+
+                sqlCom = new SqlCommand("spGetShop_Service '" + shopID.ToString() + "'", sqlConn);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(dbShop_Service);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+
+            }
+
+            return dbShop_Service;
+        }
+
     }
 }
