@@ -21,5 +21,25 @@ namespace s213200619_Baywest.User.userForm
         {
 
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void metroProgressSpinner1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

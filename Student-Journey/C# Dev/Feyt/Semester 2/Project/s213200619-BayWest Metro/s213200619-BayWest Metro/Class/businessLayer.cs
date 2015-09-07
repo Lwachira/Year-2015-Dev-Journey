@@ -21,7 +21,7 @@ namespace s213200619_BayWest_Metro.Class
             try
             {
                 sqlBuilder = new SqlConnectionStringBuilder();
-                sqlBuilder.DataSource = "local";
+                sqlBuilder.DataSource = "";
                 sqlBuilder.InitialCatalog = "RentalSystem_213200619";
                 sqlBuilder.IntegratedSecurity = true;
                 sqlCon = new SqlConnection(sqlBuilder.ConnectionString);
