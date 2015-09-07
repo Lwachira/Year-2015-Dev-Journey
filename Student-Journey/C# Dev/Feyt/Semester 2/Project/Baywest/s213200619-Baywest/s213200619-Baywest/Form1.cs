@@ -24,7 +24,7 @@ namespace s213200619_Baywest
         public Form1()
         {
             InitializeComponent();
-
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,7 +57,8 @@ namespace s213200619_Baywest
                 loginUserName = mCmbUsername.Text;
                 loginRank = mCmbUsername.SelectedValue.ToString();
                 cl = new classLoginDetails(loginID, loginUserName, loginRank);
-                frmUser fu = new frmUser();
+                
+                frmUser fu = new frmUser(cl);
                 fu.ShowDialog();
 
             }

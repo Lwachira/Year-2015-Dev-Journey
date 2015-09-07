@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace s213200619_Baywest.Admin.adminClass
 {
-    class classLoginDetails
+    public class classLoginDetails
     {
         adminBusinessLayer bl = new adminBusinessLayer();
         int loginID;
