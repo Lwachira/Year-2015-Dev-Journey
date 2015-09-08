@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Admin\adminClass\adminBusinessLayer.cs" />
     <Compile Include="Admin\adminClass\classLoginDetails.cs" />
+    <Compile Include="Admin\adminClass\helperClass.cs" />
     <Compile Include="Admin\adminForm\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

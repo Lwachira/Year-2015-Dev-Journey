@@ -75,6 +75,77 @@ namespace s213200619_Baywest.Admin.adminClass
 
         }
 
+        public int insertLogin(classLoginDetails cld)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+
+                }
+
+
+                string sqlInsert = "spInsertLogin '" + cld.LoginID + "','" + cld.LoginUserName + "','" + cld.LoginRank + "'";
+                sqlCom = new SqlCommand(sqlInsert, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
+
+        public int deleteLogin(classLoginDetails cld)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlDelete = "spDeleteLogin '" + cld.LoginID + "'";
+                sqlCom = new SqlCommand(sqlDelete, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int updateLogin(classLoginDetails cld)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlUpdate = "spUpdateLogin '" + cld.LoginID + "','" + cld.LoginUserName + "','" + cld.LoginRank + "'";
+                sqlCom = new SqlCommand(sqlUpdate, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
+
     }
 
 

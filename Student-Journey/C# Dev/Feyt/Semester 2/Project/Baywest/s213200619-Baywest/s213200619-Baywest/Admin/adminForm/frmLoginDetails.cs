@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using s213200619_Baywest.Admin.adminClass;
+using System.IO;
 
 namespace s213200619_Baywest.Admin.adminForm
 {
@@ -23,7 +24,7 @@ namespace s213200619_Baywest.Admin.adminForm
         private void frmLoginDetails_Load(object sender, EventArgs e)
         {
             metroDgvLogin.DataSource = cld.GetAllLogin();
-            metroDgvRequestLogin.DataSource = cld.GetAllLogin();
+
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -53,6 +54,85 @@ namespace s213200619_Baywest.Admin.adminForm
                 metroTxtID.Text = metroDgvRequestLogin[0, e.RowIndex].Value.ToString();
                 metroTxtUserName.Text = metroDgvRequestLogin[1, e.RowIndex].Value.ToString();
                 metroTxtRank.Text = metroDgvRequestLogin[2, e.RowIndex].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                metroDgvRequestLogin.DataSource = helperClass.DataTableFromTextFile(@"Files\registration.txt", '#');
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDeletedUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                metroDgvRequestLogin.DataSource = helperClass.DataTableFromTextFile(@"Files\deletedLoginDetails.txt", '#');
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cld = new classLoginDetails(int.Parse(metroTxtID.Text), metroTxtUserName.Text, metroTxtRank.Text);
+                metroDgvLogin.DataSource = cld.InsertLogin();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            metroDgvLogin.DataSource = cld.GetAllLogin();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            cld = new classLoginDetails(int.Parse(metroTxtID.Text), metroTxtUserName.Text, metroTxtRank.Text);
+            metroDgvLogin.DataSource = cld.UpdateLogin();
+            metroDgvLogin.DataSource = cld.GetAllLogin();
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StreamWriter file = new StreamWriter(@"Files\deletedLoginDetails.txt", true);
+                file.WriteLine(metroLabel1.Text + "#" + metroLabel2.Text + "#" + metroLabel3.Text);
+                file.WriteLine(metroTxtID.Text + "#" + metroTxtUserName.Text + "#" + metroTxtRank.Text);
+                file.Close();
+                cld = new classLoginDetails(int.Parse(metroTxtID.Text), metroTxtUserName.Text, metroTxtRank.Text);
+                metroDgvLogin.DataSource = cld.DeleteLogin();
+                metroDgvLogin.DataSource = cld.GetAllLogin();
             }
             catch (Exception ex)
             {

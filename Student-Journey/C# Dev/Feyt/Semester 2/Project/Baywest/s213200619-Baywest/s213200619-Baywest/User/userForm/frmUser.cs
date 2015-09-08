@@ -50,9 +50,7 @@ namespace s213200619_Baywest.User.userForm
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            uc = new userCustomer(customerID, customerName, customerCellNumber, loginID);
-            frmRental rental = new frmRental(uc);
-            rental.ShowDialog();
+
         }
 
         private void metrodgvUser_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -71,5 +69,11 @@ namespace s213200619_Baywest.User.userForm
             }
         }
 
+        private void btnRentalAgreement_Click(object sender, EventArgs e)
+        {
+            uc = new userCustomer(customerID, customerName, customerCellNumber, loginID);
+            frmRental rental = new frmRental(uc);
+            rental.ShowDialog();
+        }
     }
 }

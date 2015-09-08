@@ -73,5 +73,10 @@ namespace s213200619_Baywest.User.userForm
             }
 
         }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -31,11 +31,11 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.txtLoginID = new MetroFramework.Controls.MetroTextBox();
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.txtRank = new MetroFramework.Controls.MetroTextBox();
             this.btnWrite = new MetroFramework.Controls.MetroButton();
             this.btnClose = new MetroFramework.Controls.MetroButton();
+            this.txtLoginID = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -64,19 +64,6 @@
             this.metroLabel3.Size = new System.Drawing.Size(37, 19);
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Rank";
-            // 
-            // txtLoginID
-            // 
-            this.txtLoginID.Lines = new string[0];
-            this.txtLoginID.Location = new System.Drawing.Point(112, 107);
-            this.txtLoginID.MaxLength = 32767;
-            this.txtLoginID.Name = "txtLoginID";
-            this.txtLoginID.PasswordChar = '\0';
-            this.txtLoginID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtLoginID.SelectedText = "";
-            this.txtLoginID.Size = new System.Drawing.Size(101, 23);
-            this.txtLoginID.TabIndex = 3;
-            this.txtLoginID.UseSelectable = true;
             // 
             // txtUsername
             // 
@@ -112,6 +99,7 @@
             this.btnWrite.TabIndex = 6;
             this.btnWrite.Text = "Write To File";
             this.btnWrite.UseSelectable = true;
+            this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
             // btnClose
             // 
@@ -123,16 +111,25 @@
             this.btnClose.UseSelectable = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // txtLoginID
+            // 
+            this.txtLoginID.Location = new System.Drawing.Point(112, 110);
+            this.txtLoginID.Mask = "000";
+            this.txtLoginID.Name = "txtLoginID";
+            this.txtLoginID.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtLoginID.Size = new System.Drawing.Size(100, 20);
+            this.txtLoginID.TabIndex = 3;
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 347);
+            this.Controls.Add(this.txtLoginID);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnWrite);
             this.Controls.Add(this.txtRank);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.txtLoginID);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -149,10 +146,10 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroTextBox txtLoginID;
         private MetroFramework.Controls.MetroTextBox txtUsername;
         private MetroFramework.Controls.MetroTextBox txtRank;
         private MetroFramework.Controls.MetroButton btnWrite;
         private MetroFramework.Controls.MetroButton btnClose;
+        private System.Windows.Forms.MaskedTextBox txtLoginID;
     }
 }

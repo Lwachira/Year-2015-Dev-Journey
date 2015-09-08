@@ -58,5 +58,21 @@ namespace s213200619_Baywest.Admin.adminClass
             return bl.GetAllLogin();
         }
 
+
+        public int InsertLogin()
+        {
+            return bl.insertLogin(this);
+        }
+
+        public int DeleteLogin()
+        {
+            return bl.deleteLogin(this);
+
+        }
+
+        public int UpdateLogin()
+        {
+            return bl.updateLogin(this);
+        }
     }
 }

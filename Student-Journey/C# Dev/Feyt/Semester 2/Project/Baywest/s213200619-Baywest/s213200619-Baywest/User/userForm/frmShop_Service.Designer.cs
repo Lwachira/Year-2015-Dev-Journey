@@ -38,14 +38,18 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.metrodgvShopsService)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metrodgvShopsService
             // 
             this.metrodgvShopsService.AllowUserToResizeRows = false;
-            this.metrodgvShopsService.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metrodgvShopsService.BackgroundColor = System.Drawing.Color.White;
             this.metrodgvShopsService.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metrodgvShopsService.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metrodgvShopsService.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -69,7 +73,7 @@
             this.metrodgvShopsService.EnableHeadersVisualStyles = false;
             this.metrodgvShopsService.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metrodgvShopsService.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metrodgvShopsService.Location = new System.Drawing.Point(125, 98);
+            this.metrodgvShopsService.Location = new System.Drawing.Point(3, 3);
             this.metrodgvShopsService.Name = "metrodgvShopsService";
             this.metrodgvShopsService.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -82,7 +86,7 @@
             this.metrodgvShopsService.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metrodgvShopsService.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metrodgvShopsService.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metrodgvShopsService.Size = new System.Drawing.Size(601, 169);
+            this.metrodgvShopsService.Size = new System.Drawing.Size(533, 169);
             this.metrodgvShopsService.Style = MetroFramework.MetroColorStyle.Lime;
             this.metrodgvShopsService.TabIndex = 17;
             this.metrodgvShopsService.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.metrodgvShopsService_RowEnter_1);
@@ -137,12 +141,24 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(23, 87);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.metrodgvShopsService);
+            this.splitContainer1.Size = new System.Drawing.Size(814, 354);
+            this.splitContainer1.SplitterDistance = 271;
+            this.splitContainer1.TabIndex = 22;
+            // 
             // frmShop_Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 464);
-            this.Controls.Add(this.metrodgvShopsService);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmShop_Service";
             this.Style = MetroFramework.MetroColorStyle.Lime;
@@ -151,6 +167,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.metrodgvShopsService)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +183,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
