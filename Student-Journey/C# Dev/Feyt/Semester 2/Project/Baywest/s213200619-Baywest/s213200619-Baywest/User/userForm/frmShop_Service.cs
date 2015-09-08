@@ -17,6 +17,10 @@ namespace s213200619_Baywest.User.userForm
 
         public userShop us = new userShop();
         public userShopService uss = new userShopService();
+        int shopServiceID;
+        int shopID;
+        int serviceID;
+        string serviceName;
         public frmShop_Service(userShop us)
         {
             InitializeComponent();
@@ -48,16 +52,23 @@ namespace s213200619_Baywest.User.userForm
         {
             try
             {
-                txtShopServiceID.Text = metrodgvShopsService[0, e.RowIndex].Value.ToString();
-                txtShopID.Text = metrodgvShopsService[1, e.RowIndex].Value.ToString();
-                txtServiceID.Text = metrodgvShopsService[2, e.RowIndex].Value.ToString();
-                txtServiceName.Text = metrodgvShopsService[3, e.RowIndex].Value.ToString();
+                shopServiceID = int.Parse(metrodgvShopsService[0, e.RowIndex].Value.ToString());
+                shopID = int.Parse(metrodgvShopsService[1, e.RowIndex].Value.ToString());
+                serviceID = int.Parse(metrodgvShopsService[2, e.RowIndex].Value.ToString());
+                serviceName = metrodgvShopsService[3, e.RowIndex].Value.ToString();
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            uss = new userShopService(shopServiceID, shopID, serviceID, serviceName);
+            frmShopInspection shopInspection = new frmShopInspection(uss);
+            shopInspection.ShowDialog();
         }
     }
 }
