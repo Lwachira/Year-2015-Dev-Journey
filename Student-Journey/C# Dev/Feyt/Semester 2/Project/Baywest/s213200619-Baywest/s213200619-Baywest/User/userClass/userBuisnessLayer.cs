@@ -174,5 +174,29 @@ namespace s213200619_Baywest.User.userClass
             return dbShopInspection;
         }
 
+        public DataTable getShopUpgrade(int id)
+        {
+            DataTable dbUpgrade = new DataTable();
+            try
+            {
+                if (sqlConn.State == ConnectionState.Closed)
+                {
+                    sqlConn.Open();
+
+                }
+
+                sqlCom = new SqlCommand("spGetShopUpgrade '" + id.ToString() + "'", sqlConn);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(dbUpgrade);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+
+            return dbUpgrade;
+        }
+
     }
 }

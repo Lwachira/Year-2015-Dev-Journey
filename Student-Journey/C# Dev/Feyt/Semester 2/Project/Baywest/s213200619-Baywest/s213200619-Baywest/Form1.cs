@@ -64,7 +64,10 @@ namespace s213200619_Baywest
             }
         }
 
-
-
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            frmRegister register = new frmRegister();
+            register.ShowDialog();
+        }
     }
 }

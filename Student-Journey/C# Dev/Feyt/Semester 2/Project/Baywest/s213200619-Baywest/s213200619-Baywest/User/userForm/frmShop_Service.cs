@@ -70,5 +70,12 @@ namespace s213200619_Baywest.User.userForm
             frmShopInspection shopInspection = new frmShopInspection(uss);
             shopInspection.ShowDialog();
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            uss = new userShopService(shopServiceID, shopID, serviceID, serviceName);
+            frmShopUpgrade shopUpgrade = new frmShopUpgrade(uss);
+            shopUpgrade.ShowDialog();
+        }
     }
 }

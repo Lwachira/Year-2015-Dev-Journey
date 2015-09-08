@@ -8,25 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-
-namespace s213200619_Baywest.Admin.adminForm
+namespace s213200619_Baywest
 {
-    public partial class frmAdmin : MetroForm
+    public partial class frmRegister : MetroForm
     {
-        public frmAdmin()
+        public frmRegister()
         {
             InitializeComponent();
         }
 
-        private void frmAdmin_Load(object sender, EventArgs e)
+        private void frmRegister_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void metroLogin_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            frmLoginDetails loginDetails = new frmLoginDetails();
-            loginDetails.ShowDialog();
+            Application.Exit();
         }
     }
 }

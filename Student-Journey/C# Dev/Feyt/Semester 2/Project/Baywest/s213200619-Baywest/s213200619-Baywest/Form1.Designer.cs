@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.mCmbUsername = new MetroFramework.Controls.MetroComboBox();
+            this.btnSignUp = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // label1
@@ -56,11 +57,22 @@
             this.mCmbUsername.UseSelectable = true;
             this.mCmbUsername.SelectedIndexChanged += new System.EventHandler(this.mCmbUsername_SelectedIndexChanged);
             // 
+            // btnSignUp
+            // 
+            this.btnSignUp.Location = new System.Drawing.Point(388, 274);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(119, 55);
+            this.btnSignUp.TabIndex = 6;
+            this.btnSignUp.Text = "SignUp";
+            this.btnSignUp.UseSelectable = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 464);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mCmbUsername);
             this.Name = "Form1";
@@ -75,6 +87,7 @@
 
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroComboBox mCmbUsername;
+        private MetroFramework.Controls.MetroButton btnSignUp;
     }
 }
 
