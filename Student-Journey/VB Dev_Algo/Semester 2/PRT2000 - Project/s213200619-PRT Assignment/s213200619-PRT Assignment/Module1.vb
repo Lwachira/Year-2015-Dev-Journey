@@ -8,9 +8,9 @@ Module Module1
         Dim currentRow As String()
         Dim holdFaculty As String
         Dim holdDepart As String
-
+        Dim totalStudentCount As Integer = 0
         Dim studentCount As Integer = 0
-
+        Dim message As String = ""
         Using myReader As New FileIO.TextFieldParser("students.txt")
             myReader.TextFieldType = FieldType.Delimited
             myReader.SetDelimiters("#")
@@ -27,30 +27,45 @@ Module Module1
 
                 If holdFaculty <> currentRow(0) Then
 
-
                     PrinttotalStudents(studentCount, holdDepart)
                     PrintCourseHeading(currentRow(0))
-
+                    totalStudentCount += studentCount
+                    message += holdFaculty.ToString() + " " + totalStudentCount.ToString() + Environment.NewLine
                     PrintDepartmentHeading(currentRow(1))
                     holdDepart = currentRow(1)
                     holdFaculty = currentRow(0)
+
+                    totalStudentCount = 0
                     studentCount = 0
                 ElseIf holdDepart <> currentRow(1)
                     PrinttotalStudents(studentCount, holdDepart)
                     PrintDepartmentHeading(currentRow(1))
 
                     holdDepart = currentRow(1)
+                    totalStudentCount += studentCount
                     studentCount = 0
                 End If
 
                 'Always has to happen
                 PrintStudentline(currentRow(2), currentRow(3))
                 studentCount += 1
+
             End While
             PrinttotalStudents(studentCount, holdDepart)
+            totalStudentCount += studentCount
+            message += holdFaculty.ToString() + " " + totalStudentCount.ToString() + Environment.NewLine
+            PrintSectionFooter(message)
         End Using
 
+
+
         Console.ReadLine()
+    End Sub
+
+    Private Sub PrintSectionFooter(message As String)
+        Console.WriteLine("Summery")
+        Console.WriteLine("=========")
+        Console.WriteLine(message)
     End Sub
 
     Private Sub PrinttotalStudents(studCount As Integer, holdDepartment As String)
