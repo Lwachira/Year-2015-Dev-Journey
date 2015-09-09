@@ -154,6 +154,7 @@
             this.metroCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroCustomer.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroCustomer.UseSelectable = true;
+            this.metroCustomer.Click += new System.EventHandler(this.metroCustomer_Click);
             // 
             // metroStaff
             // 

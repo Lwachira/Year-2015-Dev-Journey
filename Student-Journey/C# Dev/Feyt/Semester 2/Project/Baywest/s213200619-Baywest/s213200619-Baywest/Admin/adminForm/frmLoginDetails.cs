@@ -127,7 +127,7 @@ namespace s213200619_Baywest.Admin.adminForm
             try
             {
                 StreamWriter file = new StreamWriter(@"Files\deletedLoginDetails.txt", true);
-                file.WriteLine(metroLabel1.Text + "#" + metroLabel2.Text + "#" + metroLabel3.Text);
+                //file.WriteLine(metroLabel1.Text + "#" + metroLabel2.Text + "#" + metroLabel3.Text);
                 file.WriteLine(metroTxtID.Text + "#" + metroTxtUserName.Text + "#" + metroTxtRank.Text);
                 file.Close();
                 cld = new classLoginDetails(int.Parse(metroTxtID.Text), metroTxtUserName.Text, metroTxtRank.Text);

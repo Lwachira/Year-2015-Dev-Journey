@@ -146,6 +146,33 @@ namespace s213200619_Baywest.Admin.adminClass
             return x;
         }
 
+
+        public DataTable GetAllCustomer()
+        {
+            DataTable dbCustomer = new DataTable();
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                sqlCom = new SqlCommand("SpGetCustomer", sqlCon);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(dbCustomer);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return dbCustomer;
+        }
+
+
+        //public int insertCustomer()
+
     }
 
 

@@ -22,6 +22,7 @@ namespace s213200619_Baywest.User.userForm
         string customerName;
         string customerCellNumber;
         int loginID;
+        string myNewUser;
         public frmUser(classLoginDetails cl)
         {
             InitializeComponent();
@@ -33,6 +34,16 @@ namespace s213200619_Baywest.User.userForm
         private void frmUser_Load(object sender, EventArgs e)
         {
             metrodgvUser.DataSource = uc.GetUser(int.Parse(cl.LoginID.ToString()));
+            myNewUser = cl.LoginID.ToString();
+
+            if (metrodgvUser.Rows.Count == 0)
+            {
+                btnRequest.Visible = true;
+            }
+            else
+            {
+                btnRequest.Visible = false;
+            }
 
         }
 
@@ -74,6 +85,12 @@ namespace s213200619_Baywest.User.userForm
             uc = new userCustomer(customerID, customerName, customerCellNumber, loginID);
             frmRental rental = new frmRental(uc);
             rental.ShowDialog();
+        }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            frmAddUser customer = new frmAddUser(myNewUser);
+            customer.ShowDialog();
         }
     }
 }

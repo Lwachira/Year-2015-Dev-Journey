@@ -60,6 +60,17 @@ namespace s213200619_Baywest.User.userForm
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnShop_Click(object sender, EventArgs e)
+        {
             try
             {
                 ur = new userRental(rentalID, customerID, shopID, rentalStartDate, rentalEndDate);
@@ -71,12 +82,17 @@ namespace s213200619_Baywest.User.userForm
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void splitContainer1_Panel1_Paint_1(object sender, PaintEventArgs e)
+        {
 
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            frmAddRental rental = new frmAddRental();
+            rental.ShowDialog();
         }
     }
 }

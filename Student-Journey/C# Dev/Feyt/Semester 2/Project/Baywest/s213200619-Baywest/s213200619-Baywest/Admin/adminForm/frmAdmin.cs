@@ -28,5 +28,12 @@ namespace s213200619_Baywest.Admin.adminForm
             frmLoginDetails loginDetails = new frmLoginDetails();
             loginDetails.ShowDialog();
         }
+
+        private void metroCustomer_Click(object sender, EventArgs e)
+        {
+            frmCustomer customer = new frmCustomer();
+            customer.ShowDialog();
+
+        }
     }
 }

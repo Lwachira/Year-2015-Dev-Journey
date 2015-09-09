@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\adminClass\adminBusinessLayer.cs" />
+    <Compile Include="Admin\adminClass\adminCustomer.cs" />
     <Compile Include="Admin\adminClass\classLoginDetails.cs" />
     <Compile Include="Admin\adminClass\helperClass.cs" />
     <Compile Include="Admin\adminForm\frmAdmin.cs">
@@ -67,6 +68,12 @@
     </Compile>
     <Compile Include="Admin\adminForm\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\adminForm\frmLoginDetails.cs">
       <SubType>Form</SubType>
@@ -95,6 +102,18 @@
     <Compile Include="User\userClass\userShopInspection.cs" />
     <Compile Include="User\userClass\userShopService.cs" />
     <Compile Include="User\userClass\userShopUpgrade.cs" />
+    <Compile Include="User\userForm\frmAddRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddRental.Designer.cs">
+      <DependentUpon>frmAddRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\userForm\frmRental.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +153,9 @@
     <EmbeddedResource Include="Admin\adminForm\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\adminForm\frmLoginDetails.resx">
       <DependentUpon>frmLoginDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +175,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User\userForm\frmAddRental.resx">
+      <DependentUpon>frmAddRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\userForm\frmRental.resx">
       <DependentUpon>frmRental.cs</DependentUpon>
     </EmbeddedResource>
