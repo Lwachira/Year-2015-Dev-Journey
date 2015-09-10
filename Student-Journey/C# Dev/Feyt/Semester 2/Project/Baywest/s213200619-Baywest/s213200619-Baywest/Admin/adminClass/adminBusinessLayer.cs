@@ -147,7 +147,7 @@ namespace s213200619_Baywest.Admin.adminClass
         }
 
 
-        public DataTable GetAllCustomer()
+        public DataTable getAllCustomer()
         {
             DataTable dbCustomer = new DataTable();
             try
@@ -170,9 +170,169 @@ namespace s213200619_Baywest.Admin.adminClass
             return dbCustomer;
         }
 
+        public int insertCustomer(adminCustomer ac)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                sqlCom = new SqlCommand("spInsertCustomer '" + ac.CustomerID + "','" + ac.CustomerName + "','" + ac.CustomerCell + "','" + ac.LoginID + "'", sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
 
-        //public int insertCustomer()
+                MessageBox.Show(ex.Message);
+            }
+            return x;
 
+
+        }
+
+
+        public int deleteCustomer(adminCustomer ac)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlDelete = "spDeleteCustomer '" + ac.CustomerID + "'";
+                sqlCom = new SqlCommand(sqlDelete, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int updateCustomer(adminCustomer ac)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlUpdate = "spUpdateCustomer '" + ac.CustomerID + "','" + ac.CustomerName + "','" + ac.CustomerCell + "','" + ac.LoginID + "'";
+                sqlCom = new SqlCommand(sqlUpdate, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
+
+
+
+
+        public DataTable getAllRental()
+        {
+            DataTable dbCustomer = new DataTable();
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                sqlCom = new SqlCommand("spGetAllRental", sqlCon);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(dbCustomer);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return dbCustomer;
+        }
+
+        public int insertRental(adminRentalAgreement ara)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                sqlCom = new SqlCommand("spInsertRental '" + ara.RentalID + "','" + ara.CustomerID + "','" + ara.ShopID + "','" + ara.RentalStartDate + "','" + ara.RentalEndDate + "'", sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+
+
+        }
+
+
+        public int deleteRental(adminRentalAgreement ara)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlDelete = "spDeleteRental '" + ara.RentalID + "'";
+                sqlCom = new SqlCommand(sqlDelete, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int updateRental(adminRentalAgreement ara)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlUpdate = "spUpdateRental '" + ara.RentalID + "','" + ara.CustomerID + "','" + ara.ShopID + "','" + ara.RentalStartDate + "','" + ara.RentalEndDate + "'";
+                sqlCom = new SqlCommand(sqlUpdate, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
     }
 
 

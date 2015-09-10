@@ -128,6 +128,7 @@
             this.metroRentalAgreement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroRentalAgreement.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroRentalAgreement.UseSelectable = true;
+            this.metroRentalAgreement.Click += new System.EventHandler(this.metroRentalAgreement_Click);
             // 
             // metroCall
             // 

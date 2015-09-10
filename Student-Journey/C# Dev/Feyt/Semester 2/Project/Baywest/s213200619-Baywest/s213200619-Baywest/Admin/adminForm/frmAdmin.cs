@@ -35,5 +35,11 @@ namespace s213200619_Baywest.Admin.adminForm
             customer.ShowDialog();
 
         }
+
+        private void metroRentalAgreement_Click(object sender, EventArgs e)
+        {
+            frmRental rental = new frmRental();
+            rental.ShowDialog();
+        }
     }
 }

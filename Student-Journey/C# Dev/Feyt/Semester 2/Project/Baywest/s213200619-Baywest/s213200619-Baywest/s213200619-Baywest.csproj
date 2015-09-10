@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Admin\adminClass\adminBusinessLayer.cs" />
     <Compile Include="Admin\adminClass\adminCustomer.cs" />
+    <Compile Include="Admin\adminClass\adminRentalAgreement.cs" />
     <Compile Include="Admin\adminClass\classLoginDetails.cs" />
     <Compile Include="Admin\adminClass\helperClass.cs" />
     <Compile Include="Admin\adminForm\frmAdmin.cs">
@@ -80,6 +81,12 @@
     </Compile>
     <Compile Include="Admin\adminForm\frmLoginDetails.Designer.cs">
       <DependentUpon>frmLoginDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmRental.Designer.cs">
+      <DependentUpon>frmRental.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -158,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\adminForm\frmLoginDetails.resx">
       <DependentUpon>frmLoginDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmRental.resx">
+      <DependentUpon>frmRental.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
