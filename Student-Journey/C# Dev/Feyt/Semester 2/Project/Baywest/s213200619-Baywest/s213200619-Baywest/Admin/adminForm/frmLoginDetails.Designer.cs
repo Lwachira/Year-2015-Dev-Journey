@@ -333,6 +333,7 @@
             this.metroDgvRequestLogin.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.metroDgvRequestLogin.Location = new System.Drawing.Point(3, 188);
             this.metroDgvRequestLogin.Name = "metroDgvRequestLogin";
+            this.metroDgvRequestLogin.ReadOnly = true;
             this.metroDgvRequestLogin.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -381,6 +382,7 @@
             this.metroDgvLogin.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.metroDgvLogin.Location = new System.Drawing.Point(3, 3);
             this.metroDgvLogin.Name = "metroDgvLogin";
+            this.metroDgvLogin.ReadOnly = true;
             this.metroDgvLogin.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));

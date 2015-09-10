@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroDgvInspection = new MetroFramework.Controls.MetroGrid();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.metroDgvInspection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -90,10 +91,19 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.metroProgressBar1);
             this.splitContainer1.Panel2.Controls.Add(this.metroDgvInspection);
             this.splitContainer1.Size = new System.Drawing.Size(814, 354);
             this.splitContainer1.SplitterDistance = 271;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // metroProgressBar1
+            // 
+            this.metroProgressBar1.Location = new System.Drawing.Point(436, 328);
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.Size = new System.Drawing.Size(100, 23);
+            this.metroProgressBar1.TabIndex = 2;
+            this.metroProgressBar1.Value = 100;
             // 
             // frmShopInspection
             // 
@@ -117,5 +127,6 @@
 
         private MetroFramework.Controls.MetroGrid metroDgvInspection;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
     }
 }

@@ -62,6 +62,8 @@
     <Compile Include="Admin\adminClass\adminBusinessLayer.cs" />
     <Compile Include="Admin\adminClass\adminCustomer.cs" />
     <Compile Include="Admin\adminClass\adminRentalAgreement.cs" />
+    <Compile Include="Admin\adminClass\adminShop.cs" />
+    <Compile Include="Admin\adminClass\adminShopService.cs" />
     <Compile Include="Admin\adminClass\classLoginDetails.cs" />
     <Compile Include="Admin\adminClass\helperClass.cs" />
     <Compile Include="Admin\adminForm\frmAdmin.cs">
@@ -69,6 +71,24 @@
     </Compile>
     <Compile Include="Admin\adminForm\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShop.Designer.cs">
+      <DependentUpon>frmAdminShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopInspection.Designer.cs">
+      <DependentUpon>frmAdminShopInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopUpgrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopUpgrade.Designer.cs">
+      <DependentUpon>frmAdminShopUpgrade.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\adminForm\frmCustomer.cs">
       <SubType>Form</SubType>
@@ -88,11 +108,11 @@
     <Compile Include="Admin\adminForm\frmRental.Designer.cs">
       <DependentUpon>frmRental.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\adminForm\frmShop.cs">
+    <Compile Include="Admin\adminForm\frmShopService.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\adminForm\frmShop.Designer.cs">
-      <DependentUpon>frmShop.cs</DependentUpon>
+    <Compile Include="Admin\adminForm\frmShopService.Designer.cs">
+      <DependentUpon>frmShopService.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -166,6 +186,15 @@
     <EmbeddedResource Include="Admin\adminForm\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminShop.resx">
+      <DependentUpon>frmAdminShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminShopInspection.resx">
+      <DependentUpon>frmAdminShopInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminShopUpgrade.resx">
+      <DependentUpon>frmAdminShopUpgrade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\adminForm\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,8 +204,8 @@
     <EmbeddedResource Include="Admin\adminForm\frmRental.resx">
       <DependentUpon>frmRental.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\adminForm\frmShop.resx">
-      <DependentUpon>frmShop.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\adminForm\frmShopService.resx">
+      <DependentUpon>frmShopService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

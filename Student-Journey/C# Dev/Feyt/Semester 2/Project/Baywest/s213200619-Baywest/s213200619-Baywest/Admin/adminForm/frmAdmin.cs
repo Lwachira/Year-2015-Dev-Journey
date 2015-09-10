@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using MetroFramework.Forms;
+using s213200619_Baywest.Admin.adminForm;
 
 namespace s213200619_Baywest.Admin.adminForm
 {
@@ -40,6 +33,14 @@ namespace s213200619_Baywest.Admin.adminForm
         {
             frmRental rental = new frmRental();
             rental.ShowDialog();
+        }
+
+        private void metroShop_Click(object sender, EventArgs e)
+        {
+            frmAdminShop shop = new frmAdminShop();
+            shop.ShowDialog();
+
+
         }
     }
 }

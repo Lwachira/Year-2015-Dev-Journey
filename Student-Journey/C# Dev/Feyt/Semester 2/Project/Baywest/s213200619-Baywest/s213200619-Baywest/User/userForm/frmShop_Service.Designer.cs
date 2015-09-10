@@ -39,6 +39,7 @@
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.metrodgvShopsService)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -49,7 +50,7 @@
             // metrodgvShopsService
             // 
             this.metrodgvShopsService.AllowUserToResizeRows = false;
-            this.metrodgvShopsService.BackgroundColor = System.Drawing.Color.White;
+            this.metrodgvShopsService.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metrodgvShopsService.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metrodgvShopsService.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metrodgvShopsService.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -148,10 +149,19 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.metroProgressBar1);
             this.splitContainer1.Panel2.Controls.Add(this.metrodgvShopsService);
             this.splitContainer1.Size = new System.Drawing.Size(814, 354);
             this.splitContainer1.SplitterDistance = 271;
             this.splitContainer1.TabIndex = 22;
+            // 
+            // metroProgressBar1
+            // 
+            this.metroProgressBar1.Location = new System.Drawing.Point(436, 328);
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.Size = new System.Drawing.Size(100, 23);
+            this.metroProgressBar1.TabIndex = 18;
+            this.metroProgressBar1.Value = 80;
             // 
             // frmShop_Service
             // 
@@ -184,5 +194,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
     }
 }

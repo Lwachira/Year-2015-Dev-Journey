@@ -42,6 +42,7 @@
             this.btnShop = new MetroFramework.Controls.MetroTile();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.btnRegister = new MetroFramework.Controls.MetroTile();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.metrodgvRental)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -156,6 +157,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.metroProgressBar1);
             this.splitContainer1.Panel2.Controls.Add(this.metrodgvRental);
             this.splitContainer1.Size = new System.Drawing.Size(814, 354);
             this.splitContainer1.SplitterDistance = 271;
@@ -167,7 +169,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(4, 152);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(262, 199);
             this.metroTabControl1.TabIndex = 21;
             this.metroTabControl1.UseSelectable = true;
@@ -230,6 +232,14 @@
             this.btnRegister.Visible = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // metroProgressBar1
+            // 
+            this.metroProgressBar1.Location = new System.Drawing.Point(436, 328);
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.Size = new System.Drawing.Size(100, 23);
+            this.metroProgressBar1.TabIndex = 22;
+            this.metroProgressBar1.Value = 40;
+            // 
             // frmRental
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,5 +275,6 @@
         private MetroFramework.Controls.MetroTile btnShop;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTile btnRegister;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
     }
 }

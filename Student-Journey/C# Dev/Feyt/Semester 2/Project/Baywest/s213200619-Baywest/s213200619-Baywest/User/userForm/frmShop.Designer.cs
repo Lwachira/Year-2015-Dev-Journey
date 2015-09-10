@@ -38,6 +38,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metrodgvShop = new MetroFramework.Controls.MetroGrid();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metrodgvShop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -90,7 +91,7 @@
             // metrodgvShop
             // 
             this.metrodgvShop.AllowUserToResizeRows = false;
-            this.metrodgvShop.BackgroundColor = System.Drawing.Color.White;
+            this.metrodgvShop.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metrodgvShop.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metrodgvShop.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metrodgvShop.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -139,10 +140,19 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.metroProgressBar1);
             this.splitContainer1.Panel2.Controls.Add(this.metrodgvShop);
             this.splitContainer1.Size = new System.Drawing.Size(814, 354);
             this.splitContainer1.SplitterDistance = 223;
             this.splitContainer1.TabIndex = 19;
+            // 
+            // metroProgressBar1
+            // 
+            this.metroProgressBar1.Location = new System.Drawing.Point(484, 328);
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.Size = new System.Drawing.Size(100, 23);
+            this.metroProgressBar1.TabIndex = 3;
+            this.metroProgressBar1.Value = 60;
             // 
             // frmShop
             // 
@@ -174,5 +184,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private MetroFramework.Controls.MetroGrid metrodgvShop;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
     }
 }

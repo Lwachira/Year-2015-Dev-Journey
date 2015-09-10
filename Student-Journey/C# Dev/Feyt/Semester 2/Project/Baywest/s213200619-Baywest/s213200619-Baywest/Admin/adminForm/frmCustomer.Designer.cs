@@ -99,6 +99,7 @@
             this.metroDgvCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.metroDgvCustomer.Location = new System.Drawing.Point(3, 3);
             this.metroDgvCustomer.Name = "metroDgvCustomer";
+            this.metroDgvCustomer.ReadOnly = true;
             this.metroDgvCustomer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
@@ -226,6 +227,7 @@
             this.metroDgvFileCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.metroDgvFileCustomer.Location = new System.Drawing.Point(3, 188);
             this.metroDgvFileCustomer.Name = "metroDgvFileCustomer";
+            this.metroDgvFileCustomer.ReadOnly = true;
             this.metroDgvFileCustomer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));

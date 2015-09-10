@@ -115,6 +115,7 @@
             this.metroShop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroShop.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroShop.UseSelectable = true;
+            this.metroShop.Click += new System.EventHandler(this.metroShop_Click);
             // 
             // metroRentalAgreement
             // 

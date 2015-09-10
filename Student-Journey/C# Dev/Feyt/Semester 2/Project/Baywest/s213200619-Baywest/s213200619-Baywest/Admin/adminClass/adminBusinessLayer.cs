@@ -333,6 +333,197 @@ namespace s213200619_Baywest.Admin.adminClass
 
             return x;
         }
+
+
+
+
+
+        public DataTable getAllShop()
+        {
+            DataTable dbShop = new DataTable();
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                sqlCom = new SqlCommand("spGetAllShop", sqlCon);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(dbShop);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return dbShop;
+        }
+
+        public int insertShop(adminShop asp)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                sqlCom = new SqlCommand("spInsertShop '" + asp.ShopID + "','" + asp.ShopName + "','" + asp.ShopSize + "'", sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+
+
+        }
+
+
+        public int deleteShop(adminShop asp)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlDelete = "spDeleteShop '" + asp.ShopID + "'";
+                sqlCom = new SqlCommand(sqlDelete, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int updateShop(adminShop asp)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlUpdate = "spUpdateShop '" + asp.ShopID + "','" + asp.ShopName + "','" + asp.ShopSize + "'";
+                sqlCom = new SqlCommand(sqlUpdate, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
+
+
+        public DataTable getAllShopService()
+        {
+            DataTable dbShopService = new DataTable();
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                sqlCom = new SqlCommand("spGetAllShopService", sqlCon);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(dbShopService);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return dbShopService;
+        }
+
+        public int insertShopService(adminShopService asps)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlInsert = "spInsertShopService '" + asps.ShopServiceID + "','" + asps.ShopID + "','" + asps.ServiceID + "','" + asps.ServiceName + "'";
+                sqlCom = new SqlCommand(sqlInsert, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int deleteShopService(adminShopService asps)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlDelete = "spDeleteShopService '" + asps.ShopServiceID + "'";
+                sqlCom = new SqlCommand(sqlDelete, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int updateShopService(adminShopService asps)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlUpdate = "spUpdateShopService '" + asps.ShopServiceID + "','" + asps.ShopID + "','" + asps.ServiceID + "','" + asps.ServiceName + "'";
+                sqlCom = new SqlCommand(sqlUpdate, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
+
+
+
     }
 
 

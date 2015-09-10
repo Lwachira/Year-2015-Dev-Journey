@@ -8,16 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+
 namespace s213200619_Baywest.Admin.adminForm
 {
-    public partial class frmShop : MetroForm
+    public partial class frmAdminShopInspection : MetroForm
     {
-        public frmShop()
+        public frmAdminShopInspection()
         {
             InitializeComponent();
         }
 
-        private void frmShop_Load(object sender, EventArgs e)
+        private void frmAdminShopInspection_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
