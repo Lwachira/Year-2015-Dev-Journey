@@ -44,16 +44,14 @@ namespace s213200619_Baywest.User.userForm
                 StreamWriter myWriter = new StreamWriter(@"Files\NewUser.txt", true);
                 myWriter.WriteLine(customerID.ToString() + "#" + customerName.ToString() + "#" + customerCell.ToString() + "#" + loginID.ToString());
                 myWriter.Close();
+                MessageBox.Show("Completed");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
+
             }
-            finally
-            {
-                MessageBox.Show("Completed");
-            }
+
         }
     }
 }

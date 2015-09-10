@@ -50,6 +50,7 @@
             this.btnWrite.TabIndex = 14;
             this.btnWrite.Text = "Write To File";
             this.btnWrite.UseSelectable = true;
+            this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
             // btnClose
             // 
@@ -134,6 +135,7 @@
             // 
             // dtRentalStartDate
             // 
+            this.dtRentalStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtRentalStartDate.Location = new System.Drawing.Point(124, 181);
             this.dtRentalStartDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtRentalStartDate.Name = "dtRentalStartDate";
@@ -142,6 +144,7 @@
             // 
             // dtRentalEndDate
             // 
+            this.dtRentalEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtRentalEndDate.Location = new System.Drawing.Point(123, 216);
             this.dtRentalEndDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtRentalEndDate.Name = "dtRentalEndDate";

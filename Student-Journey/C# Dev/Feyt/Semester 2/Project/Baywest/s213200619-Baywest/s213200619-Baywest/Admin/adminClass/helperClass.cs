@@ -13,13 +13,17 @@ namespace s213200619_Baywest.Admin.adminClass
     {
         public static DataTable DataTableFromTextFile(string location, char delimiter = '#')
         {
-            DataTable result;
+           
+                DataTable result;
 
-            string[] LineArray = File.ReadAllLines(location);
+                string[] LineArray = File.ReadAllLines(location);
 
-            result = FormDataTable(LineArray, delimiter);
+                result = FormDataTable(LineArray, delimiter);
 
-            return result;
+                return result;
+            
+            
+          
         }
 
 
