@@ -43,7 +43,7 @@
             this.btnUpdate = new MetroFramework.Controls.MetroButton();
             this.btnInsert = new MetroFramework.Controls.MetroButton();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.btnDeletedCustomer = new MetroFramework.Controls.MetroButton();
+            this.btnDeletedShop = new MetroFramework.Controls.MetroButton();
             this.btnNewCustomer = new MetroFramework.Controls.MetroButton();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.btnShopInspection = new MetroFramework.Controls.MetroButton();
@@ -138,7 +138,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(10, 185);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(242, 176);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl1.TabIndex = 8;
@@ -195,7 +195,7 @@
             // 
             // metroTabPage3
             // 
-            this.metroTabPage3.Controls.Add(this.btnDeletedCustomer);
+            this.metroTabPage3.Controls.Add(this.btnDeletedShop);
             this.metroTabPage3.Controls.Add(this.btnNewCustomer);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
@@ -210,14 +210,15 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
-            // btnDeletedCustomer
+            // btnDeletedShop
             // 
-            this.btnDeletedCustomer.Location = new System.Drawing.Point(3, 32);
-            this.btnDeletedCustomer.Name = "btnDeletedCustomer";
-            this.btnDeletedCustomer.Size = new System.Drawing.Size(96, 23);
-            this.btnDeletedCustomer.TabIndex = 8;
-            this.btnDeletedCustomer.Text = "load Delete File";
-            this.btnDeletedCustomer.UseSelectable = true;
+            this.btnDeletedShop.Location = new System.Drawing.Point(3, 32);
+            this.btnDeletedShop.Name = "btnDeletedShop";
+            this.btnDeletedShop.Size = new System.Drawing.Size(96, 23);
+            this.btnDeletedShop.TabIndex = 8;
+            this.btnDeletedShop.Text = "load Delete File";
+            this.btnDeletedShop.UseSelectable = true;
+            this.btnDeletedShop.Click += new System.EventHandler(this.btnDeletedShop_Click);
             // 
             // btnNewCustomer
             // 
@@ -227,6 +228,7 @@
             this.btnNewCustomer.TabIndex = 7;
             this.btnNewCustomer.Text = "load Request File";
             this.btnNewCustomer.UseSelectable = true;
+            this.btnNewCustomer.Click += new System.EventHandler(this.btnNewCustomer_Click);
             // 
             // metroTabPage2
             // 
@@ -478,7 +480,7 @@
         private MetroFramework.Controls.MetroButton btnUpdate;
         private MetroFramework.Controls.MetroButton btnInsert;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
-        private MetroFramework.Controls.MetroButton btnDeletedCustomer;
+        private MetroFramework.Controls.MetroButton btnDeletedShop;
         private MetroFramework.Controls.MetroButton btnNewCustomer;
         private MetroFramework.Controls.MetroTextBox txtShopSIze;
         private MetroFramework.Controls.MetroTextBox txtShopID;

@@ -29,14 +29,14 @@ namespace s213200619_Baywest.User.userForm
         {
             dgvShop.DataSource = us.GetShop(int.Parse(ur.ShopID.ToString()));
 
-            if (dgvShop.Rows.Count == 0)
-            {
-                btnRequest.Visible = true;
-            }
-            else
-            {
-                btnRequest.Visible = false;
-            }
+            //if (dgvShop.Rows.Count == 0)
+            //{
+            //    btnRequest.Visible = true;
+            //}
+            //else
+            //{
+            //    btnRequest.Visible = false;
+            //}
         }
 
         private void metrodgvUser_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -70,6 +70,12 @@ namespace s213200619_Baywest.User.userForm
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
+        {
+            frmAddShop shop = new frmAddShop();
+            shop.ShowDialog();
+        }
+
+        private void btnRequest_Click(object sender, EventArgs e)
         {
             frmAddShop shop = new frmAddShop();
             shop.ShowDialog();

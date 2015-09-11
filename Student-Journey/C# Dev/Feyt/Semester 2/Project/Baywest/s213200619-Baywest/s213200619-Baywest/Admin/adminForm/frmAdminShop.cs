@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using s213200619_Baywest.Admin.adminClass;
+using System.IO;
 
 namespace s213200619_Baywest.Admin.adminForm
 {
@@ -86,6 +87,9 @@ namespace s213200619_Baywest.Admin.adminForm
                 int shopID = int.Parse(txtShopID.Text.Trim());
                 string shopName = txtShopName.Text.Trim();
                 string shopSize = txtShopSIze.Text.Trim();
+                StreamWriter file = new StreamWriter(@"Files\deletedShop.txt", true);
+                file.WriteLine(shopID.ToString() + "#" + shopName.ToString() + "#" + shopSize.ToString());
+                file.Close();
                 asp = new adminShop(shopID, shopName, shopSize);
                 dgvShop.DataSource = asp.DeleteShop();
                 dgvShop.DataSource = asp.GetAllShop();
@@ -148,6 +152,33 @@ namespace s213200619_Baywest.Admin.adminForm
         private void dgvShop_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnNewCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvShopFile.DataSource = helperClass.DataTableFromTextFile(@"Files\newShop.txt", '#');
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDeletedShop_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvShopFile.DataSource = helperClass.DataTableFromTextFile(@"Files\deletedShop.txt", '#');
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

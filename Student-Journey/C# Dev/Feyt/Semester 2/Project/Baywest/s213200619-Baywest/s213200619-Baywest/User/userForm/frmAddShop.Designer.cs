@@ -41,16 +41,13 @@
             // txtShopSize
             // 
             this.txtShopSize.Location = new System.Drawing.Point(110, 155);
-            this.txtShopSize.Mask = "00000";
             this.txtShopSize.Name = "txtShopSize";
             this.txtShopSize.Size = new System.Drawing.Size(100, 20);
             this.txtShopSize.TabIndex = 29;
-            this.txtShopSize.ValidatingType = typeof(int);
             // 
             // txtShopName
             // 
             this.txtShopName.Location = new System.Drawing.Point(110, 121);
-            this.txtShopName.Mask = "00000";
             this.txtShopName.Name = "txtShopName";
             this.txtShopName.Size = new System.Drawing.Size(100, 20);
             this.txtShopName.TabIndex = 28;
