@@ -23,9 +23,11 @@
 
             <br />
             Images:
-            <asp:RadioButton Text="1" ID="rdOne" runat="server" />
-            <asp:RadioButton Text="2" ID="rdTwo" runat="server" />
-            <asp:RadioButton Text="3" ID="rdThree" runat="server" />
+           <asp:RadioButtonList ID="rdoImage" runat="server">
+               <asp:ListItem Value="smiley" Text="Image 01" />
+               <asp:ListItem Value="sad" Text="Image 02" />
+               <asp:ListItem Value="angry" Text="Image 03" />
+           </asp:RadioButtonList>
             <br />
             <br />
             <asp:Button Text="Submit" ID="btnSubmit" runat="server" Width="96px" CssClass="auto-style1" OnClick="btnSubmit_Click" />

@@ -19,28 +19,12 @@ namespace Prac_01
 
             string image = "";
             string message;
-            if (rdOne.Checked)
-            {
-                image = rdOne.Text;
-            }
-            else if (rdTwo.Checked)
-            {
-                image = rdTwo.Text;
-            }
-            else if (rdThree.Checked)
-            {
-                image = rdThree.Text;
 
-            }
-            else
-            {
-
-            }
 
 
             message = txtMessage.Text;
-
-            imgPic.ImageUrl = "ImageGenerator.aspx?Name=" + message;
+            image = rdoImage.SelectedValue.ToString();
+            imgPic.ImageUrl = "ImageGenerator.aspx?Name=" + message + "&Image=" + image;
             imgPic.Visible = true;
         }
     }
