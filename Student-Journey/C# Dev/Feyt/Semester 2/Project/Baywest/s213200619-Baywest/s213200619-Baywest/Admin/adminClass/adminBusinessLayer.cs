@@ -523,6 +523,189 @@ namespace s213200619_Baywest.Admin.adminClass
         }
 
 
+        public DataTable getAllShopInspection()
+        {
+            DataTable dbShopInspection = new DataTable();
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                sqlCom = new SqlCommand("spGetAllShopInspection", sqlCon);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(dbShopInspection);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return dbShopInspection;
+        }
+
+        public int insertShopInspection(adminShopInspection asi)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlInsert = "spInsertShopInspection '" + asi.InspectionID + "','" + asi.ShopID + "','" + asi.ServiceID + "','" + asi.StartDate + "','" + asi.EndDate + "','" + asi.InspectionTask + "','" + asi.Message + "'";
+                sqlCom = new SqlCommand(sqlInsert, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int deleteShopInspection(adminShopInspection asi)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlDelete = "spDeleteShopInspection '" + asi.InspectionID + "'";
+                sqlCom = new SqlCommand(sqlDelete, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int updateShopInspection(adminShopInspection asi)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlUpdate = "spUpdateShopInspection '" + asi.InspectionID + "','" + asi.ShopID + "','" + asi.ServiceID + "','" + asi.StartDate + "','" + asi.EndDate + "','" + asi.InspectionTask + "','" + asi.Message + "'";
+                sqlCom = new SqlCommand(sqlUpdate, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
+
+
+
+        public DataTable getAllShopUpgrade()
+        {
+            DataTable dbShopInspection = new DataTable();
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                sqlCom = new SqlCommand("spGetAllShopUpgrade", sqlCon);
+                sqlDbAdapter = new SqlDataAdapter(sqlCom);
+                sqlDbAdapter.Fill(dbShopInspection);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return dbShopInspection;
+        }
+
+        public int insertShopUpgrade(adminShopUpgrade asu)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlInsert = "spInsertShopUpgrade '" + asu.UpgradeID + "','" + asu.ShopID + "','" + asu.ServiceID + "','" + asu.StartDate + "','" + asu.EndDate + "','" + asu.UpgradeTask + "','" + asu.CompletionMessage + "'";
+                sqlCom = new SqlCommand(sqlInsert, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int deleteShopUpgrade(adminShopUpgrade asu)
+        {
+            int x = 1;
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlDelete = "spDeleteShopUpgrade '" + asu.UpgradeID + "'";
+                sqlCom = new SqlCommand(sqlDelete, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            return x;
+        }
+
+        public int updateShopUpgrade(adminShopUpgrade asu)
+        {
+            int x = 1;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+
+                string sqlUpdate = "spUpdateShopUpgrade '" + asu.UpgradeID + "','" + asu.ShopID + "','" + asu.ServiceID + "','" + asu.StartDate + "','" + asu.EndDate + "','" + asu.UpgradeTask + "','" + asu.CompletionMessage + "'";
+                sqlCom = new SqlCommand(sqlUpdate, sqlCon);
+                x = sqlCom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            return x;
+        }
 
     }
 

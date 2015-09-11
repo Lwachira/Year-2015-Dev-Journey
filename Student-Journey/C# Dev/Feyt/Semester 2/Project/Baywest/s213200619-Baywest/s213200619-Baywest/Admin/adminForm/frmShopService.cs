@@ -96,10 +96,10 @@ namespace s213200619_Baywest.Admin.adminForm
                 dgvShopService.DataSource = asps.UpdateShopService();
                 dgvShopService.DataSource = asps.GetAllShopService();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
 

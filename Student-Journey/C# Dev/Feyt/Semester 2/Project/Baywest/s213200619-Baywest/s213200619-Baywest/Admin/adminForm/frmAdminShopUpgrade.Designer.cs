@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvShopUpgrade = new MetroFramework.Controls.MetroGrid();
             this.dgvShopUpgradeFile = new MetroFramework.Controls.MetroGrid();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -41,12 +41,10 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txtMessage = new MetroFramework.Controls.MetroTextBox();
-            this.txtInspectionTask = new MetroFramework.Controls.MetroTextBox();
+            this.txtUpgradeTask = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.txtShopName = new MetroFramework.Controls.MetroTextBox();
+            this.txtShopID = new MetroFramework.Controls.MetroTextBox();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.btnDelete = new MetroFramework.Controls.MetroButton();
@@ -55,11 +53,13 @@
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.btnDeletedCustomer = new MetroFramework.Controls.MetroButton();
             this.btnNewCustomer = new MetroFramework.Controls.MetroButton();
-            this.txtShopSIze = new MetroFramework.Controls.MetroTextBox();
-            this.txtShopID = new MetroFramework.Controls.MetroTextBox();
+            this.txtServiceID = new MetroFramework.Controls.MetroTextBox();
+            this.txtUpgradeID = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.dtEnd = new MetroFramework.Controls.MetroDateTime();
+            this.dtStart = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShopUpgrade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShopUpgradeFile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -82,23 +82,23 @@
             this.dgvShopUpgrade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvShopUpgrade.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvShopUpgrade.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShopUpgrade.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShopUpgrade.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvShopUpgrade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvShopUpgrade.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvShopUpgrade.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvShopUpgrade.EnableHeadersVisualStyles = false;
             this.dgvShopUpgrade.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvShopUpgrade.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -106,14 +106,14 @@
             this.dgvShopUpgrade.Name = "dgvShopUpgrade";
             this.dgvShopUpgrade.ReadOnly = true;
             this.dgvShopUpgrade.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShopUpgrade.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShopUpgrade.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvShopUpgrade.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvShopUpgrade.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvShopUpgrade.Size = new System.Drawing.Size(535, 184);
@@ -132,23 +132,23 @@
             this.dgvShopUpgradeFile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvShopUpgradeFile.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvShopUpgradeFile.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShopUpgradeFile.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShopUpgradeFile.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvShopUpgradeFile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvShopUpgradeFile.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvShopUpgradeFile.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvShopUpgradeFile.EnableHeadersVisualStyles = false;
             this.dgvShopUpgradeFile.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvShopUpgradeFile.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -156,14 +156,14 @@
             this.dgvShopUpgradeFile.Name = "dgvShopUpgradeFile";
             this.dgvShopUpgradeFile.ReadOnly = true;
             this.dgvShopUpgradeFile.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShopUpgradeFile.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShopUpgradeFile.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvShopUpgradeFile.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvShopUpgradeFile.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvShopUpgradeFile.Size = new System.Drawing.Size(535, 193);
@@ -200,18 +200,18 @@
             this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel1.Controls.Add(this.dtEnd);
+            this.metroPanel1.Controls.Add(this.dtStart);
             this.metroPanel1.Controls.Add(this.metroLabel7);
             this.metroPanel1.Controls.Add(this.metroLabel6);
             this.metroPanel1.Controls.Add(this.txtMessage);
-            this.metroPanel1.Controls.Add(this.txtInspectionTask);
+            this.metroPanel1.Controls.Add(this.txtUpgradeTask);
             this.metroPanel1.Controls.Add(this.metroLabel5);
             this.metroPanel1.Controls.Add(this.metroLabel4);
-            this.metroPanel1.Controls.Add(this.metroDateTime2);
-            this.metroPanel1.Controls.Add(this.metroDateTime1);
-            this.metroPanel1.Controls.Add(this.txtShopName);
-            this.metroPanel1.Controls.Add(this.metroTabControl1);
-            this.metroPanel1.Controls.Add(this.txtShopSIze);
             this.metroPanel1.Controls.Add(this.txtShopID);
+            this.metroPanel1.Controls.Add(this.metroTabControl1);
+            this.metroPanel1.Controls.Add(this.txtServiceID);
+            this.metroPanel1.Controls.Add(this.txtUpgradeID);
             this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.metroLabel2);
             this.metroPanel1.Controls.Add(this.metroLabel1);
@@ -231,7 +231,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(12, 203);
+            this.metroLabel7.Location = new System.Drawing.Point(12, 207);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(60, 19);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Blue;
@@ -265,20 +265,20 @@
             this.txtMessage.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtMessage.UseSelectable = true;
             // 
-            // txtInspectionTask
+            // txtUpgradeTask
             // 
-            this.txtInspectionTask.Lines = new string[0];
-            this.txtInspectionTask.Location = new System.Drawing.Point(117, 161);
-            this.txtInspectionTask.MaxLength = 32767;
-            this.txtInspectionTask.Name = "txtInspectionTask";
-            this.txtInspectionTask.PasswordChar = '\0';
-            this.txtInspectionTask.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtInspectionTask.SelectedText = "";
-            this.txtInspectionTask.Size = new System.Drawing.Size(107, 23);
-            this.txtInspectionTask.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtInspectionTask.TabIndex = 14;
-            this.txtInspectionTask.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtInspectionTask.UseSelectable = true;
+            this.txtUpgradeTask.Lines = new string[0];
+            this.txtUpgradeTask.Location = new System.Drawing.Point(117, 161);
+            this.txtUpgradeTask.MaxLength = 32767;
+            this.txtUpgradeTask.Name = "txtUpgradeTask";
+            this.txtUpgradeTask.PasswordChar = '\0';
+            this.txtUpgradeTask.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtUpgradeTask.SelectedText = "";
+            this.txtUpgradeTask.Size = new System.Drawing.Size(107, 23);
+            this.txtUpgradeTask.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtUpgradeTask.TabIndex = 14;
+            this.txtUpgradeTask.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtUpgradeTask.UseSelectable = true;
             // 
             // metroLabel5
             // 
@@ -302,46 +302,26 @@
             this.metroLabel4.Text = "Start";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroDateTime2
+            // txtShopID
             // 
-            this.metroDateTime2.Location = new System.Drawing.Point(55, 127);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTime2.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroDateTime2.TabIndex = 11;
-            this.metroDateTime2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroDateTime1
-            // 
-            this.metroDateTime1.Location = new System.Drawing.Point(55, 92);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTime1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroDateTime1.TabIndex = 10;
-            this.metroDateTime1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtShopName
-            // 
-            this.txtShopName.Lines = new string[0];
-            this.txtShopName.Location = new System.Drawing.Point(117, 32);
-            this.txtShopName.MaxLength = 32767;
-            this.txtShopName.Name = "txtShopName";
-            this.txtShopName.PasswordChar = '\0';
-            this.txtShopName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtShopName.SelectedText = "";
-            this.txtShopName.Size = new System.Drawing.Size(107, 23);
-            this.txtShopName.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtShopName.TabIndex = 9;
-            this.txtShopName.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtShopName.UseSelectable = true;
+            this.txtShopID.Lines = new string[0];
+            this.txtShopID.Location = new System.Drawing.Point(117, 32);
+            this.txtShopID.MaxLength = 32767;
+            this.txtShopID.Name = "txtShopID";
+            this.txtShopID.PasswordChar = '\0';
+            this.txtShopID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtShopID.SelectedText = "";
+            this.txtShopID.Size = new System.Drawing.Size(107, 23);
+            this.txtShopID.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtShopID.TabIndex = 9;
+            this.txtShopID.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtShopID.UseSelectable = true;
             // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
-            this.metroTabControl1.Location = new System.Drawing.Point(3, 232);
+            this.metroTabControl1.Location = new System.Drawing.Point(13, 232);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(242, 143);
@@ -370,12 +350,13 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(8, 108);
+            this.btnDelete.Location = new System.Drawing.Point(101, 14);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseSelectable = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -385,6 +366,7 @@
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseSelectable = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
@@ -394,6 +376,7 @@
             this.btnInsert.TabIndex = 2;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseSelectable = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // metroTabPage3
             // 
@@ -430,35 +413,35 @@
             this.btnNewCustomer.Text = "load Request File";
             this.btnNewCustomer.UseSelectable = true;
             // 
-            // txtShopSIze
+            // txtServiceID
             // 
-            this.txtShopSIze.Lines = new string[0];
-            this.txtShopSIze.Location = new System.Drawing.Point(117, 61);
-            this.txtShopSIze.MaxLength = 32767;
-            this.txtShopSIze.Name = "txtShopSIze";
-            this.txtShopSIze.PasswordChar = '\0';
-            this.txtShopSIze.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtShopSIze.SelectedText = "";
-            this.txtShopSIze.Size = new System.Drawing.Size(107, 23);
-            this.txtShopSIze.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtShopSIze.TabIndex = 7;
-            this.txtShopSIze.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtShopSIze.UseSelectable = true;
+            this.txtServiceID.Lines = new string[0];
+            this.txtServiceID.Location = new System.Drawing.Point(117, 61);
+            this.txtServiceID.MaxLength = 32767;
+            this.txtServiceID.Name = "txtServiceID";
+            this.txtServiceID.PasswordChar = '\0';
+            this.txtServiceID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtServiceID.SelectedText = "";
+            this.txtServiceID.Size = new System.Drawing.Size(107, 23);
+            this.txtServiceID.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtServiceID.TabIndex = 7;
+            this.txtServiceID.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtServiceID.UseSelectable = true;
             // 
-            // txtShopID
+            // txtUpgradeID
             // 
-            this.txtShopID.Lines = new string[0];
-            this.txtShopID.Location = new System.Drawing.Point(117, 3);
-            this.txtShopID.MaxLength = 32767;
-            this.txtShopID.Name = "txtShopID";
-            this.txtShopID.PasswordChar = '\0';
-            this.txtShopID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtShopID.SelectedText = "";
-            this.txtShopID.Size = new System.Drawing.Size(107, 23);
-            this.txtShopID.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtShopID.TabIndex = 5;
-            this.txtShopID.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtShopID.UseSelectable = true;
+            this.txtUpgradeID.Lines = new string[0];
+            this.txtUpgradeID.Location = new System.Drawing.Point(117, 3);
+            this.txtUpgradeID.MaxLength = 32767;
+            this.txtUpgradeID.Name = "txtUpgradeID";
+            this.txtUpgradeID.PasswordChar = '\0';
+            this.txtUpgradeID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtUpgradeID.SelectedText = "";
+            this.txtUpgradeID.Size = new System.Drawing.Size(107, 23);
+            this.txtUpgradeID.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtUpgradeID.TabIndex = 5;
+            this.txtUpgradeID.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtUpgradeID.UseSelectable = true;
             // 
             // metroLabel3
             // 
@@ -492,6 +475,28 @@
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Upgrade ID";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // dtEnd
+            // 
+            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtEnd.Location = new System.Drawing.Point(55, 127);
+            this.dtEnd.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtEnd.Name = "dtEnd";
+            this.dtEnd.Size = new System.Drawing.Size(200, 29);
+            this.dtEnd.Style = MetroFramework.MetroColorStyle.Blue;
+            this.dtEnd.TabIndex = 19;
+            this.dtEnd.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // dtStart
+            // 
+            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtStart.Location = new System.Drawing.Point(55, 92);
+            this.dtStart.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.Size = new System.Drawing.Size(200, 29);
+            this.dtStart.Style = MetroFramework.MetroColorStyle.Blue;
+            this.dtStart.TabIndex = 18;
+            this.dtStart.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // frmAdminShopUpgrade
             // 
@@ -527,12 +532,10 @@
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroTextBox txtMessage;
-        private MetroFramework.Controls.MetroTextBox txtInspectionTask;
+        private MetroFramework.Controls.MetroTextBox txtUpgradeTask;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroDateTime metroDateTime2;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
-        private MetroFramework.Controls.MetroTextBox txtShopName;
+        private MetroFramework.Controls.MetroTextBox txtShopID;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroButton btnDelete;
@@ -541,10 +544,12 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private MetroFramework.Controls.MetroButton btnDeletedCustomer;
         private MetroFramework.Controls.MetroButton btnNewCustomer;
-        private MetroFramework.Controls.MetroTextBox txtShopSIze;
-        private MetroFramework.Controls.MetroTextBox txtShopID;
+        private MetroFramework.Controls.MetroTextBox txtServiceID;
+        private MetroFramework.Controls.MetroTextBox txtUpgradeID;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroDateTime dtEnd;
+        private MetroFramework.Controls.MetroDateTime dtStart;
     }
 }

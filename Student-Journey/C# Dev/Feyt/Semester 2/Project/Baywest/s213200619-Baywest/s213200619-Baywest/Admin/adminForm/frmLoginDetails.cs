@@ -100,6 +100,8 @@ namespace s213200619_Baywest.Admin.adminForm
             {
                 cld = new classLoginDetails(int.Parse(metroTxtID.Text), metroTxtUserName.Text, metroTxtRank.Text);
                 metroDgvLogin.DataSource = cld.InsertLogin();
+                metroDgvLogin.DataSource = cld.GetAllLogin();
+
 
             }
             catch (Exception ex)

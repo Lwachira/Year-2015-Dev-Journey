@@ -63,7 +63,9 @@
     <Compile Include="Admin\adminClass\adminCustomer.cs" />
     <Compile Include="Admin\adminClass\adminRentalAgreement.cs" />
     <Compile Include="Admin\adminClass\adminShop.cs" />
+    <Compile Include="Admin\adminClass\adminShopInspection.cs" />
     <Compile Include="Admin\adminClass\adminShopService.cs" />
+    <Compile Include="Admin\adminClass\adminShopUpgrade.cs" />
     <Compile Include="Admin\adminClass\classLoginDetails.cs" />
     <Compile Include="Admin\adminClass\helperClass.cs" />
     <Compile Include="Admin\adminForm\frmAdmin.cs">
@@ -140,6 +142,12 @@
     </Compile>
     <Compile Include="User\userForm\frmAddRental.Designer.cs">
       <DependentUpon>frmAddRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShop.Designer.cs">
+      <DependentUpon>frmAddShop.cs</DependentUpon>
     </Compile>
     <Compile Include="User\userForm\frmAddUser.cs">
       <SubType>Form</SubType>
@@ -225,6 +233,9 @@
     </Compile>
     <EmbeddedResource Include="User\userForm\frmAddRental.resx">
       <DependentUpon>frmAddRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmAddShop.resx">
+      <DependentUpon>frmAddShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\userForm\frmAddUser.resx">
       <DependentUpon>frmAddUser.cs</DependentUpon>

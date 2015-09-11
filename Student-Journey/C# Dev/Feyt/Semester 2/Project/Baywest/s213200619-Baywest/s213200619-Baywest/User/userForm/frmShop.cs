@@ -27,7 +27,16 @@ namespace s213200619_Baywest.User.userForm
 
         private void frmShop_Load(object sender, EventArgs e)
         {
-            metrodgvShop.DataSource = us.GetShop(int.Parse(ur.ShopID.ToString()));
+            dgvShop.DataSource = us.GetShop(int.Parse(ur.ShopID.ToString()));
+
+            if (dgvShop.Rows.Count == 0)
+            {
+                btnRequest.Visible = true;
+            }
+            else
+            {
+                btnRequest.Visible = false;
+            }
         }
 
         private void metrodgvUser_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -35,9 +44,9 @@ namespace s213200619_Baywest.User.userForm
 
             try
             {
-                shopID = int.Parse(metrodgvShop[0, e.RowIndex].Value.ToString());
-                shopName = metrodgvShop[1, e.RowIndex].Value.ToString();
-                shopSize = metrodgvShop[2, e.RowIndex].Value.ToString();
+                shopID = int.Parse(dgvShop[0, e.RowIndex].Value.ToString());
+                shopName = dgvShop[1, e.RowIndex].Value.ToString();
+                shopSize = dgvShop[2, e.RowIndex].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -49,10 +58,21 @@ namespace s213200619_Baywest.User.userForm
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void btnShopService_Click(object sender, EventArgs e)
+        {
             us = new userShop(shopID, shopName, shopSize);
             frmShop_Service shopService = new frmShop_Service(us);
             shopService.ShowDialog();
+        }
 
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            frmAddShop shop = new frmAddShop();
+            shop.ShowDialog();
         }
     }
 }

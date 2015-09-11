@@ -25,7 +25,7 @@ namespace s213200619_Baywest.Admin.adminForm
             try
             {
                 dgvShop.DataSource = asp.GetAllShop();
-                dgvShopFile.DataSource = asp.GetAllShop();
+
 
             }
             catch (Exception ex)
@@ -143,6 +143,11 @@ namespace s213200619_Baywest.Admin.adminForm
         {
             frmAdminShopUpgrade shopUpgrade = new frmAdminShopUpgrade();
             shopUpgrade.ShowDialog();
+        }
+
+        private void dgvShop_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

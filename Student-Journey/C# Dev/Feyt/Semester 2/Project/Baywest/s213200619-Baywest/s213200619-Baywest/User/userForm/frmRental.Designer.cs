@@ -169,7 +169,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(4, 152);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(262, 199);
             this.metroTabControl1.TabIndex = 21;
             this.metroTabControl1.UseSelectable = true;
@@ -214,6 +214,7 @@
             this.metroTabPage2.Size = new System.Drawing.Size(254, 157);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Request";
+            this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
