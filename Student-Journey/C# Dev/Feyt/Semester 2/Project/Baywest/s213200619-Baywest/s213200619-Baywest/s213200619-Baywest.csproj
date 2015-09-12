@@ -149,6 +149,12 @@
     <Compile Include="User\userForm\frmAddShop.Designer.cs">
       <DependentUpon>frmAddShop.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\userForm\frmAddShopInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShopInspection.Designer.cs">
+      <DependentUpon>frmAddShopInspection.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\userForm\frmAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
     </Compile>
     <Compile Include="User\userForm\frmShopInspection.Designer.cs">
       <DependentUpon>frmShopInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShopService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShopService.Designer.cs">
+      <DependentUpon>frmAddShopService.cs</DependentUpon>
     </Compile>
     <Compile Include="User\userForm\frmShopUpgrade.cs">
       <SubType>Form</SubType>
@@ -237,6 +249,9 @@
     <EmbeddedResource Include="User\userForm\frmAddShop.resx">
       <DependentUpon>frmAddShop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmAddShopInspection.resx">
+      <DependentUpon>frmAddShopInspection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\userForm\frmAddUser.resx">
       <DependentUpon>frmAddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\userForm\frmShopInspection.resx">
       <DependentUpon>frmShopInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmAddShopService.resx">
+      <DependentUpon>frmAddShopService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\userForm\frmShopUpgrade.resx">
       <DependentUpon>frmShopUpgrade.cs</DependentUpon>

@@ -12,29 +12,34 @@ using System.IO;
 
 namespace s213200619_Baywest.User.userForm
 {
-    public partial class frmAddShop : MetroForm
+    public partial class frmAddShopService : MetroForm
     {
-        public frmAddShop()
+        public frmAddShopService()
         {
             InitializeComponent();
         }
 
-        private void frmAddShop_Load(object sender, EventArgs e)
+        private void frmShopService_Load(object sender, EventArgs e)
         {
 
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btnWrite_Click(object sender, EventArgs e)
         {
+            int shopServiceID = int.Parse(txtShopServiceID.Text.Trim());
             int shopID = int.Parse(txtShopID.Text.Trim());
-            string shopName = txtShopName.Text.Trim();
-            string shopSize = txtShopSize.Text.Trim();
-
+            int serviceID = int.Parse(txtServiceID.Text.Trim());
+            string serviceName = txtServiceName.Text.Trim();
 
             try
             {
-                StreamWriter myWriter = new StreamWriter(@"Files\newShop.txt", true);
-                myWriter.WriteLine(shopID.ToString() + "#" + shopName.ToString() + "#" + shopSize.ToString());
+                StreamWriter myWriter = new StreamWriter(@"Files\newShopService.txt", true);
+                myWriter.WriteLine(shopServiceID.ToString() + "#" + shopID.ToString() + "#" + serviceID.ToString() + "#" + serviceName.ToString());
                 myWriter.Close();
 
             }
@@ -43,11 +48,6 @@ namespace s213200619_Baywest.User.userForm
 
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

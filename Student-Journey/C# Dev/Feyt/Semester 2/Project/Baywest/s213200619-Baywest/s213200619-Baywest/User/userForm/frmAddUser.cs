@@ -53,5 +53,10 @@ namespace s213200619_Baywest.User.userForm
             }
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

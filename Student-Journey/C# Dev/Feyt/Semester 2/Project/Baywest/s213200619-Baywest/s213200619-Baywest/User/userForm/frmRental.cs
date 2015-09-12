@@ -31,14 +31,14 @@ namespace s213200619_Baywest.User.userForm
         {
             metrodgvRental.DataSource = ur.GetRental(uc.CustomerID);
 
-            if (metrodgvRental.Rows.Count == 0)
-            {
-                btnRegister.Visible = true;
-            }
-            else
-            {
-                btnRegister.Visible = false;
-            }
+            //if (metrodgvRental.Rows.Count == 0)
+            //{
+            //    btnRegister.Visible = true;
+            //}
+            //else
+            //{
+            //    btnRegister.Visible = false;
+            //}
         }
 
         private void metrodgvRental_RowEnter(object sender, DataGridViewCellEventArgs e)

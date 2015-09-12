@@ -230,7 +230,6 @@
             this.btnRegister.Text = "Register";
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegister.UseSelectable = true;
-            this.btnRegister.Visible = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // metroProgressBar1

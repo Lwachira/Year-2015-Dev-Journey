@@ -45,5 +45,10 @@ namespace s213200619_Baywest.User.userForm
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

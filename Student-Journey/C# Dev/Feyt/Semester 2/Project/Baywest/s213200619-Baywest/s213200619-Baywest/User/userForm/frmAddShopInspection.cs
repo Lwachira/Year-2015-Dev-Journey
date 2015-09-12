@@ -8,33 +8,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-using System.IO;
 
 namespace s213200619_Baywest.User.userForm
 {
-    public partial class frmAddShop : MetroForm
+    public partial class frmAddShopInspection : MetroForm
     {
-        public frmAddShop()
+        public frmAddShopInspection()
         {
             InitializeComponent();
         }
 
-        private void frmAddShop_Load(object sender, EventArgs e)
+        private void frmAddShopInspection_Load(object sender, EventArgs e)
         {
 
         }
 
         private void btnWrite_Click(object sender, EventArgs e)
         {
+            int inspectionID = int.Parse(txtShopInspectionID.Text.Trim());
             int shopID = int.Parse(txtShopID.Text.Trim());
-            string shopName = txtShopName.Text.Trim();
-            string shopSize = txtShopSize.Text.Trim();
-
+            int serviceID = int.Parse(txtServiceID.Text.Trim());
+            string startDate = dtStart.Text.Trim();
+            string endDate = dtEnd.Text.Trim();
 
             try
             {
-                StreamWriter myWriter = new StreamWriter(@"Files\newShop.txt", true);
-                myWriter.WriteLine(shopID.ToString() + "#" + shopName.ToString() + "#" + shopSize.ToString());
+                StreamWriter myWriter = new StreamWriter(@"Files\newShopService.txt", true);
+                myWriter.WriteLine(shopServiceID.ToString() + "#" + shopID.ToString() + "#" + serviceID.ToString() + "#" + serviceName.ToString());
                 myWriter.Close();
 
             }
@@ -43,11 +43,6 @@ namespace s213200619_Baywest.User.userForm
 
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

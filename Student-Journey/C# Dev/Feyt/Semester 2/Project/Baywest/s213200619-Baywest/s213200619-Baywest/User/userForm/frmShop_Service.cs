@@ -66,16 +66,32 @@ namespace s213200619_Baywest.User.userForm
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShopInspection_Click(object sender, EventArgs e)
+        {
             uss = new userShopService(shopServiceID, shopID, serviceID, serviceName);
             frmShopInspection shopInspection = new frmShopInspection(uss);
             shopInspection.ShowDialog();
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void btnShopUpgrade_Click(object sender, EventArgs e)
         {
             uss = new userShopService(shopServiceID, shopID, serviceID, serviceName);
             frmShopUpgrade shopUpgrade = new frmShopUpgrade(uss);
             shopUpgrade.ShowDialog();
+        }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            frmAddShopService shopService = new frmAddShopService();
+            shopService.ShowDialog();
         }
     }
 }

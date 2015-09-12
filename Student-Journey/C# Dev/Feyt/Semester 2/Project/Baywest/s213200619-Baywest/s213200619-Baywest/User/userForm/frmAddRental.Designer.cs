@@ -60,6 +60,7 @@
             this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Close";
             this.btnClose.UseSelectable = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // metroLabel1
             // 
