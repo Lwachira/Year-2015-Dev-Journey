@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using s213200619_Baywest.Admin.adminClass;
+using System.IO;
 
 namespace s213200619_Baywest.Admin.adminForm
 {
@@ -111,7 +112,9 @@ namespace s213200619_Baywest.Admin.adminForm
                 int shopID = int.Parse(txtShopID.Text.Trim());
                 int serviceID = int.Parse(txtServiceID.Text.Trim());
                 string serviceName = txtServiceName.Text.Trim();
-
+                StreamWriter file = new StreamWriter(@"Files\deletedShopService.txt", true);
+                file.WriteLine(shopServiceID.ToString() + "#" + shopID.ToString() + "#" + serviceID.ToString() + "#" + serviceName.ToString());
+                file.Close();
                 asps = new adminShopService(shopServiceID, shopID, serviceID, serviceName);
                 dgvShopService.DataSource = asps.DeleteShopService();
                 dgvShopService.DataSource = asps.GetAllShopService();
@@ -120,6 +123,32 @@ namespace s213200619_Baywest.Admin.adminForm
             {
 
                 throw;
+            }
+        }
+
+        private void btnNewCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvShopServiceFile.DataSource = helperClass.DataTableFromTextFile(@"Files\newShopService.txt", '#');
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDeletedCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvShopServiceFile.DataSource = helperClass.DataTableFromTextFile(@"Files\deletedShopService.txt", '#');
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
     }
