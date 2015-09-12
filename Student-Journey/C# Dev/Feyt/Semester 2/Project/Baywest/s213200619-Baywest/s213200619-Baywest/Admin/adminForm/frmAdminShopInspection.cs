@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using s213200619_Baywest.Admin.adminClass;
+using System.IO;
 
 namespace s213200619_Baywest.Admin.adminForm
 {
@@ -91,7 +92,9 @@ namespace s213200619_Baywest.Admin.adminForm
                 endDate = dtEnd.Text.Trim();
                 inspectionTask = txtInspectionTask.Text.Trim();
                 message = txtMessage.Text.Trim();
-
+                StreamWriter file = new StreamWriter(@"Files\deletedShopInspection.txt", true);
+                file.WriteLine(inspectionID.ToString() + "#" + shopID.ToString() + "#" + serviceID.ToString() + "#" + startDate.ToString() + "#" + endDate.ToString() + "#" + inspectionTask.ToString() + "#" + message.ToString());
+                file.Close();
                 asi = new adminShopInspection(inspectionID, shopID, serviceID, startDate, endDate, inspectionTask, message);
                 dgvShopInspection.DataSource = asi.DeleteShopInspection();
                 dgvShopInspection.DataSource = asi.GetAllShopInspection();
@@ -157,6 +160,54 @@ namespace s213200619_Baywest.Admin.adminForm
 
 
 
+        }
+
+        private void btnNewCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvShopInspectionFile.DataSource = helperClass.DataTableFromTextFile(@"Files\newShopInspection.txt", '#');
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvShopInspectionFile_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtInspectionID.Text = dgvShopInspectionFile[0, e.RowIndex].Value.ToString();
+                txtShopID.Text = dgvShopInspectionFile[1, e.RowIndex].Value.ToString();
+                txtServiceID.Text = dgvShopInspectionFile[2, e.RowIndex].Value.ToString();
+                DateTime result = DateTime.Parse(dgvShopInspectionFile[3, e.RowIndex].Value.ToString());
+                dtStart.Value = result;
+                result = DateTime.Parse(dgvShopInspectionFile[4, e.RowIndex].Value.ToString());
+                dtEnd.Value = result;
+                txtInspectionTask.Text = dgvShopInspectionFile[5, e.RowIndex].Value.ToString();
+                txtMessage.Text = dgvShopInspectionFile[6, e.RowIndex].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btnDeletedCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvShopInspectionFile.DataSource = helperClass.DataTableFromTextFile(@"Files\deletedShopInspection.txt", '#');
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

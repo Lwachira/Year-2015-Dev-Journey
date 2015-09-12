@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using s213200619_Baywest.Admin.adminClass;
+using System.IO;
 
 namespace s213200619_Baywest.Admin.adminForm
 {
@@ -51,6 +52,9 @@ namespace s213200619_Baywest.Admin.adminForm
                 dtStart.Value = DateTime.Parse(dgvShopUpgrade[3, e.RowIndex].Value.ToString());
 
                 dtEnd.Value = DateTime.Parse(dgvShopUpgrade[4, e.RowIndex].Value.ToString());
+                txtUpgradeTask.Text = dgvShopUpgrade[5, e.RowIndex].Value.ToString();
+                txtMessage.Text = dgvShopUpgrade[6, e.RowIndex].Value.ToString();
+
             }
 
             catch (Exception ex)
@@ -142,10 +146,67 @@ namespace s213200619_Baywest.Admin.adminForm
                 endDate = dtEnd.Text.Trim();
                 upgradeTask = txtUpgradeTask.Text.Trim();
                 completionMessage = txtMessage.Text.Trim();
-
+                StreamWriter file = new StreamWriter(@"Files\deletedShopUpgrade.txt", true);
+                file.WriteLine(upgradeID.ToString() + "#" + shopID.ToString() + "#" + serviceID.ToString() + "#" + startDate.ToString() + "#" + endDate.ToString() + "#" + upgradeTask.ToString() + "#" + completionMessage.ToString());
+                file.Close();
                 asu = new adminShopUpgrade(upgradeID, shopID, serviceID, startDate, endDate, upgradeTask, completionMessage);
                 dgvShopUpgrade.DataSource = asu.DeleteShopUpgrade();
                 dgvShopUpgrade.DataSource = asu.GetAllShopUpgrade();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnNewShopUpgrade_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvShopUpgradeFile.DataSource = helperClass.DataTableFromTextFile(@"Files\newShopUpgrade.txt", '#');
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvShopUpgradeFile_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtUpgradeID.Text = dgvShopUpgradeFile[0, e.RowIndex].Value.ToString();
+                txtShopID.Text = dgvShopUpgradeFile[1, e.RowIndex].Value.ToString();
+                txtServiceID.Text = dgvShopUpgradeFile[2, e.RowIndex].Value.ToString();
+
+
+                dtStart.Value = DateTime.Parse(dgvShopUpgradeFile[3, e.RowIndex].Value.ToString());
+
+                dtEnd.Value = DateTime.Parse(dgvShopUpgradeFile[4, e.RowIndex].Value.ToString());
+                txtUpgradeTask.Text = dgvShopUpgradeFile[5, e.RowIndex].Value.ToString();
+                txtMessage.Text = dgvShopUpgradeFile[6, e.RowIndex].Value.ToString();
+
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDeletedCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeletedCustomer_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvShopUpgradeFile.DataSource = helperClass.DataTableFromTextFile(@"Files\deletedShopUpgrade.txt", '#');
             }
             catch (Exception ex)
             {

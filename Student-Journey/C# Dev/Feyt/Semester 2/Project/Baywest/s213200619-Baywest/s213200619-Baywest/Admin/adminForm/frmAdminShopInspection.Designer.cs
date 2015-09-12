@@ -193,6 +193,7 @@
             this.btnDeletedCustomer.TabIndex = 8;
             this.btnDeletedCustomer.Text = "load Delete File";
             this.btnDeletedCustomer.UseSelectable = true;
+            this.btnDeletedCustomer.Click += new System.EventHandler(this.btnDeletedCustomer_Click);
             // 
             // btnNewCustomer
             // 
@@ -202,6 +203,7 @@
             this.btnNewCustomer.TabIndex = 7;
             this.btnNewCustomer.Text = "load Request File";
             this.btnNewCustomer.UseSelectable = true;
+            this.btnNewCustomer.Click += new System.EventHandler(this.btnNewCustomer_Click);
             // 
             // metroTabPage3
             // 
@@ -289,7 +291,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(3, 232);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(242, 143);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl1.TabIndex = 8;
@@ -473,6 +475,7 @@
             this.dgvShopInspectionFile.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgvShopInspectionFile.TabIndex = 1;
             this.dgvShopInspectionFile.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dgvShopInspectionFile.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvShopInspectionFile_RowEnter);
             // 
             // splitContainer1
             // 
