@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7E87C94-B39D-4132-8C7B-9B3B5AD8F74A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>s213200619_Baywest</RootNamespace>
+    <AssemblyName>s213200619-Baywest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\adminClass\adminBusinessLayer.cs" />
+    <Compile Include="Admin\adminClass\adminCustomer.cs" />
+    <Compile Include="Admin\adminClass\adminRentalAgreement.cs" />
+    <Compile Include="Admin\adminClass\adminShop.cs" />
+    <Compile Include="Admin\adminClass\adminShopInspection.cs" />
+    <Compile Include="Admin\adminClass\adminShopService.cs" />
+    <Compile Include="Admin\adminClass\adminShopUpgrade.cs" />
+    <Compile Include="Admin\adminClass\classLoginDetails.cs" />
+    <Compile Include="Admin\adminClass\helperClass.cs" />
+    <Compile Include="Admin\adminForm\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShop.Designer.cs">
+      <DependentUpon>frmAdminShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopInspection.Designer.cs">
+      <DependentUpon>frmAdminShopInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopUpgrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopUpgrade.Designer.cs">
+      <DependentUpon>frmAdminShopUpgrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminCustomer.Designer.cs">
+      <DependentUpon>frmAdminCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminLoginDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminLoginDetails.Designer.cs">
+      <DependentUpon>frmAdminLoginDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminRental.Designer.cs">
+      <DependentUpon>frmAdminRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmAdminShopService.Designer.cs">
+      <DependentUpon>frmAdminShopService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\userClass\userBuisnessLayer.cs" />
+    <Compile Include="User\userClass\userCustomer.cs" />
+    <Compile Include="User\userClass\userRental.cs" />
+    <Compile Include="User\userClass\userShop.cs" />
+    <Compile Include="User\userClass\userShopInspection.cs" />
+    <Compile Include="User\userClass\userShopService.cs" />
+    <Compile Include="User\userClass\userShopUpgrade.cs" />
+    <Compile Include="User\userForm\frmAddRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddRental.Designer.cs">
+      <DependentUpon>frmAddRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShop.Designer.cs">
+      <DependentUpon>frmAddShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShopInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShopInspection.Designer.cs">
+      <DependentUpon>frmAddShopInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShopUpgrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShopUpgrade.Designer.cs">
+      <DependentUpon>frmAddShopUpgrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmRental.Designer.cs">
+      <DependentUpon>frmRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmShop.Designer.cs">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmShopInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmShopInspection.Designer.cs">
+      <DependentUpon>frmShopInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShopService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmAddShopService.Designer.cs">
+      <DependentUpon>frmAddShopService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmShopUpgrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmShopUpgrade.Designer.cs">
+      <DependentUpon>frmShopUpgrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmShop_Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmShop_Service.Designer.cs">
+      <DependentUpon>frmShop_Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\userForm\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\userForm\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\adminForm\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminShop.resx">
+      <DependentUpon>frmAdminShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminShopInspection.resx">
+      <DependentUpon>frmAdminShopInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminShopUpgrade.resx">
+      <DependentUpon>frmAdminShopUpgrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminCustomer.resx">
+      <DependentUpon>frmAdminCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminLoginDetails.resx">
+      <DependentUpon>frmAdminLoginDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminRental.resx">
+      <DependentUpon>frmAdminRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmAdminShopService.resx">
+      <DependentUpon>frmAdminShopService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="User\userForm\frmAddRental.resx">
+      <DependentUpon>frmAddRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmAddShop.resx">
+      <DependentUpon>frmAddShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmAddShopInspection.resx">
+      <DependentUpon>frmAddShopInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmAddShopUpgrade.resx">
+      <DependentUpon>frmAddShopUpgrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmRental.resx">
+      <DependentUpon>frmRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmShop.resx">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmShopInspection.resx">
+      <DependentUpon>frmShopInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmAddShopService.resx">
+      <DependentUpon>frmAddShopService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmShopUpgrade.resx">
+      <DependentUpon>frmShopUpgrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmShop_Service.resx">
+      <DependentUpon>frmShop_Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\userForm\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Baywest-Logo-1024x721.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
