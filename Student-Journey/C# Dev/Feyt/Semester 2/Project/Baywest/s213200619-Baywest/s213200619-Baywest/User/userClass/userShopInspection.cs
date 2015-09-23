@@ -10,6 +10,7 @@ namespace s213200619_Baywest.User.userClass
     public class userShopInspection
     {
         private userBuisnessLayer bl = new userBuisnessLayer();
+<<<<<<< HEAD
         private int shopInspectionID;
         private int shopID;
         private int serviceID;
@@ -17,6 +18,16 @@ namespace s213200619_Baywest.User.userClass
         private string endDate;
         private string inspectionTask;
         private string message;
+=======
+        int shopInspectionID;
+        int shopID;
+        int serviceID;
+        string startDate;
+        string endDate;
+        string inspectionTask;
+        string message;
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
 
         public userShopInspection(int shopInspectionID, int shopID, int serviceID, string startDate, string endDate, string inspectionTask, string message)
         {
@@ -36,6 +47,10 @@ namespace s213200619_Baywest.User.userClass
 
         public userShopInspection()
         {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         }
 
         public int ShopInspectionID
@@ -84,5 +99,11 @@ namespace s213200619_Baywest.User.userClass
         {
             return bl.getShopInspection(id);
         }
+<<<<<<< HEAD
     }
 }
+=======
+
+    }
+}
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e

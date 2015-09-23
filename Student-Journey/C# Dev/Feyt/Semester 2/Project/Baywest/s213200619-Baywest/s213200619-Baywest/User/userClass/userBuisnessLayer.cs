@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using s213200619_Baywest.Admin.adminClass;
 using System;
 using System.Collections.Generic;
@@ -11,13 +12,33 @@ using System.Windows.Forms;
 namespace s213200619_Baywest.User.userClass
 {
     internal class userBuisnessLayer
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using System.Data;
+using s213200619_Baywest.Admin.adminClass;
+
+namespace s213200619_Baywest.User.userClass
+{
+
+
+    class userBuisnessLayer
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
     {
         private classLoginDetails cld = new classLoginDetails();
         private SqlCommand sqlCom;
         private SqlConnection sqlConn;
         private SqlDataAdapter sqlDbAdapter;
         private SqlConnectionStringBuilder sqlBuilder;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         public userBuisnessLayer()
         {
             try
@@ -27,15 +48,33 @@ namespace s213200619_Baywest.User.userClass
                 sqlBuilder.InitialCatalog = "Baywest_213200619";
                 sqlBuilder.IntegratedSecurity = true;
                 sqlConn = new SqlConnection(sqlBuilder.ConnectionString);
+<<<<<<< HEAD
             }
             catch (Exception ex)
             {
+=======
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 MessageBox.Show(ex.Message);
             }
         }
 
+<<<<<<< HEAD
         public DataTable getMyUser(int id)
         {
+=======
+
+        public DataTable getMyUser(int id)
+        {
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
             try
             {
                 if (sqlConn.State == ConnectionState.Closed)
@@ -43,9 +82,18 @@ namespace s213200619_Baywest.User.userClass
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
                 MessageBox.Show(ex.Message);
             }
 
+=======
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
             DataTable DBcustomerTable = new DataTable();
             try
             {
@@ -55,10 +103,20 @@ namespace s213200619_Baywest.User.userClass
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
                 MessageBox.Show(ex.Message);
             }
 
             return DBcustomerTable;
+=======
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return DBcustomerTable;
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         }
 
         public DataTable getRental(int custID)
@@ -69,14 +127,26 @@ namespace s213200619_Baywest.User.userClass
                 if (sqlConn.State == ConnectionState.Closed)
                 {
                     sqlConn.Open();
+<<<<<<< HEAD
                 }
 
+=======
+
+                }
+
+
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 sqlCom = new SqlCommand("spGetRental '" + custID.ToString() + "'", sqlConn);
                 sqlDbAdapter = new SqlDataAdapter(sqlCom);
                 sqlDbAdapter.Fill(dbRentalTable);
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 MessageBox.Show(ex.Message);
             }
 
@@ -91,6 +161,10 @@ namespace s213200619_Baywest.User.userClass
                 if (sqlConn.State == ConnectionState.Closed)
                 {
                     sqlConn.Open();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 }
 
                 sqlCom = new SqlCommand("spGetShop '" + shopID.ToString() + "'", sqlConn);
@@ -99,6 +173,10 @@ namespace s213200619_Baywest.User.userClass
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 MessageBox.Show(ex.Message);
             }
 
@@ -113,15 +191,27 @@ namespace s213200619_Baywest.User.userClass
                 if (sqlConn.State == ConnectionState.Closed)
                 {
                     sqlConn.Open();
+<<<<<<< HEAD
                 }
 
                 sqlCom = new SqlCommand("spGetShop_Service '" + shopID + "'", sqlConn);
+=======
+
+                }
+
+                sqlCom = new SqlCommand("spGetShop_Service '" + shopID.ToString() + "'", sqlConn);
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 sqlDbAdapter = new SqlDataAdapter(sqlCom);
                 sqlDbAdapter.Fill(dbShop_Service);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
             }
 
             return dbShop_Service;
@@ -135,6 +225,10 @@ namespace s213200619_Baywest.User.userClass
                 if (sqlConn.State == ConnectionState.Closed)
                 {
                     sqlConn.Open();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 }
 
                 sqlCom = new SqlCommand("spGetShopInspection '" + id.ToString() + "'", sqlConn);
@@ -143,6 +237,10 @@ namespace s213200619_Baywest.User.userClass
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 MessageBox.Show(ex.Message);
             }
 
@@ -157,6 +255,10 @@ namespace s213200619_Baywest.User.userClass
                 if (sqlConn.State == ConnectionState.Closed)
                 {
                     sqlConn.Open();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 }
 
                 sqlCom = new SqlCommand("spGetShopUpgrade '" + id.ToString() + "'", sqlConn);
@@ -171,5 +273,11 @@ namespace s213200619_Baywest.User.userClass
 
             return dbUpgrade;
         }
+<<<<<<< HEAD
     }
 }
+=======
+
+    }
+}
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e

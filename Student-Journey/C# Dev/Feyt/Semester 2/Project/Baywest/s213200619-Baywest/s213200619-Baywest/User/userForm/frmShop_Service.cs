@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ﻿using MetroFramework.Forms;
 using s213200619_Baywest.User.userClass;
 using System;
+=======
+﻿using System;
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,11 +13,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
+=======
+using MetroFramework.Forms;
+using s213200619_Baywest.User.userClass;
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
 
 namespace s213200619_Baywest.User.userForm
 {
     public partial class frmShop_Service : MetroForm
     {
+<<<<<<< HEAD
         private userShopService uss = new userShopService();
         private userShop us = new userShop();
         private int shopServiceID;
@@ -21,6 +31,15 @@ namespace s213200619_Baywest.User.userForm
         private int serviceID;
         private string serviceName;
 
+=======
+
+        public userShop us = new userShop();
+        public userShopService uss = new userShopService();
+        int shopServiceID;
+        int shopID;
+        int serviceID;
+        string serviceName;
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         public frmShop_Service(userShop us)
         {
             InitializeComponent();
@@ -29,7 +48,11 @@ namespace s213200619_Baywest.User.userForm
 
         private void frmShop_Service_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             metrodgvShopsService.DataSource = uss.GetShop_Service(us.ShopID);
+=======
+            metrodgvShopsService.DataSource = uss.GetShop_Service(int.Parse(us.ShopID.ToString()));
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         }
 
         //private void metrodgvShopsService_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -43,6 +66,10 @@ namespace s213200619_Baywest.User.userForm
         //    }
         //    catch (Exception ex)
         //    {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         //        MessageBox.Show(ex.Message);
         //    }
         //}
@@ -58,16 +85,28 @@ namespace s213200619_Baywest.User.userForm
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
                 MessageBox.Show(ex.Message);
             }
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         }
 
         private void btnShopInspection_Click(object sender, EventArgs e)
@@ -90,4 +129,8 @@ namespace s213200619_Baywest.User.userForm
             shopService.ShowDialog();
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e

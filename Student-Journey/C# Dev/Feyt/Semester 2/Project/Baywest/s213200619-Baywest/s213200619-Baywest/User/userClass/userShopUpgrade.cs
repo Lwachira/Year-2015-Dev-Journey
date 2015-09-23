@@ -10,6 +10,7 @@ namespace s213200619_Baywest.User.userClass
     public class userShopUpgrade
     {
         private userBuisnessLayer bl = new userBuisnessLayer();
+<<<<<<< HEAD
         private int upgradeID;
         private int shopID;
         private int serviceID;
@@ -17,6 +18,15 @@ namespace s213200619_Baywest.User.userClass
         private string endDate;
         private string upgradeTask;
         private string completionMessage;
+=======
+        int upgradeID;
+        int shopID;
+        int serviceID;
+        string startDate;
+        string endDate;
+        string upgradeTask;
+        string completionMessage;
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
 
         public userShopUpgrade(int upgradeID, int shopID, int serviceID, string startDate, string endDate, string upgradeTask, string completionMessage)
         {
@@ -27,6 +37,10 @@ namespace s213200619_Baywest.User.userClass
             this.endDate = endDate;
             this.upgradeTask = upgradeTask;
             this.completionMessage = completionMessage;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         }
 
         public userShopUpgrade(int shopID)
@@ -36,6 +50,10 @@ namespace s213200619_Baywest.User.userClass
 
         public userShopUpgrade()
         {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
         }
 
         public DataTable GetShopUpgrade(int id)
@@ -43,4 +61,8 @@ namespace s213200619_Baywest.User.userClass
             return bl.getShopUpgrade(id);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e

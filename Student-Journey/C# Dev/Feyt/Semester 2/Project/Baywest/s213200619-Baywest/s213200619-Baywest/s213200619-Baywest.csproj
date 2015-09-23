@@ -92,6 +92,7 @@
     <Compile Include="Admin\adminForm\frmAdminShopUpgrade.Designer.cs">
       <DependentUpon>frmAdminShopUpgrade.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Admin\adminForm\frmAdminCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +116,31 @@
     </Compile>
     <Compile Include="Admin\adminForm\frmAdminShopService.Designer.cs">
       <DependentUpon>frmAdminShopService.cs</DependentUpon>
+=======
+    <Compile Include="Admin\adminForm\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmLoginDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmLoginDetails.Designer.cs">
+      <DependentUpon>frmLoginDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmRental.Designer.cs">
+      <DependentUpon>frmRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmShopService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminForm\frmShopService.Designer.cs">
+      <DependentUpon>frmShopService.cs</DependentUpon>
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -221,6 +247,7 @@
     <EmbeddedResource Include="Admin\adminForm\frmAdminShopUpgrade.resx">
       <DependentUpon>frmAdminShopUpgrade.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Admin\adminForm\frmAdminCustomer.resx">
       <DependentUpon>frmAdminCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +259,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\adminForm\frmAdminShopService.resx">
       <DependentUpon>frmAdminShopService.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Admin\adminForm\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmLoginDetails.resx">
+      <DependentUpon>frmLoginDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmRental.resx">
+      <DependentUpon>frmRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\adminForm\frmShopService.resx">
+      <DependentUpon>frmShopService.cs</DependentUpon>
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

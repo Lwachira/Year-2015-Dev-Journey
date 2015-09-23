@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.mCmbUsername = new MetroFramework.Controls.MetroComboBox();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,6 +59,10 @@
             this.mCmbUsername.UseSelectable = true;
             this.mCmbUsername.SelectedIndexChanged += new System.EventHandler(this.mCmbUsername_SelectedIndexChanged);
             // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -67,6 +74,7 @@
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Login Screen";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,5 +84,6 @@
 
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroComboBox mCmbUsername;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }

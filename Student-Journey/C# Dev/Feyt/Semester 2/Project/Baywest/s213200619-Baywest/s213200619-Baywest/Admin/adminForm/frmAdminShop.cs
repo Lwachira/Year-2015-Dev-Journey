@@ -133,7 +133,11 @@ namespace s213200619_Baywest.Admin.adminForm
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             frmAdminShopService shopService = new frmAdminShopService();
+=======
+            frmShopService shopService = new frmShopService();
+>>>>>>> 064fcc474fdf023a259aa852b3154a726676540e
             shopService.ShowDialog();
         }
 
