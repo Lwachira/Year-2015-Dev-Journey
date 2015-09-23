@@ -27,12 +27,12 @@
             <h1>Heading</h1>
 
             <span>First Name:
-                <asp:TextBox runat="server" ID="firstName" /></span>
+                <asp:TextBox runat="server" ID="txtFirstName" /></span>
             &nbsp
             &nbsp
             &nbsp
             <span>Last Name:
-                <asp:TextBox runat="server" ID="lastName" />
+                <asp:TextBox runat="server" ID="txtLastName" />
                 <br />
             </span>
             <div id="divName">
@@ -40,13 +40,13 @@
                 <asp:Label Text="First Name And last Name" runat="server" Width="376px" ID="lblText" Font-Size="X-Large" CssClass="auto-style2" />
                 <br />
                 <br />
-                <asp:Button Text="text" runat="server" Width="164px" CssClass="auto-style1" />
+                <asp:Button Text="Write" runat="server" Width="164px" CssClass="auto-style1" ID="btnWrite" OnClick="btnWrite_Click" />
             </div>
             <h2>Theme Controls</h2>
 
-            <asp:RadioButtonList runat="server">
-                <asp:ListItem Text="text1" />
-                <asp:ListItem Text="text2" />
+            <asp:RadioButtonList runat="server" ID="rdoTheme" AutoPostBack="True" OnSelectedIndexChanged="rdoTheme_SelectedIndexChanged">
+                <asp:ListItem Text="Theme 1" Value="themeDark" />
+                <asp:ListItem Text="Theme 2" Value="themeBlue" />
             </asp:RadioButtonList>
         </div>
     </form>
