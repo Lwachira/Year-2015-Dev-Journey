@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Prac_03.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Image ImageUrl="https://mountainss.files.wordpress.com/2015/08/microsoft-azure-banner.jpg" runat="server" Width="630px" Height="153px" CssClass="auto-style1" />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+            &nbsp
+            &nbsp
+            &nbsp
+            &nbsp
+        <%--    <asp:TreeView ID="TreeView1" runat="server" ImageSet="Msdn" NodeIndent="10" ShowLines="True">
+                <HoverNodeStyle BackColor="#CCCCCC" BorderColor="#888888" BorderStyle="Solid" Font-Underline="True" />
+                <Nodes>
+                    <asp:TreeNode Text="New Node" Value="New Node">
+                        <asp:TreeNode NavigateUrl="~/Default.aspx" ShowCheckBox="True" Text="Home" Value="Home"></asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode Text="New Node" Value="New Node">
+                        <asp:TreeNode NavigateUrl="~/Contact Us.aspx" ShowCheckBox="True" Text="Contact Us" Value="Contact Us"></asp:TreeNode>
+                    </asp:TreeNode>
+                </Nodes>
+                <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="1px" VerticalPadding="2px" />
+                <ParentNodeStyle Font-Bold="False" />
+                <SelectedNodeStyle BackColor="White" BorderColor="#888888" BorderStyle="Solid" BorderWidth="1px" Font-Underline="False" HorizontalPadding="3px" VerticalPadding="1px" />
+            </asp:TreeView>--%>
+
+            <asp:TreeView runat="server" ID="trv1" ImageSet="Msdn" NodeIndent="10">
+                <HoverNodeStyle BackColor="#CCCCCC" BorderColor="#888888" BorderStyle="Solid" Font-Underline="true" />
+                <Nodes>
+                    <asp:TreeNode Text="Home" Value="Home">
+                        <asp:TreeNode NavigateUrl="~/Default.aspx" ShowCheckBox="True" Text="Home" Value="Home"></asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode Text="Contact" Value="Contact">
+                        <asp:TreeNode NavigateUrl="~/Contact Us.aspx" ShowCheckBox="true" Text="Contact Us" Value="Contact Us"></asp:TreeNode>
+                    </asp:TreeNode>
+                </Nodes>
+                <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="1px" VerticalPadding="2px" />
+                <ParentNodeStyle Font-Bold="False" />
+                <SelectedNodeStyle BackColor="White" BorderColor="#888888" BorderStyle="Solid" BorderWidth="1px" Font-Underline="False" HorizontalPadding="3px" VerticalPadding="1px" />
+            </asp:TreeView>
+            <br />
+            <i>Lincoln Gachagua</i>
+        </div>
+    </form>
+</body>
+</html>
