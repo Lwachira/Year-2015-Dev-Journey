@@ -11,7 +11,12 @@ namespace fundementalsPage1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            List<string> fruit = new List<string>();
+            fruit.Add("Kiwi");
+            fruit.Add("Pear");
+            fruit.Add("Mango");
+            lstFruits.DataSource = fruit;
+            lstFruits.DataBind();
         }
     }
 }
