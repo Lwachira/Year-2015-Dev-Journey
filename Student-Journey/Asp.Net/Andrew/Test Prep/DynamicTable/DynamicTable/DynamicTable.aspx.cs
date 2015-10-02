@@ -11,7 +11,28 @@ namespace DynamicTable
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void btnDraw_Click(object sender, EventArgs e)
+        {
+            int rows = int.Parse(txtRows.Text);
+            int cols = int.Parse(txtCols.Text);
+
+            dTable.BorderWidth = 1;
+            for (int i = 0; i < rows; i++)
+            {
+                TableRow row = new TableRow();
+                dTable.Controls.Add(row);
+                for (int c = 0; c < cols; c++)
+                {
+                    TableCell cell = new TableCell();
+                    cell.Text = "Row " + i.ToString() + " Col " + c.ToString();
+                    cell.BorderStyle = BorderStyle.Solid;
+                    row.Controls.Add(cell);
+                }
+            }
+
+            dTable.Visible = true;
         }
     }
 }

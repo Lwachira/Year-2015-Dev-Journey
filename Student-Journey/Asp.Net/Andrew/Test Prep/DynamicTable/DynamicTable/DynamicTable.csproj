@@ -75,9 +75,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DynamicTable.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DynamicTable.aspx.cs">
+      <DependentUpon>DynamicTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicTable.aspx.designer.cs">
+      <DependentUpon>DynamicTable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>

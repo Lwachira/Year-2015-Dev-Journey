@@ -8,9 +8,19 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
+        <div>
+            <asp:Button Text="Draw" runat="server" ID="btnDraw" OnClick="btnDraw_Click" />
+            <br />
+            <br />
+            Rows
+            <asp:TextBox runat="server" ID="txtRows" />
+            Cols
+            <asp:TextBox runat="server" ID="txtCols" />
+
+            <br />
+            <asp:Table runat="server" ID="dTable" Visible="false">
+            </asp:Table>
+        </div>
     </form>
 </body>
 </html>
