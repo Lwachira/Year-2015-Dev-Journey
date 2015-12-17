@@ -21,5 +21,22 @@ namespace OdeToFood.Controllers
         }
 
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Restaurant restuarant)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Restaurants.Add(restuarant);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(restuarant);
+        }
     }
 }

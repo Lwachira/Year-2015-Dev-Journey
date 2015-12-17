@@ -1,148 +1,38 @@
-﻿//using OdeToFood.Models;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web;
-//using System.Web.Mvc;
+﻿using odetofood.models;
+using OdeToFood.Models;
+using system;
+using system.collections.generic;
+using system.linq;
+using system.web;
+using system.web.mvc;
+using System.Web.Mvc;
 
-//namespace OdeToFood.Controllers
-//{
-//    public class ReviewsController : Controller
-//    {
+namespace odetofood.controllers
+{
+    public class reviewscontroller : Controller
+    {
+        OdeToFoodDb _db = new OdeToFoodDb();
 
-       
-//        // GET: Reviews
-//        public ActionResult Index()
-//        {
-//            var model =
-//                            from r in _reviews
-//                            orderby r.Country
-//                            select r;
+        // get: reviews
+        public ActionResult Index([Bind(Prefix ="id")]int restaurantId)
+        {
+            var restaurant = _db.Restaurants.Find(restaurantId);
+            if (restaurant != null)
+            {
+                return View(restaurant);
 
-//            return View(model);
-//        }
+                   
+            }
 
-        
-      
-
-//        // GET: Reviews/Details/5
-//        public ActionResult Details(int id)
-//        {
-//            return View();
-//        }
-
-//        // GET: Reviews/Create
-//        public ActionResult Create()
-//        {
-//            return View();
-//        }
-
-//        // POST: Reviews/Create
-//        [HttpPost]
-//        public ActionResult Create(FormCollection collection)
-//        {
-//            try
-//            {
-//                // TODO: Add insert logic here
-
-//                return RedirectToAction("Index");
-//            }
-//            catch
-//            {
-//                return View();
-//            }
-//        }
-
-//        // GET: Reviews/Edit/5
-//        public ActionResult Edit(int id)
-//        {
-//            var review = _reviews.Single(r => r.Id == id);
-//            return View(review);
-//        }
-
-//        // POST: Reviews/Edit/5
-//        [HttpPost]
-//        public ActionResult Edit(int id, FormCollection collection)
-//        {
-//            var review = _reviews.Single(r => r.Id == id);
-//            if (TryUpdateModel(review))
-//            {
-                
-//                return RedirectToAction("Index");
-//            }
-
-//            return View(review);
-//        }
-
-//        // GET: Reviews/Delete/5
-//        public ActionResult Delete(int id)
-//        {
-//            return View();
-//        }
-
-//        // POST: Reviews/Delete/5
-//        [HttpPost]
-//        public ActionResult Delete(int id, FormCollection collection)
-//        {
-//            try
-//            {
-//                // TODO: Add delete logic here
-
-//                return RedirectToAction("Index");
-//            }
-//            catch
-//            {
-//                return View();
-//            }
-//        }
+            return HttpNotFound("Error cant compute");
+        }
 
 
-//        static List<ResturantReview> _reviews = new List<ResturantReview>
-//        {
-//            new ResturantReview
-//            {
-//                Id = 1,
-//                Name = "Cinnamon Club",
-//                City = "London",
-//                Country = "UK",
-//                Rating = 10
-//            },
-//            new ResturantReview
-//            {
-//                Id = 2,
-//                 Name = "Marrakesh",
-//                 City = "D.C",
-//                 Country = "USA",
-//                 Rating = 10
-//            },
-//            new ResturantReview
-//            {
-//                Id = 3,
-//                Name = "The House of Elliot",
-//                City ="Ghent",
-//                Country = "Belgium",
-//                Rating = 10
-//            },
 
-
-//             new ResturantReview
-//            {
-//                Id = 4,
-//                Name = "Vuyo's Chips",
-//                City ="Port Elizabeth",
-//                Country = "South Africa",
-//                Rating = 10
-//            },
-
-//              new ResturantReview
-//            {
-//                Id = 5,
-//                Name = "Kentucky Burger",
-//                City ="Durban",
-//                Country = "South Africa",
-//                Rating = 10
-//            }
-//        };
-
-//    }
-//}
+        protected override void Dispose(bool disposing)
+        {
+            _db.Dispose();
+            base.Dispose(disposing);
+        }
+    }
+}
