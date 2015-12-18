@@ -1,10 +1,4 @@
-﻿using odetofood.models;
-using OdeToFood.Models;
-using system;
-using system.collections.generic;
-using system.linq;
-using system.web;
-using system.web.mvc;
+﻿using OdeToFood.Models;
 using System.Web.Mvc;
 
 namespace odetofood.controllers
@@ -24,10 +18,16 @@ namespace odetofood.controllers
                    
             }
 
-            return HttpNotFound("Error cant compute");
+            return HttpNotFound();
         }
 
 
+
+        [HttpGet]
+        public ActionResult Create(int restaurantId)
+        {
+            return View();
+        }
 
         protected override void Dispose(bool disposing)
         {

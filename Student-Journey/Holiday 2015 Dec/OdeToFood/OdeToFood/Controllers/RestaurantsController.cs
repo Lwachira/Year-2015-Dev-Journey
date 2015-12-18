@@ -34,7 +34,7 @@ namespace OdeToFood.Controllers
                 db.Restaurants.Add(restuarant);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }
+            } 
 
             return View(restuarant);
         }
