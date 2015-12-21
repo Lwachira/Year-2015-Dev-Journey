@@ -45,9 +45,9 @@ namespace odetofood.controllers
         }
 
         [HttpGet]
-        public ActionResult Edit(int restaurantId)
+        public ActionResult Edit(int id)
         {
-            var model = _db.Reviews.Find(restaurantId);
+            var model = _db.Reviews.Find(id);
             return View(model);
         }
 
