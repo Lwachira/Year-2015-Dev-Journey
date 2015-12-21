@@ -1,4 +1,5 @@
 ﻿using OdeToFood.Models;
+using System.Data.Entity;
 using System.Web.Mvc;
 
 namespace odetofood.controllers
@@ -8,19 +9,33 @@ namespace odetofood.controllers
         OdeToFoodDb _db = new OdeToFoodDb();
 
         // get: reviews
-        public ActionResult Index([Bind(Prefix ="id")]int restaurantId)
+        public ActionResult Index([Bind(Prefix = "id")]int restaurantId)
         {
             var restaurant = _db.Restaurants.Find(restaurantId);
             if (restaurant != null)
             {
                 return View(restaurant);
 
-                   
+
             }
 
             return HttpNotFound();
         }
 
+
+
+
+        [HttpPost]
+        public ActionResult Create(ResturantReview review)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Reviews.Add(review);
+                _db.SaveChanges();
+                return RedirectToAction("Index", new { id = review.RestaurantId });
+            }
+            return View(review);
+        }
 
 
         [HttpGet]
@@ -29,6 +44,26 @@ namespace odetofood.controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Edit(int restaurantId)
+        {
+            var model = _db.Reviews.Find(restaurantId);
+            return View(model);
+        }
+
+
+        [HttpPost]
+        public ActionResult Edit(ResturantReview review)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Entry(review).State = EntityState.Modified;
+                _db.SaveChanges();
+                return RedirectToAction("Index", new { id = review.RestaurantId });
+            }
+
+            return View(review);
+        }
         protected override void Dispose(bool disposing)
         {
             _db.Dispose();
