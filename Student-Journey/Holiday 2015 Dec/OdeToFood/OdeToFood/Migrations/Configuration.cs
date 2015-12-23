@@ -27,6 +27,14 @@ namespace OdeToFood.Migrations
                     Reviews = new List<Models.ResturantReview> { new Models.ResturantReview { Rating = 9, Body = "Great food!",ReviewerName="Lincoln" }
                     }
                 });
+
+
+            for (int i = 0; i < 1000; i++)
+            {
+                context.Restaurants.AddOrUpdate(r => r.Name,
+                    new Models.Restaurant { Name = i.ToString(), City = "Nowhere", Country = "USA" });
+                    
+            }
         }
     }
 }
