@@ -28,6 +28,14 @@ namespace OdeToFood.Controllers
                     CountOfReviews = r.Reviews.Count()
                 });
 
+            if (Request.IsAjaxRequest())
+            {
+
+                return Content("Ajax is working");
+
+            }
+           
+          
             return View(model);
         }
 
