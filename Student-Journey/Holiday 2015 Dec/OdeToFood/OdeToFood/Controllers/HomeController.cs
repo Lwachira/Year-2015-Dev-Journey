@@ -12,6 +12,22 @@ namespace OdeToFood.Controllers
 
 
         OdeToFoodDb _db = new OdeToFoodDb();
+
+
+
+       public ActionResult Autocomplete(string term)
+        {
+            var model =
+                _db.Restaurants
+                .Where(r => r.Name.StartsWith(term))
+                .Take(10)
+                .Select(r => new
+                {
+                    lable = r.Name
+                });
+
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
         public ActionResult Index(string searchTerm)
         {
             var model =
