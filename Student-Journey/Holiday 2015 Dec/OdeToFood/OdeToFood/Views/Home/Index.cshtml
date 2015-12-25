@@ -27,7 +27,7 @@
 
 
 <form method="get" action="@Url.Action("Index")"data-otf-ajax="true" data-otf-target="restaurantList">
-    <input type="search" name="SearchTerm" style="color:black" />
+    <input type="search" name="SearchTerm" style="color:black" data-otf-autocomplete="@Url.Action("Autocomplete")" />
     <input type="submit" value="Search By Name" style="color:black" />
 </form>
 
