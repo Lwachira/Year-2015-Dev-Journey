@@ -18,11 +18,12 @@
 
     var createAutocomplete = function () {
         var $input = $(this);
+
         var options = {
-            sources: $input.attr("data-otf-autocomplete")
+            sources: $input.attr("data-otf-autocomplete") 
         };
         $input.autocomplete(options);
-    }
+    };
 
     $("form[data-otf-ajax='true']").submit(ajaxFormSubmit);
     $("input[data-otf-autocomplete]").each(createAutocomplete);

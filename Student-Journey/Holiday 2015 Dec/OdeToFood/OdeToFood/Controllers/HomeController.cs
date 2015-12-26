@@ -47,7 +47,7 @@ namespace OdeToFood.Controllers
             if (Request.IsAjaxRequest())
             {
 
-                return Content("Ajax is working");
+                return PartialView("_Restaurants", model);
 
             }
            
