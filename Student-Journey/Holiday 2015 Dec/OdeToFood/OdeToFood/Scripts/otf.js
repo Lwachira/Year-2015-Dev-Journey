@@ -16,11 +16,20 @@
         return false;
     };
 
+    var submitAutocompleteForm = function (event, ui) {
+        var $input = $(this);
+        $input.val(ui.item.lable);
+
+        var $form = $input.parents("form:first");
+        $form.submit();
+    };
+
     var createAutocomplete = function () {
         var $input = $(this);
 
         var options = {
-            sources: $input.attr("data-otf-autocomplete") 
+            sources: $input.attr("data-otf-autocomplete"),
+            select : submitAutocompleteForm
         };
         $input.autocomplete(options);
     };
