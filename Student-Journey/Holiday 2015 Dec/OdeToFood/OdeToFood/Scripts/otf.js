@@ -11,7 +11,9 @@
 
         $.ajax(options).done(function (data) {
             var $target = $($form.attr("data-otf-target"));
-            $target.replaceWith(data);
+            var $newHtml = $(data);
+            $target.replaceWith($newHtml);
+           
         });
         return false;
     };
@@ -37,3 +39,5 @@
     $("form[data-otf-ajax='true']").submit(ajaxFormSubmit);
     $("input[data-otf-autocomplete]").each(createAutocomplete);
 });
+
+
