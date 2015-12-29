@@ -26,6 +26,16 @@ namespace OdeToFood.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var model = db.Restaurants.Find(id);
+            return View(model);
+        }
+
+
+     
+
         [HttpPost]
         public ActionResult Create(Restaurant restuarant)
         {

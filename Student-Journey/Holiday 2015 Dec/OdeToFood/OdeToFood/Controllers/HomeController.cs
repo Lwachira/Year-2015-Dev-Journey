@@ -33,7 +33,7 @@ namespace OdeToFood.Controllers
 
 
 
-        [OutputCache(CacheProfile ="Long",VaryByHeader ="X-Requested-With",Location = OutputCacheLocation.Server)]
+        [OutputCache(CacheProfile ="Long",VaryByHeader ="X-Requested-With;Accept-Language",Location = OutputCacheLocation.Server)]
         public ActionResult Index(string searchTerm = null, int page =1)
         {
             //creates a default value or starting point for your pages
